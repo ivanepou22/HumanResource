@@ -1,0 +1,38 @@
+{
+  "id": "d63de393-26ce-4198-a1d8-6a906ccc92ca",
+  "name": "Human Resource Management",
+  "publisher": "Adroit Solutions Ltd - IVAN EPOU",
+  "version": "1.0.0.0",
+  "brief": "Human Resource Management Module",
+  "description": "Human Resource Management System\nIncludes The following Modules :-\n\tEmployee Recuirement Mangement\n\tEmployee Bio info Managment\n\tEmployee Appraisal Managment\n\tEmployee Leave Management\n\tPayroll Management\n\tEmployee Exit Management\n\nCopy Right Adroit Solutions Ltd, Prince Tibandeke Road, Bukoto P.O BOX 3705",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "publisher": "Microsoft",
+      "name": "System Application",
+      "version": "16.0.0.0"
+    },
+    {
+      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+      "publisher": "Microsoft",
+      "name": "Base Application",
+      "version": "16.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "16.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://HumanResource.com/help/",
+  "showMyCode": true,
+  "runtime": "5.0"
+}
