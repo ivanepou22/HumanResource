@@ -1,5 +1,6 @@
 tableextension 50022 "VendorExt" extends Vendor
 {
+
     fields
     {
         // Add changes to table fields here
@@ -16,6 +17,7 @@ tableextension 50022 "VendorExt" extends Vendor
         {
             OptionMembers = " ",DOMESTIC,FOREIGN;
         }
+
     }
 
     var
@@ -26,7 +28,6 @@ tableextension 50022 "VendorExt" extends Vendor
     var
         myInt: Integer;
     begin
-        if (("No." <> '') and ("VAT Bus. Posting Group" <> '')) then
-            TestField("VAT Registration No.");
+
     end;
 }
