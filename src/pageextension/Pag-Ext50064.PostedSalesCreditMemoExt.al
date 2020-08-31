@@ -1,19 +1,14 @@
-pageextension 50043 "Customer Ledger Entries Ext" extends "Customer Ledger Entries"
+pageextension 50064 "Posted Sales Credit Memo Ext" extends "Posted Sales Credit Memo"
 {
     layout
     {
         // Add changes to page layout here
-        addafter(Open)
+        addafter("External Document No.")
         {
             field("Branch Code"; "Branch Code")
             {
                 ApplicationArea = All;
-                Editable = false;
-            }
-            field("Return Branch Code"; "Return Branch Code")
-            {
-                ApplicationArea = All;
-                Editable = false;
+                Importance = Standard;
             }
 
         }

@@ -8,6 +8,12 @@ tableextension 50041 "Cust. Ledger Entry Ext" extends "Cust. Ledger Entry"
             FieldClass = FlowField;
             CalcFormula = lookup ("Sales Invoice Header"."Branch Code" where("No." = field("Document No.")));
         }
+
+        field(50035; "Return Branch Code"; Code[50])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup ("Sales Cr.Memo Header"."Branch Code" where("No." = field("Document No.")));
+        }
     }
 
     var
