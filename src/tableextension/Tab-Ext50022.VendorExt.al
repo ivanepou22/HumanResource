@@ -18,6 +18,15 @@ tableextension 50022 "VendorExt" extends Vendor
             OptionMembers = " ",DOMESTIC,FOREIGN;
         }
 
+        field(50025; "VAT Registration Nos."; Text[20])
+        {
+            Caption = 'VAT Registration No.';
+            NotBlank = true;
+            trigger OnValidate()
+            begin
+                "VAT Registration No." := UpperCase("VAT Registration Nos.");
+            end;
+        }
     }
 
     var

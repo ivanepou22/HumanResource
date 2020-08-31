@@ -1,5 +1,6 @@
 pageextension 50022 "Vendor Card Ext" extends "Vendor Card"
 {
+
     layout
     {
         // Add changes to page layout here
@@ -11,6 +12,27 @@ pageextension 50022 "Vendor Card Ext" extends "Vendor Card"
                 Importance = Promoted;
             }
         }
+
+        addfirst(Invoicing)
+        {
+            field("VAT Registration Nos."; "VAT Registration Nos.")
+            {
+                ApplicationArea = VAT;
+                ToolTip = 'Specifies the vendor''s VAT registration number.';
+                Visible = false;
+
+                trigger OnDrillDown()
+                var
+                    VATRegistrationLogMgt: Codeunit "VAT Registration Log Mgt.";
+                begin
+                    VATRegistrationLogMgt.AssistEditVendorVATReg(Rec);
+                end;
+            }
+        }
+        // modify("VAT Registration No.")
+        // {
+        //     Visible = false;
+        // }
     }
 
     actions
