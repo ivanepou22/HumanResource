@@ -8,6 +8,7 @@ pageextension 50046 "Transfer Order Ext" extends "Transfer Order"
             field("Transfer Reason"; "Transfer Reason")
             {
                 ApplicationArea = All;
+                Visible = false;
             }
 
         }

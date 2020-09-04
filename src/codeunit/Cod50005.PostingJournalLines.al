@@ -44,6 +44,17 @@ codeunit 50005 "PostingJournalLines"
         TransferReceiptHeader."Transfer Reason" := TransferHeader."Transfer Reason";
     end;
 
-    var
-        myInt: Integer;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"TransferOrder-Post Shipment", 'OnBeforeInsertTransShptLine', '', true, true)]
+    local procedure PostShipmentLines(var TransShptLine: Record "Transfer Shipment Line"; TransLine: Record "Transfer Line"; CommitIsSuppressed: Boolean)
+    begin
+        //var TransShptLine: Record "Transfer Shipment Line"; TransLine: Record "Transfer Line"; CommitIsSuppressed: Boolean
+        TransShptLine."Transfer Reason" := TransLine."Transfer Reason";
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"TransferOrder-Post Receipt", 'OnBeforeInsertTransRcptLine', '', true, true)]
+    local procedure PostReceiptLine(var TransRcptLine: Record "Transfer Receipt Line"; TransLine: Record "Transfer Line"; CommitIsSuppressed: Boolean)
+    begin
+        TransRcptLine."Transfer Reason" := TransLine."Transfer Reason";
+    end;
+
 }

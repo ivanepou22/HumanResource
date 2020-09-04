@@ -332,4 +332,20 @@ codeunit 50002 "Customize Events"
             Message(ASL001);
         end;
     end;
+
+    [EventSubscriber(ObjectType::Page, Page::"Sales Return Order", 'OnBeforeActionEvent', 'Post', true, true)]
+    local procedure CheckforSalesPersion(var Rec: Record "Sales Header")
+    var
+        SalesHeader: Record "Sales Header";
+    begin
+        Rec.TestField("Salesperson Code");
+    end;
+
+    [EventSubscriber(ObjectType::Page, Page::"Sales Return Order", 'OnBeforeActionEvent', 'Preview Posting', true, true)]
+    local procedure CheckforSalesPersion2(var Rec: Record "Sales Header")
+    var
+        SalesHeader: Record "Sales Header";
+    begin
+        Rec.TestField("Salesperson Code");
+    end;
 }
