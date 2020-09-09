@@ -9,6 +9,10 @@ pageextension 50069 "PostedSales InvoiceLinesExt" extends "Posted Sales Invoice 
             {
                 ApplicationArea = All;
             }
+            field("Posting Date"; "Posting Date")
+            {
+                ApplicationArea = All;
+            }
 
         }
     }

@@ -39,6 +39,10 @@ pageextension 50009 "General Ledger Entries Ext" extends "General Ledger Entries
             {
                 ApplicationArea = All;
             }
+        }
+
+        addafter("System-Created Entry")
+        {
 
         }
     }

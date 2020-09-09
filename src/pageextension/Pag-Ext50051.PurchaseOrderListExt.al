@@ -38,6 +38,16 @@ pageextension 50051 "Purchase Order List Ext" extends "Purchase Order List"
                     PurchaseOrderPrint.RUN;
                 end;
             }
+            action("Purchase Order Summary")
+            {
+                ApplicationArea = suite;
+                Caption = 'Purchase Order Summary';
+                Ellipsis = true;
+                Image = Suggest;
+                Promoted = true;
+                PromotedCategory = Category5;
+                RunObject = report "Purchase Order Summary";
+            }
         }
     }
 

@@ -182,34 +182,6 @@ report 50001 "Payment Voucher"
                 TotalAmount := 0;
                 SETRANGE("Document Type", "Sales Comment Line"."Document Type"::"Payment Voucher");
                 SETRANGE("No.", PrintDocumentNo);
-
-                /*{
-                I := 0;
-                                ProvisionalAmount := 0;
-                                SalesCommentLine.RESET;
-                                SalesCommentLine.SETRANGE("Document Type", SalesCommentLine."Document Type"::"Payment Voucher");
-                                SalesCommentLine.SETRANGE("No.", PrintDocumentNo);
-                                IF SalesCommentLine.FINDFIRST THEN
-                                    REPEAT
-                                        I += 1;
-                                        ProvisionalAmount += SalesCommentLine.Amount;
-                                        ProvisionalAmountLCY += SalesCommentLine."Amount (LCY)";
-                                        IF (Bank.GET(SalesCommentLine."Bal. Account No.")) THEN BEGIN
-                                            IF (BankName = '') THEN
-                                                BankName := Bank.Name;
-                                        END;
-
-                                    UNTIL SalesCommentLine.NEXT = 0;
-
-                                IF (I = 1) THEN BEGIN
-                                    TotalAmount := ProvisionalAmount;
-                                    TotalAmountLCY := ProvisionalAmountLCY;
-                                END ELSE
-                                    IF (I > 1) THEN BEGIN
-                                        TotalAmount := ProvisionalAmount / 2;
-                                        TotalAmountLCY := ProvisionalAmountLCY / 2;
-                                    END;
-                }*/
             end;
 
             trigger OnAfterGetRecord()
@@ -227,14 +199,17 @@ report 50001 "Payment Voucher"
                 IF PaymentVoucher.FINDSET THEN BEGIN
                     IF PaymentVoucher.COUNT > 1 THEN
                         REPEAT
-                            IF PaymentVoucher.Amount > 0 THEN BEGIN
-                                TotalAmount += PaymentVoucher.Amount;
-                                TotalAmountLCY += PaymentVoucher."Amount (LCY)";
+                            IF PaymentVoucher.Amount < 0 THEN BEGIN
+                                if PaymentVoucher."Account Type" = PaymentVoucher."Account Type"::"Bank Account" then begin
+                                    TotalAmount += PaymentVoucher.Amount;
+                                    TotalAmountLCY += PaymentVoucher."Amount (LCY)";
+                                end;
                             END;
                         UNTIL PaymentVoucher.NEXT = 0
-                    ELSE
+                    ELSE begin
                         TotalAmount := ABS(PaymentVoucher.Amount);
-                    TotalAmountLCY := ABS(PaymentVoucher."Amount (LCY)");
+                        TotalAmountLCY := ABS(PaymentVoucher."Amount (LCY)");
+                    end;
                 END;
                 IF TotalAmount = 0 THEN BEGIN
                     PaymentVoucher.RESET;
@@ -243,17 +218,24 @@ report 50001 "Payment Voucher"
                     IF PaymentVoucher.FINDSET THEN BEGIN
                         IF PaymentVoucher.COUNT > 1 THEN
                             REPEAT
-                                IF TotalAmount < 0 THEN BEGIN
+                                IF (PaymentVoucher.Amount < 0) THEN BEGIN
                                     TotalAmount += ABS(PaymentVoucher.Amount);
                                     TotalAmountLCY += ABS(PaymentVoucher."Amount (LCY)");
                                 END;
                             UNTIL PaymentVoucher.NEXT = 0
-                        ELSE
+                        ELSE begin
                             TotalAmount := ABS(PaymentVoucher.Amount);
-                        TotalAmountLCY := ABS(PaymentVoucher."Amount (LCY)");
+                            TotalAmountLCY := ABS(PaymentVoucher."Amount (LCY)");
+                        end;
                     END;
                 END;
                 // Amount in Words
+                if TotalAmount < 0 then begin
+                    TotalAmount := -TotalAmount;
+                    TotalAmountLCY := -TotalAmountLCY;
+                end;
+
+
                 CheckReport.InitTextVariable;
                 GenLedgerSetup.GET;
                 IF "Sales Comment Line"."Currency Code" <> '' THEN
@@ -306,22 +288,6 @@ report 50001 "Payment Voucher"
 
                 //Geting the document number
                 DocumentNumber := PaymentVoucher."No.";
-                /*{
-                //Getting the applied entries
-                VendorLedgerEntries.RESET;
-                                VendorLedgerEntries.SETRANGE(VendorLedgerEntries."Applies-to ID", "Sales Comment Line"."No.");
-                                IF VendorLedgerEntries.FINDSET THEN BEGIN
-                                    IF ("Sales Comment Line"."Account Type" = "Sales Comment Line"."Account Type"::Vendor) THEN BEGIN
-                                        VendorInvoiceDate := VendorLedgerEntries."Posting Date";
-                                        VendorInvoiceDocumentType := VendorLedgerEntries."Document Type";
-                                        VendorInvoiceDocumentNo := VendorLedgerEntries."Document No.";
-                                        VendorInvoiceDescription := VendorLedgerEntries.Description;
-                                        VendorInvoiceCurrency := VendorLedgerEntries."Currency Code";
-                                        VendorInvoiceAmount := VendorLedgerEntries."Original Amount";
-                                        VendorInvoiceRemainingAmount := (VendorLedgerEntries."Original Amount" - VendorLedgerEntries."Amount to Apply");
-                                    END;
-                                END;
-                  }*/
             end;
 
             trigger OnPostDataItem()

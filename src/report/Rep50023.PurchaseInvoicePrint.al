@@ -1,4 +1,4 @@
-report 50200 "Purchase Invoice - Print"
+report 50023 "Purchase Invoice - Print"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './PurchaseInvoicePrint.rdlc';

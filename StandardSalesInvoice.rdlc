@@ -1209,7 +1209,6 @@
                                               <PaddingRight>5pt</PaddingRight>
                                             </Style>
                                           </Textbox>
-                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -6507,7 +6506,7 @@
                                                     <Value>=Last(Fields!TotalExcludingVATText.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
-                                                      <FontSize>8pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -6542,7 +6541,7 @@
                                                     <Value>=Last(Fields!TotalSubTotalMinusInvoiceDiscount.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
-                                                      <FontSize>8pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Format>=Last(Fields!TotalNetAmountFormat.Value)</Format>
                                                     </Style>
@@ -6655,7 +6654,7 @@
                                                     <Value>=Last(Fields!TotalIncludingVATText.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
-                                                      <FontSize>8pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -6690,7 +6689,7 @@
                                                     <Value>=Last(Fields!TotalAmountIncludingVAT.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
-                                                      <FontSize>8pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Format>=Last(Fields!TotalAmountIncludingVATFormat.Value)</Format>
                                                     </Style>
@@ -6942,7 +6941,7 @@
                                                     <Value>=Last(Fields!TotalExcludingVATText.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
-                                                      <FontSize>8pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -6977,7 +6976,7 @@
                                                     <Value>=Last(Fields!TotalNetAmount.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
-                                                      <FontSize>8pt</FontSize>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Format>=Last(Fields!TotalNetAmountFormat.Value)</Format>
                                                     </Style>
@@ -7466,6 +7465,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
