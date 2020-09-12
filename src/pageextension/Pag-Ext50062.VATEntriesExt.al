@@ -5,6 +5,11 @@ pageextension 50062 "VAT Entries Ext" extends "VAT Entries"
         // Add changes to page layout here
         addafter("Bill-to/Pay-to No.")
         {
+            field("External Document No."; "External Document No.")
+            {
+                ApplicationArea = All;
+            }
+
             field("Customer Name"; "Customer Name")
             {
                 ApplicationArea = All;
