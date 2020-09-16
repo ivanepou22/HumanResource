@@ -50,6 +50,11 @@ page 50064 "Posted Bank Acc Rec. Header"
                 {
                     ApplicationArea = All;
                 }
+                field("Previous Uncleared Difference"; "Previous Uncleared Difference" - PositiveNegativeDifferences)
+                {
+                    ApplicationArea = All;
+                }
+
                 Field("Ending Balance"; EndingBalance)
                 {
                     ApplicationArea = All;

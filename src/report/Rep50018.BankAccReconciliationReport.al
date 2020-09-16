@@ -29,6 +29,7 @@ report 50018 "Bank Acc Reconciliation Report"
             Column(StatementType_BankAccReconciliation; "Bank Acc. Reconciliation"."Statement Type") { }
             Column(PreviousUnclearedDifference_BankAccReconciliation; "Bank Acc. Reconciliation"."Previous Uncleared Difference") { }
             Column(Print; Print) { }
+            column(Total_Difference; "Total Difference") { }
             Column(CheckPrinting; CheckPrinting) { }
             Column(DepositPrinting; DepositPrinting) { }
             Column(DifferencePrinting; DifferencePrinting) { }

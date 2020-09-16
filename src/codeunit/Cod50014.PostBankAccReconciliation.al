@@ -270,7 +270,7 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
                 // V1.0.0 Tracking Outstanding Checks and Outstanding Deposits
                 // Statement Type,Bank Account No.,Statement No.
                 PostedBankReconciliation.RESET;
-                PostedBankReconciliation.SETRANGE("Statement Type 2", PostedBankReconciliation."Statement Type 2"::"Posted Bank Reconciliation");
+                PostedBankReconciliation.SETRANGE("Statement Type", PostedBankReconciliation."Statement Type"::"Payment Application");
                 PostedBankReconciliation.SETRANGE("Bank Account No.", BankAccLedgEntry."Bank Account No.");
                 PostedBankReconciliation.SETFILTER("Statement No.", '<>%1', BankAccReconLine."Statement No.");
                 IF PostedBankReconciliation.FINDLAST THEN
@@ -711,7 +711,7 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
     begin
         IF BankAccountLedgerEntry.GET(BankAccountReconciliationLine."Applied Entry") THEN BEGIN
             BankReconciliationLine.RESET;
-            BankReconciliationLine.SETRANGE("Statement Type 2", BankReconciliationLine."Statement Type 2"::"Posted Bank Reconciliation");
+            BankReconciliationLine.SETRANGE("Statement Type", BankReconciliationLine."Statement Type"::"Payment Application");
             BankReconciliationLine.SETRANGE("Statement No.", BankAccountReconciliationLine."Statement No.");
             BankReconciliationLine.SETFILTER("Statement Line No.", '<>%1', BankAccountReconciliationLine."Statement Line No.");
             BankReconciliationLine.SETRANGE("Applied Entry", BankAccountReconciliationLine."Applied Entry");
@@ -791,7 +791,7 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
             UNTIL CashBook.NEXT = 0;
 
         ReconciliationLine2.RESET;
-        ReconciliationLine2.SETRANGE("Statement Type", ReconciliationLine2."Statement Type 2"::"Posted Bank Reconciliation");
+        ReconciliationLine2.SETRANGE("Statement Type", ReconciliationLine2."Statement Type"::"Payment Application");
         ReconciliationLine2.SETRANGE(ReconciliationLine2."Bank Account No.", BankAccountReconciliation."Bank Account No.");
         ReconciliationLine2.SETFILTER(ReconciliationLine2."Statement No.", '<>%1', BankAccountReconciliation."Statement No.");
         ReconciliationLine2.SETRANGE(ReconciliationLine2.Type, ReconciliationLine2.Type::Difference);
@@ -804,7 +804,7 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
             UNTIL ReconciliationLine2.NEXT = 0;
 
         ReconciliationLine2.RESET;
-        ReconciliationLine2.SETRANGE("Statement Type", ReconciliationLine2."Statement Type 2"::"Posted Bank Reconciliation");
+        ReconciliationLine2.SETRANGE("Statement Type", ReconciliationLine2."Statement Type"::"Payment Application");
         ReconciliationLine2.SETRANGE(ReconciliationLine2."Bank Account No.", BankAccountReconciliation."Bank Account No.");
         ReconciliationLine2.SETFILTER(ReconciliationLine2."Statement No.", '<>%1', BankAccountReconciliation."Statement No.");
         ReconciliationLine2.SETRANGE(ReconciliationLine2.Type, ReconciliationLine2.Type::Difference);

@@ -121,7 +121,7 @@ pageextension 50058 "Bank Acc. Reconciliation Ext" extends "Bank Acc. Reconcilia
                     ApplicationArea = All;
                     Caption = 'Bank Acc. Reconciliation Detailed Report';
                     Promoted = true;
-                    PromotedCategory = Process;
+                    PromotedCategory = Report;
                     PromotedIsBig = true;
                     Image = Reconcile;
                     trigger OnAction()
@@ -139,7 +139,7 @@ pageextension 50058 "Bank Acc. Reconciliation Ext" extends "Bank Acc. Reconcilia
                     ApplicationArea = All;
                     Caption = 'Bank Acc. Reconciliation Summary Report';
                     Promoted = true;
-                    PromotedCategory = Process;
+                    PromotedCategory = Report;
                     PromotedIsBig = true;
                     Image = Receipt;
                     trigger OnAction()
