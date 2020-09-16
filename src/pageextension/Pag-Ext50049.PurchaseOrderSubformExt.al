@@ -5,6 +5,7 @@ pageextension 50049 "Purchase Order Subform Ext" extends "Purchase Order Subform
         // Add changes to page layout here
         addafter("Expected Receipt Date")
         {
+
             field("VAT Bus. Posting Group"; "VAT Bus. Posting Group")
             {
                 ApplicationArea = All;
@@ -29,16 +30,10 @@ pageextension 50049 "Purchase Order Subform Ext" extends "Purchase Order Subform
                 ApplicationArea = All;
             }
 
-            field("Buy-from Vendor No."; "Buy-from Vendor No.")
-            {
-                ApplicationArea = All;
-            }
-            field("Pay-to Vendor No."; "Pay-to Vendor No.")
-            {
-                ApplicationArea = All;
-            }
-
-
+        }
+        modify("Unit Cost (LCY)")
+        {
+            Editable = false;
         }
     }
 
