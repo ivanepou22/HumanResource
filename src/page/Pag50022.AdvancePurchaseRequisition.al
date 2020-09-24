@@ -530,6 +530,9 @@ page 50022 "Advance Purchase Requisition"
                 action("Co&mments")
                 {
                     ApplicationArea = All;
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    PromotedIsBig = true;
                     Image = ViewComments;
                     RunObject = page "Purch. Comment Sheet";
                     RunPageLink = "Document Type" = FIELD("Document Type"), "No." = FIELD("No."), "Document Line No." = CONST(0);
@@ -622,10 +625,11 @@ page 50022 "Advance Purchase Requisition"
                 action(Comment)
                 {
                     ApplicationArea = All;
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    PromotedIsBig = true;
                     Visible = OpenApprovalEntriesExistForCurrUser;
                     Caption = 'Caption';
-                    Promoted = true;
-                    PromotedCategory = Category4;
                     Image = ViewComments;
                     RunObject = Page "Approval Comments";
                     RunPageLink = "Table ID" = CONST(38), "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
@@ -782,6 +786,7 @@ page 50022 "Advance Purchase Requisition"
                     Promoted = true;
                     PromotedCategory = Process;
                     Image = CopyDocument;
+                    Visible = false;
                     Ellipsis = true;
                     trigger OnAction()
                     begin

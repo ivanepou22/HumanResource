@@ -528,6 +528,9 @@ page 50048 "Cash Requisition"
                 action("Co&mments")
                 {
                     ApplicationArea = All;
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    PromotedIsBig = true;
                     Image = ViewComments;
                     RunObject = page "Purch. Comment Sheet";
                     RunPageLink = "Document Type" = FIELD("Document Type"), "No." = FIELD("No."), "Document Line No." = CONST(0);
@@ -621,9 +624,10 @@ page 50048 "Cash Requisition"
                 {
                     ApplicationArea = All;
                     Visible = OpenApprovalEntriesExistForCurrUser;
-                    Caption = 'Caption';
+                    Caption = 'Comment';
                     Promoted = true;
-                    PromotedCategory = Category4;
+                    PromotedCategory = Process;
+                    PromotedIsBig = true;
                     Image = ViewComments;
                     RunObject = Page "Approval Comments";
                     RunPageLink = "Table ID" = CONST(38), "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
@@ -779,6 +783,7 @@ page 50048 "Cash Requisition"
                     Caption = 'Copy Document';
                     Promoted = true;
                     PromotedCategory = Process;
+                    Visible = false;
                     Image = CopyDocument;
                     Ellipsis = true;
                     trigger OnAction()
