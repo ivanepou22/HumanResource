@@ -33,9 +33,15 @@ page 50024 "Purchase Req Subform"
                     trigger OnValidate()
                     var
                         myInt: Integer;
+                        item: Record Item;
                     begin
                         ShowShortcutDimCode(ShortcutDimCode);
                         NoOnAfterValidate;
+
+                        if "No." <> xRec."No." then begin
+                            item.Get("No.");
+                            "Item Vendor No." := item."Vendor Item No."
+                        end;
 
                         IF xRec."No." <> '' THEN
                             RedistributeTotalsOnAfterValidate;
@@ -45,6 +51,12 @@ page 50024 "Purchase Req Subform"
                 {
                     ApplicationArea = All;
                 }
+                field("Item Vendor No."; "Item Vendor No.")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Vendor Item No.';
+                }
+
                 Field("Cross-Reference No."; "Cross-Reference No.")
                 {
                     ApplicationArea = All;

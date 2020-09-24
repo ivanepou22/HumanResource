@@ -28,7 +28,7 @@
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.79861in</Width>
+                  <Width>0.61111in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.61111in</Width>
@@ -589,7 +589,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.71113in</Size>
+                    <Size>0.94611in</Size>
                     <CellContents>
                       <Textbox Name="Textbox15">
                         <CanGrow>true</CanGrow>
@@ -622,7 +622,7 @@
                             <Width>1pt</Width>
                           </BottomBorder>
                           <RightBorder>
-                            <Color>White</Color>
+                            <Color>Black</Color>
                           </RightBorder>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -668,7 +668,7 @@
                                 <Width>1pt</Width>
                               </BottomBorder>
                               <LeftBorder>
-                                <Color>White</Color>
+                                <Color>Black</Color>
                               </LeftBorder>
                               <RightBorder>
                                 <Color>White</Color>
@@ -700,7 +700,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>0.71113in</Size>
+                    <Size>0.94611in</Size>
                     <CellContents>
                       <Textbox Name="No">
                         <CanGrow>true</CanGrow>
@@ -727,7 +727,7 @@
                             <Style>Solid</Style>
                           </Border>
                           <RightBorder>
-                            <Color>White</Color>
+                            <Color>Black</Color>
                           </RightBorder>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -767,7 +767,7 @@
                                 <Style>Solid</Style>
                               </Border>
                               <LeftBorder>
-                                <Color>White</Color>
+                                <Color>Black</Color>
                               </LeftBorder>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -791,7 +791,7 @@
             <Top>0.06944in</Top>
             <Left>0.25694in</Left>
             <Height>0.40973in</Height>
-            <Width>7.72335in</Width>
+            <Width>7.77083in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

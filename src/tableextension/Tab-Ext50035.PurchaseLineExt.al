@@ -360,6 +360,10 @@ tableextension 50035 "Purchase Line Ext" extends "Purchase Line"
         {
             TableRelation = "Gen. Journal Batch".Name WHERE("Template Type" = CONST(Payments));
         }
+        field(50955; "Item Vendor No."; Code[30])
+        {
+            Editable = false;
+        }
     }
 
 

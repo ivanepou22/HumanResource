@@ -896,6 +896,7 @@ report 50006 "Process Payroll"
         PostingDate: Date;
         DocumentNo: Code[20];
         BasicSalary: Decimal;
+        ExternalTaxable: Decimal;
         TotalTaxableEarnings: Decimal;
         TotalEarnings: Decimal;
         TotalPreTaxDeductions: Decimal;
@@ -1682,13 +1683,13 @@ report 50006 "Process Payroll"
                     END ELSE
                         IF DeductionPreSSF."Amount Basis" = DeductionPreSSF."Amount Basis"::"Range Table" THEN BEGIN
                             IF DeductionPreSSF."Range Table Basis" = DeductionPreSSF."Range Table Basis"::"Basic Pay" THEN BEGIN
-                                DeductionAmountB := GetAmountFromRangeTable(DeductionPreSSF."Range Table Code", BasicSalary);
+                                DeductionAmountB := GetAmountFromRangeTable(DeductionPreSSF."Range Table Code", BasicSalary, EmployeeRec."Tax Percentage");
                             END ELSE
                                 IF DeductionPreSSF."Range Table Basis" = DeductionPreSSF."Range Table Basis"::"Gross Pay" THEN BEGIN
-                                    DeductionAmountB := GetAmountFromRangeTable(DeductionPreSSF."Range Table Code", BasicSalary + TotalEarnings);
+                                    DeductionAmountB := GetAmountFromRangeTable(DeductionPreSSF."Range Table Code", BasicSalary + TotalEarnings, EmployeeRec."Tax Percentage");
                                 END ELSE
                                     IF DeductionPreSSF."Range Table Basis" = DeductionPreSSF."Range Table Basis"::"Taxable Pay" THEN BEGIN
-                                        DeductionAmountB := GetAmountFromRangeTable(DeductionPreSSF."Range Table Code", BasicSalary + TotalTaxableEarnings);
+                                        DeductionAmountB := GetAmountFromRangeTable(DeductionPreSSF."Range Table Code", BasicSalary + TotalTaxableEarnings, EmployeeRec."Tax Percentage");
                                     END;
                         END ELSE BEGIN
                             IF DeductionPreSSF."Is SS Contribution" THEN BEGIN
@@ -1733,13 +1734,13 @@ report 50006 "Process Payroll"
                     END ELSE
                         IF Deductions."Amount Basis" = Deductions."Amount Basis"::"Range Table" THEN BEGIN
                             IF Deductions."Range Table Basis" = Deductions."Range Table Basis"::"Basic Pay" THEN BEGIN
-                                DeductionAmount := GetAmountFromRangeTable(Deductions."Range Table Code", BasicSalary);
+                                DeductionAmount := GetAmountFromRangeTable(Deductions."Range Table Code", BasicSalary, EmployeeRec."Tax Percentage");
                             END ELSE
                                 IF Deductions."Range Table Basis" = Deductions."Range Table Basis"::"Gross Pay" THEN BEGIN
-                                    DeductionAmount := GetAmountFromRangeTable(Deductions."Range Table Code", BasicSalary + TotalEarnings);
+                                    DeductionAmount := GetAmountFromRangeTable(Deductions."Range Table Code", BasicSalary + TotalEarnings, EmployeeRec."Tax Percentage");
                                 END ELSE
                                     IF Deductions."Range Table Basis" = Deductions."Range Table Basis"::"Taxable Pay" THEN BEGIN
-                                        DeductionAmount := GetAmountFromRangeTable(Deductions."Range Table Code", BasicSalary + TotalTaxableEarnings);
+                                        DeductionAmount := GetAmountFromRangeTable(Deductions."Range Table Code", BasicSalary + TotalTaxableEarnings, EmployeeRec."Tax Percentage");
                                     END;
                         END ELSE BEGIN
                             IF Deductions."Is SS Contribution" THEN
@@ -1765,13 +1766,13 @@ report 50006 "Process Payroll"
                         ELSE
                             IF Deductions."Employer Amount Basis" = Deductions."Employer Amount Basis"::"Range Table" THEN BEGIN
                                 IF Deductions."Employer Range Table Basis" = Deductions."Employer Range Table Basis"::"Basic Pay" THEN
-                                    DeductionAmountEmployer := GetAmountFromRangeTable(Deductions."Employer Range Table Code", BasicSalary)
+                                    DeductionAmountEmployer := GetAmountFromRangeTable(Deductions."Employer Range Table Code", BasicSalary, EmployeeRec."Tax Percentage")
                                 ELSE
                                     IF Deductions."Employer Range Table Basis" = Deductions."Employer Range Table Basis"::"Gross Pay" THEN
-                                        DeductionAmountEmployer := GetAmountFromRangeTable(Deductions."Employer Range Table Code", BasicSalary + TotalEarnings)
+                                        DeductionAmountEmployer := GetAmountFromRangeTable(Deductions."Employer Range Table Code", BasicSalary + TotalEarnings, EmployeeRec."Tax Percentage")
                                     ELSE
                                         IF Deductions."Employer Range Table Basis" = Deductions."Employer Range Table Basis"::"Taxable Pay" THEN
-                                            DeductionAmountEmployer := GetAmountFromRangeTable(Deductions."Employer Range Table Code", BasicSalary + TotalTaxableEarnings);
+                                            DeductionAmountEmployer := GetAmountFromRangeTable(Deductions."Employer Range Table Code", BasicSalary + TotalTaxableEarnings, EmployeeRec."Tax Percentage");
                             END ELSE BEGIN
                                 DeductionAmountEmployer := ROUND((BasisAmount * EmployeeDeductions."Employer Percentage" * 0.01), 0.001, '='); //change
                             END;
@@ -1982,13 +1983,13 @@ report 50006 "Process Payroll"
                     END ELSE
                         IF Deductions1."Amount Basis" = Deductions1."Amount Basis"::"Range Table" THEN BEGIN
                             IF Deductions1."Range Table Basis" = Deductions1."Range Table Basis"::"Basic Pay" THEN BEGIN
-                                DeductionAmountA := GetAmountFromRangeTable(Deductions1."Range Table Code", BasicSalary);
+                                DeductionAmountA := GetAmountFromRangeTable(Deductions1."Range Table Code", BasicSalary, EmployeeRec."Tax Percentage");
                             END ELSE
                                 IF Deductions1."Range Table Basis" = Deductions1."Range Table Basis"::"Gross Pay" THEN BEGIN
-                                    DeductionAmountA := GetAmountFromRangeTable(Deductions1."Range Table Code", BasicSalary + TotalEarnings);
+                                    DeductionAmountA := GetAmountFromRangeTable(Deductions1."Range Table Code", BasicSalary + TotalEarnings, EmployeeRec."Tax Percentage");
                                 END ELSE
                                     IF Deductions1."Range Table Basis" = Deductions1."Range Table Basis"::"Taxable Pay" THEN BEGIN
-                                        DeductionAmountA := GetAmountFromRangeTable(Deductions1."Range Table Code", BasicSalary + TotalTaxableEarnings);
+                                        DeductionAmountA := GetAmountFromRangeTable(Deductions1."Range Table Code", BasicSalary + TotalTaxableEarnings, EmployeeRec."Tax Percentage");
                                     END
                         END ELSE BEGIN
                             DeductionAmountA := ROUND((BasisAmount * EmployeeDeductions1.Percentage * 0.01), 0.001, '='); //change
@@ -2310,7 +2311,7 @@ report 50006 "Process Payroll"
         TaxableAmountLCY: Decimal;
     begin
         HRSetup.GET;
-        IncomeTax := GetAmountFromRangeTable(HRSetup."Income Tax Range Table Code", BasicSalary + TotalTaxableEarnings - TotalPreTaxDeductions);
+        IncomeTax := GetAmountFromRangeTable(HRSetup."Income Tax Range Table Code", BasicSalary + TotalTaxableEarnings - TotalPreTaxDeductions, EmployeeRec."Tax Percentage");
         IF IncomeTax <> 0 THEN BEGIN
             IF ProcessingOption = ProcessingOption::"Generate Payroll Journals" THEN BEGIN
                 IF HRSetup."Tax Payable Posting Type" = HRSetup."Tax Payable Posting Type"::Individual THEN BEGIN
@@ -2342,7 +2343,7 @@ report 50006 "Process Payroll"
         TaxableAmountLCY: Decimal;
     begin
         HRSetup.GET;
-        LocalTax := GetAmountFromRangeTable(HRSetup."Local Tax Range Table Code", BasicSalary + TotalTaxableEarnings - TotalPreTaxDeductions - IncomeTax);
+        LocalTax := GetAmountFromRangeTable(HRSetup."Local Tax Range Table Code", BasicSalary + TotalTaxableEarnings - TotalPreTaxDeductions - IncomeTax, EmployeeRec."Tax Percentage");
         IF LocalTax <> 0 THEN BEGIN
             IF ProcessingOption = ProcessingOption::"Generate Payroll Journals" THEN BEGIN
                 IF HRSetup."Tax Payable Posting Type" = HRSetup."Tax Payable Posting Type"::Individual THEN BEGIN
@@ -2476,7 +2477,7 @@ report 50006 "Process Payroll"
     end;
 
     //================================
-    procedure GetAmountFromRangeTable(RangeTableCode: Code[10]; BasisAmount: Decimal) Amount: Decimal
+    procedure GetAmountFromRangeTable(RangeTableCode: Code[10]; BasisAmount: Decimal; TaxPercentange: Decimal) Amount: Decimal
     var
         RefRangeTable: Record Confidential;
         RefRangeTableLine: Record Confidential;
@@ -2496,31 +2497,31 @@ report 50006 "Process Payroll"
                 ExitLoop := FALSE;
                 REPEAT
                     IF RefRangeTable."Cumml. Process Range Table" THEN BEGIN
-                        IF (RefRangeTableLine."From Amount" <= BasisAmount) THEN BEGIN
-                            IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::"Fixed Amount" THEN
-                                Amount := Amount + RefRangeTableLine."Fixed Amount"
-                            ELSE
-                                IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::Percentage THEN BEGIN
-                                    IF (RefRangeTableLine."To Amount" > BasisAmount) THEN
-                                        Amount := Amount + ROUND(((BasisAmount - PreviousUpperLimit) * RefRangeTableLine."Range Percentage" * 0.01), 0.001, '=') //change
-                                    ELSE
-                                        Amount := Amount + ROUND(((RefRangeTableLine."To Amount" - PreviousUpperLimit) *
-                                                            RefRangeTableLine."Range Percentage" * 0.01), 0.001, '='); //change
-                                END;
-                            IF (RefRangeTableLine."To Amount" > BasisAmount) THEN
-                                ExitLoop := TRUE;
-                        END;
-                        PreviousUpperLimit := RefRangeTableLine."To Amount";
-                    END ELSE BEGIN
+                        if (TaxPercentange = 0) then begin
+                            IF (RefRangeTableLine."From Amount" <= BasisAmount) THEN BEGIN
+                                IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::"Fixed Amount" THEN
+                                    Amount := Amount + RefRangeTableLine."Fixed Amount"
+                                ELSE
+                                    IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::Percentage THEN BEGIN
+                                        IF (RefRangeTableLine."To Amount" > BasisAmount) THEN
+                                            Amount := Amount + ROUND(((BasisAmount - PreviousUpperLimit) * RefRangeTableLine."Range Percentage" * 0.01), 0.001, '=') //change
+                                        ELSE
+                                            Amount := Amount + ROUND(((RefRangeTableLine."To Amount" - PreviousUpperLimit) * RefRangeTableLine."Range Percentage" * 0.01), 0.001, '='); //change
+                                    END;
+                                IF (RefRangeTableLine."To Amount" > BasisAmount) THEN ExitLoop := TRUE;
+                            END;
+                            PreviousUpperLimit := RefRangeTableLine."To Amount";
+                        end else begin
+                            Amount := Round((BasisAmount * TaxPercentange) / 100, 0.001, '=');
+                        end;                      //
+                    END
+                    ELSE BEGIN
                         IF (RefRangeTableLine."From Amount" <= BasisAmount) AND (RefRangeTableLine."To Amount" >= BasisAmount) THEN BEGIN
                             IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::"Fixed Amount" THEN
                                 Amount := RefRangeTableLine."Fixed Amount"
                             ELSE
-                                IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::Percentage THEN
-                                    Amount := ROUND((BasisAmount * RefRangeTableLine."Range Percentage" * 0.01), 0.001, '='); //change
-
-                            IF (RefRangeTableLine."To Amount" > BasisAmount) THEN
-                                ExitLoop := TRUE;
+                                IF RefRangeTableLine.Basis = RefRangeTableLine.Basis::Percentage THEN Amount := ROUND((BasisAmount * RefRangeTableLine."Range Percentage" * 0.01), 0.001, '='); //change
+                            IF (RefRangeTableLine."To Amount" > BasisAmount) THEN ExitLoop := TRUE;
                         END;
                     END;
                 UNTIL (RefRangeTableLine.NEXT = 0) OR ExitLoop

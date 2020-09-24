@@ -278,6 +278,11 @@ pageextension 50012 "Employee Card Ext" extends "Employee Card"
                     ApplicationArea = All;
                     Visible = ViewBasicSalary;
                 }
+                field("Tax Percentage"; "Tax Percentage")
+                {
+                    ApplicationArea = All;
+                    Visible = ViewBasicSalary;
+                }
 
                 field(Bank; Bank)
                 {

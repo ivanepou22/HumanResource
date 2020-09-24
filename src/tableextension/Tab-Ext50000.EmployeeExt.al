@@ -451,6 +451,11 @@ tableextension 50000 "EmployeeExt" extends Employee
         }
         field(50125; "Inactive From Date"; Date) { }
         field(50126; "Inactive To Date"; Date) { }
+        field(50127; "Tax Percentage"; Decimal)
+        {
+            MaxValue = 100;
+            MinValue = 0;
+        }
     }
 
     var
