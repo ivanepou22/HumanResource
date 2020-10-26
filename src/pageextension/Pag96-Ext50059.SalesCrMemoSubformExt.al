@@ -14,8 +14,14 @@ pageextension 50059 "Sales Cr. Memo Subform Ext" extends "Sales Cr. Memo Subform
             {
                 ApplicationArea = All;
             }
+        }
 
-
+        addafter("Location Code")
+        {
+            field("Employee No."; "Resource No.")
+            {
+                ApplicationArea = All;
+            }
         }
     }
 

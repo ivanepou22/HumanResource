@@ -30,6 +30,7 @@ report 50021 "Posted Bank Acc Recon Detail"
             Column(PreviousUnclearedDifference_BankAccReconciliation; "Bank Acc. Reconciliation"."Previous Uncleared Difference") { }
             Column(PostedUnclearedDifference_BankAccReconciliation; "Bank Acc. Reconciliation"."Posted Uncleared Difference") { }
             Column(PostedUncreditedDesposits_BankAccReconciliation; "Bank Acc. Reconciliation"."Posted Uncredited Desposits") { }
+            column(Posted_Prev__Uncleared_Diff_; "Posted Prev. Uncleared Diff." - "Posted Uncleared Difference") { }
             Column(Print; Print) { }
             Column(CheckPrinting; CheckPrinting) { }
             Column(DepositPrinting; DepositPrinting) { }
@@ -326,6 +327,35 @@ report 50021 "Posted Bank Acc Recon Detail"
                 end;
             }
 
+            //=============================================================
+            //Bank Acc. Reconciliation Line
+            dataitem(PrevDifferenceUncleared; "Bank Acc. Reconciliation Line")
+            {
+                DataItemLinkReference = "Bank Acc. Reconciliation";
+                DataItemLink = "Bank Account No." = FIELD("Bank Account No.");
+
+                Column(BankAccountNo_PrevDifferenceUncleared; PrevDifferenceUncleared."Bank Account No.") { }
+                Column(StatementNo_PrevDifferenceUncleared; PrevDifferenceUncleared."Statement No.") { }
+                Column(StatementLineNo_PrevDifferenceUncleared; PrevDifferenceUncleared."Statement Line No.") { }
+                Column(DocumentNo_PrevDifferenceUncleared; PrevDifferenceUncleared."Document No.") { }
+                Column(TransactionDate_PrevDifferenceUncleared; PrevDifferenceUncleared."Transaction Date") { }
+                Column(Description_PrevDifferenceUncleared; PrevDifferenceUncleared.Description) { }
+                Column(StatementAmount_PrevDifferenceUncleared; PrevDifferenceUncleared."Statement Amount") { }
+                Column(Difference_PrevDifferenceUncleared; PrevDifferenceUncleared.Difference) { }
+                Column(AppliedAmount_PrevDifferenceUncleared; PrevDifferenceUncleared."Applied Amount") { }
+
+                trigger OnPreDataItem()
+                var
+                    myInt: Integer;
+                begin
+                    PrevDifferenceUncleared.SetRange("Statement Type", PrevDifferenceUncleared."Statement Type"::"Payment Application");
+                    PrevDifferenceUncleared.SetFilter("Transaction Date", '<%1', "Bank Acc. Reconciliation"."Statement Date");
+                    PrevDifferenceUncleared.SetRange(Type, PrevDifferenceUncleared.Type::Difference);
+                    PrevDifferenceUncleared.SetRange(PrevDifferenceUncleared.Cleared, false);
+                    PrevDifferenceUncleared.SetFilter(PrevDifferenceUncleared."Statement No.", '<>%1', "Bank Acc. Reconciliation"."Statement No.");
+                end;
+            }
+            //=============================================================
 
             trigger OnPreDataItem()
             var

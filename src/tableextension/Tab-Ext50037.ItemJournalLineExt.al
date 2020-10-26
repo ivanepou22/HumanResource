@@ -3,10 +3,65 @@ tableextension 50037 "Item Journal Line Ext" extends "Item Journal Line"
     fields
     {
         // Add changes to table fields here
+        field(50000; "Equipment/Vehicle No"; Code[50])
+        {
+            TableRelation = "Fixed Asset";
+        }
+        field(50010; "Equipment/Vehicle Name"; Text[150])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup ("Fixed Asset".Description where("No." = field("Equipment/Vehicle No")));
+        }
+        field(50020; "User ID"; Code[50])
+        {
+        }
+        field(50030; "Requested By"; Code[150])
+        {
+        }
+
+        field(50040; "Authorized By"; Code[50])
+        {
+            TableRelation = User."User Name";
+            ValidateTableRelation = false;
+        }
+
+        field(50050; "Issued By"; Code[50])
+        {
+            TableRelation = User."User Name";
+            ValidateTableRelation = false;
+        }
+        field(50060; "Qty Requested"; Decimal)
+        {
+
+        }
     }
 
     var
         ItemJournalLineTemp: Record "Item Journal Line";
+
+
+    trigger OnInsert()
+    var
+        myInt: Integer;
+    begin
+        "User ID" := UserId;
+        "Issued By" := UserId;
+        "Qty Requested" := Quantity;
+    end;
+
+    trigger OnModify()
+    var
+        myInt: Integer;
+    begin
+        if Quantity <> xRec.Quantity then begin
+            if xRec.Quantity = 0 then begin
+                "Qty Requested" := Quantity;
+            end
+            else begin
+                "Qty Requested" := xRec.Quantity;
+            end;
+        end;
+    end;
 
     procedure TransferJournalToInventory(ItemJnlLine: Record "Item Journal Line")
     var

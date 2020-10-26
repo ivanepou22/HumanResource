@@ -30,6 +30,7 @@ report 50020 "Posted Bank Acc Recon Summary"
             Column(PreviousUnclearedDifference_BankAccReconciliation; "Bank Acc. Reconciliation"."Previous Uncleared Difference") { }
             Column(PostedUnclearedDifference_BankAccReconciliation; "Bank Acc. Reconciliation"."Posted Uncleared Difference") { }
             Column(PostedUncreditedDesposits_BankAccReconciliation; "Bank Acc. Reconciliation"."Posted Uncredited Desposits") { }
+            column(Posted_Prev__Uncleared_Diff_; "Posted Prev. Uncleared Diff." - "Posted Uncleared Difference") { }
             column(Total_Difference; "Total Difference") { }
             Column(Print; Print) { }
             Column(CheckPrinting; CheckPrinting) { }

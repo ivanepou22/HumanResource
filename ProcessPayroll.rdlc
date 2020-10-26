@@ -247,7 +247,7 @@
                   <Width>0.70834in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.53646in</Width>
+                  <Width>0.82813in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.75in</Width>
@@ -9897,6 +9897,7 @@
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>7pt</FontSize>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -14520,304 +14521,100 @@
                 <TablixMember />
                 <TablixMember>
                   <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_1.Value) = 0, True, False)</Hidden>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
                   </Visibility>
                 </TablixMember>
                 <TablixMember>
                   <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_2.Value) = 0, True, False)</Hidden>
+                    <Hidden>true</Hidden>
                   </Visibility>
                 </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_3.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_4.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_5.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_6.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_7.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_8.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_9.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_10.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_11.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_12.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_13.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_14.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_15.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_16.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_17.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_18.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_19.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_20.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_21.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_22.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_23.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_24.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_25.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_26.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_27.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_28.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_29.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_30.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_31.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_32.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_33.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_34.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_35.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_36.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_37.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_38.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_39.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_40.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_41.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_42.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_43.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_44.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_45.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_46.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_47.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_48.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_49.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_50.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_51.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_52.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_53.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_54.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_55.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_56.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_57.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_58.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_59.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!EarningAmountToShow_60.Value) = 0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
+                <TablixMember />
+                <TablixMember />
                 <TablixMember>
                   <Visibility>
                     <Hidden>=IIF(Sum(Fields!EarningAmountToShow_61.Value) = 0, True, False)</Hidden>
@@ -14846,108 +14643,28 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>true</Hidden>
-                  </Visibility>
-                </TablixMember>
                 <TablixMember />
                 <TablixMember />
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_1.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_2.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_3.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_4.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_5.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_6.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_7.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_8.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_9.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_10.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_11.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_12.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_13.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_14.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_15.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_16.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_17.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_18.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_19.Value) =0, True, False)</Hidden>
-                  </Visibility>
-                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
                 <TablixMember>
                   <Visibility>
                     <Hidden>=IIF(Sum(Fields!DeductionAmountToShow_20.Value) =0, True, False)</Hidden>
@@ -14980,7 +14697,7 @@
             <Top>1.62898in</Top>
             <Left>0.5in</Left>
             <Height>1.11458in</Height>
-            <Width>85.48504in</Width>
+            <Width>85.77671in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -15989,7 +15706,7 @@
         <Height>3.95363in</Height>
         <Style />
       </Body>
-      <Width>85.98504in</Width>
+      <Width>86.27671in</Width>
       <Page>
         <Style />
       </Page>

@@ -11,6 +11,7 @@ pageextension 50024 "Sales Order Ext" extends "Sales Order"
             }
 
         }
+
         addafter("Posting Description")
         {
             field("Truck No."; "Truck No.")
@@ -57,6 +58,7 @@ pageextension 50024 "Sales Order Ext" extends "Sales Order"
 
                 trigger OnAction()
                 begin
+                    Rec.TestField("Branch Code");
                     PostDocumentModified(CODEUNIT::"Sales-Post Modified", NavigateAfterPost::"Posted Document");
                 end;
             }
@@ -69,6 +71,7 @@ pageextension 50024 "Sales Order Ext" extends "Sales Order"
                 PromotedIsBig = true;
                 RunObject = report "Create POS";
                 Image = Sales;
+                Visible = false;
                 trigger OnAction()
                 begin
 

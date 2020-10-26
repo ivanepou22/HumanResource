@@ -108,5 +108,19 @@ pageextension 50000 "Payment Journal Ext" extends "Payment Journal"
     }
 
     var
-        myInt: Integer;
+        JournalBatch: Record "Gen. Journal Batch";
+        ASL001: Label 'Your not Allow to Access %1 Journal. Please Contact Your Administrator.';
+
+    trigger OnOpenPage()
+    begin
+        JournalBatch.Reset();
+        JournalBatch.SetRange(JournalBatch.Name, Rec."Journal Batch Name");
+        if JournalBatch.FindFirst() then begin
+            if JournalBatch."Batch User" <> '' then begin
+                if JournalBatch."Batch User" <> UserId then begin
+                    Error(ASL001, JournalBatch.Name);
+                end;
+            end;
+        end;
+    end;
 }

@@ -808,7 +808,7 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
         ReconciliationLine2.SETRANGE(ReconciliationLine2."Bank Account No.", BankAccountReconciliation."Bank Account No.");
         ReconciliationLine2.SETFILTER(ReconciliationLine2."Statement No.", '<>%1', BankAccountReconciliation."Statement No.");
         ReconciliationLine2.SETRANGE(ReconciliationLine2.Type, ReconciliationLine2.Type::Difference);
-        ReconciliationLine2.SETRANGE(ReconciliationLine2.Cleared, TRUE);
+        ReconciliationLine2.SETRANGE(ReconciliationLine2.Cleared, false);
         ReconciliationLine2.SETFILTER(ReconciliationLine2."Cleared Date", '<=%1', BankAccountReconciliation."Statement Date");
         IF ReconciliationLine2.FINDFIRST THEN
             REPEAT

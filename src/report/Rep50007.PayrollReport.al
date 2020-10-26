@@ -490,6 +490,11 @@ report 50007 "Payroll Report"
                                         TaxablePay -= ResLedgerEntry.Amount;
                                         TotalPretaxDeductions += ResLedgerEntry.Amount;
                                     END;
+                                    IF (ResLedgerEntry."ED Code" = 'NSSF') OR (ResLedgerEntry."ED Code" = 'NSSF-ADMIN')
+                                    OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') then begin
+                                        RSSF := ResLedgerEntry.Amount;
+                                        RSSFEmployer := ResLedgerEntry."Employer Amount (LCY)";
+                                    end;
                                 END ELSE
                                     IF ResLedgerEntry."Payroll Entry Type" = ResLedgerEntry."Payroll Entry Type"::"Income Tax" THEN BEGIN
                                         PAYE := ResLedgerEntry.Amount;

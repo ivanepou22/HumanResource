@@ -11,6 +11,88 @@
       <rd:DataSourceID>69e55f8e-09bd-4d37-9067-2f4bc6167223</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoCity">
+          <DataField>CompanyInfoCity</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhoneNo">
+          <DataField>CompanyInfoPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyInfoCountryRegionCode">
+          <DataField>CompanyInfoCountryRegionCode</DataField>
+        </Field>
+        <Field Name="CompanyInfoEMail">
+          <DataField>CompanyInfoEMail</DataField>
+        </Field>
+        <Field Name="CompanyInfoHomePage">
+          <DataField>CompanyInfoHomePage</DataField>
+        </Field>
+        <Field Name="CompanyInfoPicture">
+          <DataField>CompanyInfoPicture</DataField>
+        </Field>
+        <Field Name="CompanyInfoPostCode">
+          <DataField>CompanyInfoPostCode</DataField>
+        </Field>
+        <Field Name="SelltoCustomerNo_SalesInvoiceLine">
+          <DataField>SelltoCustomerNo_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="ResourceNo_SalesInvoiceLine">
+          <DataField>ResourceNo_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_SalesInvoiceLine">
+          <DataField>DocumentNo_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Description_SalesInvoiceLine">
+          <DataField>Description_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesInvoiceLine">
+          <DataField>Amount_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="Amount_SalesInvoiceLineFormat">
+          <DataField>Amount_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_SalesInvoiceLine">
+          <DataField>AmountIncludingVAT_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT_SalesInvoiceLineFormat">
+          <DataField>AmountIncludingVAT_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="No_SalesInvoiceLine">
+          <DataField>No_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="UnitPrice_SalesInvoiceLine">
+          <DataField>UnitPrice_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="UnitPrice_SalesInvoiceLineFormat">
+          <DataField>UnitPrice_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="ResourceName">
+          <DataField>ResourceName</DataField>
+        </Field>
+        <Field Name="ShowDetails">
+          <DataField>ShowDetails</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1075,6 +1157,12 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1114,86 +1202,4 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="CompanyInfoName">
-          <DataField>CompanyInfoName</DataField>
-        </Field>
-        <Field Name="CompanyInfoAddress">
-          <DataField>CompanyInfoAddress</DataField>
-        </Field>
-        <Field Name="CompanyInfoAddress2">
-          <DataField>CompanyInfoAddress2</DataField>
-        </Field>
-        <Field Name="CompanyInfoCity">
-          <DataField>CompanyInfoCity</DataField>
-        </Field>
-        <Field Name="CompanyInfoPhoneNo">
-          <DataField>CompanyInfoPhoneNo</DataField>
-        </Field>
-        <Field Name="CompanyInfoCountryRegionCode">
-          <DataField>CompanyInfoCountryRegionCode</DataField>
-        </Field>
-        <Field Name="CompanyInfoEMail">
-          <DataField>CompanyInfoEMail</DataField>
-        </Field>
-        <Field Name="CompanyInfoHomePage">
-          <DataField>CompanyInfoHomePage</DataField>
-        </Field>
-        <Field Name="CompanyInfoPicture">
-          <DataField>CompanyInfoPicture</DataField>
-        </Field>
-        <Field Name="CompanyInfoPostCode">
-          <DataField>CompanyInfoPostCode</DataField>
-        </Field>
-        <Field Name="SelltoCustomerNo_SalesInvoiceLine">
-          <DataField>SelltoCustomerNo_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="ResourceNo_SalesInvoiceLine">
-          <DataField>ResourceNo_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="DocumentNo_SalesInvoiceLine">
-          <DataField>DocumentNo_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="Description_SalesInvoiceLine">
-          <DataField>Description_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="Amount_SalesInvoiceLine">
-          <DataField>Amount_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="Amount_SalesInvoiceLineFormat">
-          <DataField>Amount_SalesInvoiceLineFormat</DataField>
-        </Field>
-        <Field Name="AmountIncludingVAT_SalesInvoiceLine">
-          <DataField>AmountIncludingVAT_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="AmountIncludingVAT_SalesInvoiceLineFormat">
-          <DataField>AmountIncludingVAT_SalesInvoiceLineFormat</DataField>
-        </Field>
-        <Field Name="No_SalesInvoiceLine">
-          <DataField>No_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="UnitPrice_SalesInvoiceLine">
-          <DataField>UnitPrice_SalesInvoiceLine</DataField>
-        </Field>
-        <Field Name="UnitPrice_SalesInvoiceLineFormat">
-          <DataField>UnitPrice_SalesInvoiceLineFormat</DataField>
-        </Field>
-        <Field Name="CustomerName">
-          <DataField>CustomerName</DataField>
-        </Field>
-        <Field Name="ResourceName">
-          <DataField>ResourceName</DataField>
-        </Field>
-        <Field Name="ShowDetails">
-          <DataField>ShowDetails</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>

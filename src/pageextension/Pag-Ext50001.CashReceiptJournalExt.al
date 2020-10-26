@@ -107,4 +107,20 @@ pageextension 50001 "Cash Receipt Journal Ext" extends "Cash Receipt Journal"
         SalesCommentLine: Record "Voucher And Receipt";
         UserSetup: Record "User Setup";
         GenBatch: Record "Gen. Journal Batch";
+        JournalBatch: Record "Gen. Journal Batch";
+        ASL001: Label 'Your not Allow to Access %1 Journal. Please Contact Your Administrator.';
+
+
+    trigger OnOpenPage()
+    begin
+        JournalBatch.Reset();
+        JournalBatch.SetRange(JournalBatch.Name, Rec."Journal Batch Name");
+        if JournalBatch.FindFirst() then begin
+            if JournalBatch."Batch User" <> '' then begin
+                if JournalBatch."Batch User" <> UserId then begin
+                    Error(ASL001, JournalBatch.Name);
+                end;
+            end;
+        end;
+    end;
 }

@@ -35,6 +35,10 @@ pageextension 50049 "Purchase Order Subform Ext" extends "Purchase Order Subform
         {
             Editable = false;
         }
+        modify(Description)
+        {
+            Editable = EditDescription;
+        }
     }
 
     actions
@@ -43,5 +47,14 @@ pageextension 50049 "Purchase Order Subform Ext" extends "Purchase Order Subform
     }
 
     var
-        myInt: Integer;
+        EditDescription: Boolean;
+
+    trigger OnAfterGetRecord()
+    var
+    begin
+        if Rec.Type = Rec.Type::Item then
+            EditDescription := false
+        else
+            EditDescription := true;
+    end;
 }

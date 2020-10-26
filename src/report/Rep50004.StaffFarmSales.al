@@ -4,7 +4,7 @@ report 50004 "Staff Farm Sales"
     ApplicationArea = All;
     DefaultLayout = RDLC;
     RDLCLayout = 'StaffFarmSales.rdl';
-
+    //S_PIN_09246
     dataset
     {
         dataitem("Sales Invoice Line"; "Sales Invoice Line")
@@ -33,6 +33,24 @@ report 50004 "Staff Farm Sales"
             Column(ResourceName; ResourceName) { }
             Column(ShowDetails; ShowDetails) { }
 
+            dataitem(SalesCrMemoLine; "Sales Cr.Memo Line")
+            {
+                DataItemLinkReference = "Sales Invoice Line";
+                DataItemLink = "Document No." = field("Document No.");
+
+                column(SalesCrMemoLine_No; SalesCrMemoLine."No.")
+                {
+                }
+                column(SalesCrMemoLine_Amount; SalesCrMemoLine.Amount)
+                {
+                }
+                column(SalesCrMemoLine_AmountIncluduingVAT; SalesCrMemoLine."Amount Including VAT")
+                {
+
+                }
+            }
+
+
             //Triggers
             trigger OnAfterGetRecord()
             var
@@ -48,6 +66,7 @@ report 50004 "Staff Farm Sales"
                 IF Resource.FINDFIRST THEN
                     ResourceName := Resource.Name;
             end;
+
         }
     }
 

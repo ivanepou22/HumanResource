@@ -7,7 +7,6 @@ tableextension 50031 "Sales Line Ext" extends "Sales Line"
         {
             TableRelation = Resource."No." WHERE(Type = FILTER(Person));
         }
-
         //Pos modification.
         field(50000; Coded; Boolean) { }
         field(50010; "Line Profit"; Decimal) { }
@@ -39,7 +38,7 @@ tableextension 50031 "Sales Line Ext" extends "Sales Line"
         field(65200; "Available Quantities"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = Sum ("Item Ledger Entry".Quantity WHERE("Item No." = FIELD(UPPERLIMIT("No.")), "Location Code" = FIELD("Location Code")));
+            CalcFormula = Sum("Item Ledger Entry".Quantity WHERE("Item No." = FIELD(UPPERLIMIT("No.")), "Location Code" = FIELD("Location Code")));
         }
     }
 

@@ -27,6 +27,10 @@ pageextension 50006 "Sales Order Subform Ext" extends "Sales Order Subform"
             Editable = true;
             Enabled = true;
         }
+        modify(Description)
+        {
+            Editable = EditDescription;
+        }
     }
 
     actions
@@ -35,5 +39,14 @@ pageextension 50006 "Sales Order Subform Ext" extends "Sales Order Subform"
     }
 
     var
-        myInt: Integer;
+        EditDescription: Boolean;
+
+    trigger OnAfterGetRecord()
+    var
+    begin
+        if Rec.Type = Rec.Type::Item then
+            EditDescription := false
+        else
+            EditDescription := true;
+    end;
 }

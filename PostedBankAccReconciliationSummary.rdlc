@@ -2089,7 +2089,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!PreviousUnclearedDifference_BankAccReconciliation.Value-Fields!PostedUnclearedDifference_BankAccReconciliation.Value</Value>
+                                  <Value>=Fields!Posted_Prev__Uncleared_Diff_.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -2121,7 +2121,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -3797,6 +3796,12 @@ End Function
         </Field>
         <Field Name="PostedUncreditedDesposits_BankAccReconciliationFormat">
           <DataField>PostedUncreditedDesposits_BankAccReconciliationFormat</DataField>
+        </Field>
+        <Field Name="Posted_Prev__Uncleared_Diff_">
+          <DataField>Posted_Prev__Uncleared_Diff_</DataField>
+        </Field>
+        <Field Name="Posted_Prev__Uncleared_Diff_Format">
+          <DataField>Posted_Prev__Uncleared_Diff_Format</DataField>
         </Field>
         <Field Name="Total_Difference">
           <DataField>Total_Difference</DataField>

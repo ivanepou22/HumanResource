@@ -523,7 +523,8 @@ report 50008 "Payslip"
                                         TaxablePay -= ResLedgerEntry.Amount;
                                         TotalPretaxDeductions += ResLedgerEntry.Amount;
                                     END;
-                                    IF ResLedgerEntry."ED Code" = 'NSSF' THEN
+                                    IF (ResLedgerEntry."ED Code" = 'NSSF') OR (ResLedgerEntry."ED Code" = 'NSSF-ADMIN')
+                                    OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') THEN
                                         RSSF := ResLedgerEntry.Amount;
                                 END ELSE
                                     IF ResLedgerEntry."Payroll Entry Type" = ResLedgerEntry."Payroll Entry Type"::"Income Tax" THEN BEGIN

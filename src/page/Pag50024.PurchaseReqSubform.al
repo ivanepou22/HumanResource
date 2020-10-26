@@ -39,8 +39,10 @@ page 50024 "Purchase Req Subform"
                         NoOnAfterValidate;
 
                         if "No." <> xRec."No." then begin
-                            item.Get("No.");
-                            "Item Vendor No." := item."Vendor Item No."
+                            if Type = Type::Item then begin
+                                item.Get("No.");
+                                "Item Vendor No." := item."Vendor Item No."
+                            end;
                         end;
 
                         IF xRec."No." <> '' THEN
