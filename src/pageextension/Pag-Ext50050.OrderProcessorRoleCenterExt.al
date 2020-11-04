@@ -132,6 +132,31 @@ pageextension 50050 "OrderProcessor RoleCenter Ext" extends "Order Processor Rol
 
             }
         }
+        addafter("Inventory - Sales &Back Orders")
+        {
+
+            action("Seal Report")
+            {
+                ApplicationArea = All;
+                Caption = 'Seal Report';
+                RunObject = report "Seal Report";
+                Image = SerialNo;
+            }
+            action("Sales Return Report")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales Return Report';
+                RunObject = report "Sales Return Report";
+                Image = Report;
+            }
+            action("Sales - Return Reciept")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales - Return Reciept';
+                RunObject = report "Sales - Return Receipt";
+                Image = Report;
+            }
+        }
 
     }
 

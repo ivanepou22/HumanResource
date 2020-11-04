@@ -4,6 +4,7 @@ tableextension 50026 "CustomerExt" extends Customer
     {
         // Add changes to table fields here
         field(50000; "Allow Sale Beyond Credit limit"; Boolean) { }
+        field(50010; "TIN Mandatory"; Boolean) { }
     }
 
     var

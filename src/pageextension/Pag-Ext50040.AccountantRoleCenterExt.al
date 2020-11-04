@@ -286,12 +286,27 @@ pageextension 50040 "Accountant Role Center Ext" extends "Accountant Role Center
 
         addafter("Statement of Retained Earnings")
         {
+
             action("Seal Report")
             {
                 ApplicationArea = All;
                 Caption = 'Seal Report';
                 RunObject = report "Seal Report";
                 Image = SerialNo;
+            }
+            action("Sales Return Report")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales Return Report';
+                RunObject = report "Sales Return Report";
+                Image = Report;
+            }
+            action("Sales - Return Reciept")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales - Return Reciept';
+                RunObject = report "Sales - Return Receipt";
+                Image = Report;
             }
         }
     }

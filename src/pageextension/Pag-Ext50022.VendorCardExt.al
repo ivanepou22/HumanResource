@@ -13,6 +13,15 @@ pageextension 50022 "Vendor Card Ext" extends "Vendor Card"
             }
         }
 
+        addafter("Balance Due (LCY)")
+        {
+            field("TIN Mandatory"; "TIN Mandatory")
+            {
+                ApplicationArea = All;
+            }
+
+        }
+
         addfirst(Invoicing)
         {
             field("VAT Registration Nos."; "VAT Registration Nos.")

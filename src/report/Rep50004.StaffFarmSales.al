@@ -32,39 +32,39 @@ report 50004 "Staff Farm Sales"
             Column(CustomerName; CustomerName) { }
             Column(ResourceName; ResourceName) { }
             Column(ShowDetails; ShowDetails) { }
-
-            dataitem(SalesCrMemoLine; "Sales Cr.Memo Line")
-            {
-                DataItemLinkReference = "Sales Invoice Line";
-                DataItemLink = "Document No." = field("Document No.");
-
-                column(SalesCrMemoLine_No; SalesCrMemoLine."No.")
-                {
-                }
-                column(SalesCrMemoLine_Amount; SalesCrMemoLine.Amount)
-                {
-                }
-                column(SalesCrMemoLine_AmountIncluduingVAT; SalesCrMemoLine."Amount Including VAT")
-                {
-
-                }
-            }
-
-
+            column(PostedCreditMemoAmount; PostedCreditMemoAmount) { }
             //Triggers
             trigger OnAfterGetRecord()
             var
                 myInt: Integer;
             begin
+                //Getting customer Name
                 Customer.RESET;
                 Customer.SETRANGE(Customer."No.", "Sales Invoice Line"."Sell-to Customer No.");
                 IF Customer.FINDFIRST THEN
                     CustomerName := Customer.Name;
 
+                //Getting Resource Name
                 Resource.RESET;
                 Resource.SETRANGE(Resource."No.", "Sales Invoice Line"."Resource No.");
                 IF Resource.FINDFIRST THEN
                     ResourceName := Resource.Name;
+
+                //Getting credit amount
+                PostedCreditMemoAmount := 0;
+                PostedSalesCreditMemoHeader.Reset();
+                PostedSalesCreditMemoHeader.SetRange(PostedSalesCreditMemoHeader."Applies-to Doc. No.", "Sales Invoice Line"."Document No.");
+                if PostedSalesCreditMemoHeader.FindFirst() then begin
+                    PostedSalesCreditMemoLine.Reset();
+                    PostedSalesCreditMemoLine.SetRange(PostedSalesCreditMemoLine."Document No.", PostedSalesCreditMemoHeader."No.");
+                    PostedSalesCreditMemoLine.SetRange(PostedSalesCreditMemoLine."No.", "Sales Invoice Line"."No.");
+                    PostedSalesCreditMemoLine.SetRange(PostedSalesCreditMemoLine."Resource No.", "Sales Invoice Line"."Resource No.");
+                    if PostedSalesCreditMemoLine.FindFirst() then begin
+                        repeat
+                            PostedCreditMemoAmount += PostedSalesCreditMemoLine."Amount Including VAT";
+                        until PostedSalesCreditMemoLine.Next() = 0;
+                    end;
+                end;
             end;
 
         }
@@ -107,6 +107,9 @@ report 50004 "Staff Farm Sales"
         CustomerName: Text[100];
         ResourceName: Text[100];
         ShowDetails: Boolean;
+        PostedSalesCreditMemoHeader: Record "Sales Cr.Memo Header";
+        PostedSalesCreditMemoLine: Record "Sales Cr.Memo Line";
+        PostedCreditMemoAmount: Decimal;
 
     trigger OnPreReport()
     var

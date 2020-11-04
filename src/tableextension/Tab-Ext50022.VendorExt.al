@@ -27,6 +27,7 @@ tableextension 50022 "VendorExt" extends Vendor
                 "VAT Registration No." := UpperCase("VAT Registration Nos.");
             end;
         }
+        field(50030; "TIN Mandatory"; Boolean) { }
     }
 
     var

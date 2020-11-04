@@ -16,6 +16,11 @@ pageextension 50023 "Customer Card Ext" extends "Customer Card"
             {
                 ApplicationArea = All;
             }
+            field("TIN Mandatory"; "TIN Mandatory")
+            {
+                ApplicationArea = All;
+            }
+
             field("Global Dimension 1 Code"; "Global Dimension 1 Code")
             {
                 ApplicationArea = All;

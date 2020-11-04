@@ -22,7 +22,7 @@ pageextension 50044 "UsersExt" extends Users
                 Image = Signature;
             }
         }
-        addafter("Permission Set by User Group")
+        addafter(Signature)
         {
             action("User Permissions")
             {

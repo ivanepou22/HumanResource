@@ -48,6 +48,21 @@ pageextension 50034 "Bank Account List Ext" extends "Bank Account List"
                     BankPettyCash.RUN;
                 end;
             }
+            action("Bank Account Trial Balance")
+            {
+                ApplicationArea = All;
+                Caption = 'Bank Account Trial Balance';
+                Promoted = true;
+                PromotedCategory = Report;
+                PromotedIsBig = true;
+                Image = TransmitElectronicDoc;
+                trigger OnAction()
+                var
+                    BankAccTrialBalance: Report "Bank Account Trial Balance";
+                begin
+                    BankAccTrialBalance.Run();
+                end;
+            }
 
             action(PostedBankAccountReconciliation)
             {
