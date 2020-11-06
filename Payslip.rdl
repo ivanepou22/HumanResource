@@ -11,1459 +11,6 @@
       <rd:DataSourceID>bc4a1df9-995e-40e9-b56f-c261866acf1a</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Resource_No">
-          <DataField>Resource_No</DataField>
-        </Field>
-        <Field Name="First_Name">
-          <DataField>First_Name</DataField>
-        </Field>
-        <Field Name="Employee_Full_Name">
-          <DataField>Employee_Full_Name</DataField>
-        </Field>
-        <Field Name="Employee_Major_Location">
-          <DataField>Employee_Major_Location</DataField>
-        </Field>
-        <Field Name="Basic_Salary">
-          <DataField>Basic_Salary</DataField>
-        </Field>
-        <Field Name="Basic_SalaryFormat">
-          <DataField>Basic_SalaryFormat</DataField>
-        </Field>
-        <Field Name="Other_Earnings">
-          <DataField>Other_Earnings</DataField>
-        </Field>
-        <Field Name="Other_EarningsFormat">
-          <DataField>Other_EarningsFormat</DataField>
-        </Field>
-        <Field Name="Gross_Pay">
-          <DataField>Gross_Pay</DataField>
-        </Field>
-        <Field Name="Gross_PayFormat">
-          <DataField>Gross_PayFormat</DataField>
-        </Field>
-        <Field Name="TaxablePay">
-          <DataField>TaxablePay</DataField>
-        </Field>
-        <Field Name="TaxablePayFormat">
-          <DataField>TaxablePayFormat</DataField>
-        </Field>
-        <Field Name="PAYE">
-          <DataField>PAYE</DataField>
-        </Field>
-        <Field Name="PAYEFormat">
-          <DataField>PAYEFormat</DataField>
-        </Field>
-        <Field Name="RSSF">
-          <DataField>RSSF</DataField>
-        </Field>
-        <Field Name="RSSFFormat">
-          <DataField>RSSFFormat</DataField>
-        </Field>
-        <Field Name="RSSF_Employer">
-          <DataField>RSSF_Employer</DataField>
-        </Field>
-        <Field Name="RSSF_EmployerFormat">
-          <DataField>RSSF_EmployerFormat</DataField>
-        </Field>
-        <Field Name="RSS_15Percent">
-          <DataField>RSS_15Percent</DataField>
-        </Field>
-        <Field Name="RSS_15PercentFormat">
-          <DataField>RSS_15PercentFormat</DataField>
-        </Field>
-        <Field Name="Local_Service_Tax">
-          <DataField>Local_Service_Tax</DataField>
-        </Field>
-        <Field Name="Local_Service_TaxFormat">
-          <DataField>Local_Service_TaxFormat</DataField>
-        </Field>
-        <Field Name="Other_Deductions">
-          <DataField>Other_Deductions</DataField>
-        </Field>
-        <Field Name="Other_DeductionsFormat">
-          <DataField>Other_DeductionsFormat</DataField>
-        </Field>
-        <Field Name="Total_Deductions">
-          <DataField>Total_Deductions</DataField>
-        </Field>
-        <Field Name="Total_DeductionsFormat">
-          <DataField>Total_DeductionsFormat</DataField>
-        </Field>
-        <Field Name="Net_Pay">
-          <DataField>Net_Pay</DataField>
-        </Field>
-        <Field Name="Net_PayFormat">
-          <DataField>Net_PayFormat</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Name">
-          <DataField>CompanyInfo_Name</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Address">
-          <DataField>CompanyInfo_Address</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Address_2">
-          <DataField>CompanyInfo_Address_2</DataField>
-        </Field>
-        <Field Name="CompanyInfo_City">
-          <DataField>CompanyInfo_City</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Phone_No_">
-          <DataField>CompanyInfo_Phone_No_</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Fax_No_">
-          <DataField>CompanyInfo_Fax_No_</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Home_Page">
-          <DataField>CompanyInfo_Home_Page</DataField>
-        </Field>
-        <Field Name="CompanyInfo_E_Mail">
-          <DataField>CompanyInfo_E_Mail</DataField>
-        </Field>
-        <Field Name="CompanyInfo_Picture">
-          <DataField>CompanyInfo_Picture</DataField>
-        </Field>
-        <Field Name="EarningCode1">
-          <DataField>EarningCode1</DataField>
-        </Field>
-        <Field Name="EarningCode2">
-          <DataField>EarningCode2</DataField>
-        </Field>
-        <Field Name="EarningCode3">
-          <DataField>EarningCode3</DataField>
-        </Field>
-        <Field Name="EarningCode4">
-          <DataField>EarningCode4</DataField>
-        </Field>
-        <Field Name="EarningCode5">
-          <DataField>EarningCode5</DataField>
-        </Field>
-        <Field Name="EarningCode6">
-          <DataField>EarningCode6</DataField>
-        </Field>
-        <Field Name="EarningCode7">
-          <DataField>EarningCode7</DataField>
-        </Field>
-        <Field Name="EarningCode8">
-          <DataField>EarningCode8</DataField>
-        </Field>
-        <Field Name="EarningCode9">
-          <DataField>EarningCode9</DataField>
-        </Field>
-        <Field Name="EarningCode10">
-          <DataField>EarningCode10</DataField>
-        </Field>
-        <Field Name="EarningCode11">
-          <DataField>EarningCode11</DataField>
-        </Field>
-        <Field Name="EarningCode12">
-          <DataField>EarningCode12</DataField>
-        </Field>
-        <Field Name="EarningCode13">
-          <DataField>EarningCode13</DataField>
-        </Field>
-        <Field Name="EarningCode14">
-          <DataField>EarningCode14</DataField>
-        </Field>
-        <Field Name="EarningCode15">
-          <DataField>EarningCode15</DataField>
-        </Field>
-        <Field Name="EarningCode16">
-          <DataField>EarningCode16</DataField>
-        </Field>
-        <Field Name="EarningCode17">
-          <DataField>EarningCode17</DataField>
-        </Field>
-        <Field Name="EarningCode18">
-          <DataField>EarningCode18</DataField>
-        </Field>
-        <Field Name="EarningCode19">
-          <DataField>EarningCode19</DataField>
-        </Field>
-        <Field Name="EarningCode20">
-          <DataField>EarningCode20</DataField>
-        </Field>
-        <Field Name="EarningCode21">
-          <DataField>EarningCode21</DataField>
-        </Field>
-        <Field Name="EarningCode22">
-          <DataField>EarningCode22</DataField>
-        </Field>
-        <Field Name="EarningCode23">
-          <DataField>EarningCode23</DataField>
-        </Field>
-        <Field Name="EarningCode24">
-          <DataField>EarningCode24</DataField>
-        </Field>
-        <Field Name="EarningCode25">
-          <DataField>EarningCode25</DataField>
-        </Field>
-        <Field Name="EarningCode26">
-          <DataField>EarningCode26</DataField>
-        </Field>
-        <Field Name="EarningCode27">
-          <DataField>EarningCode27</DataField>
-        </Field>
-        <Field Name="EarningCode28">
-          <DataField>EarningCode28</DataField>
-        </Field>
-        <Field Name="EarningCode29">
-          <DataField>EarningCode29</DataField>
-        </Field>
-        <Field Name="EarningCode30">
-          <DataField>EarningCode30</DataField>
-        </Field>
-        <Field Name="EarningCode31">
-          <DataField>EarningCode31</DataField>
-        </Field>
-        <Field Name="EarningCode32">
-          <DataField>EarningCode32</DataField>
-        </Field>
-        <Field Name="EarningCode33">
-          <DataField>EarningCode33</DataField>
-        </Field>
-        <Field Name="EarningCode34">
-          <DataField>EarningCode34</DataField>
-        </Field>
-        <Field Name="EarningCode35">
-          <DataField>EarningCode35</DataField>
-        </Field>
-        <Field Name="EarningCode36">
-          <DataField>EarningCode36</DataField>
-        </Field>
-        <Field Name="EarningCode37">
-          <DataField>EarningCode37</DataField>
-        </Field>
-        <Field Name="EarningCode38">
-          <DataField>EarningCode38</DataField>
-        </Field>
-        <Field Name="EarningCode39">
-          <DataField>EarningCode39</DataField>
-        </Field>
-        <Field Name="EarningCode40">
-          <DataField>EarningCode40</DataField>
-        </Field>
-        <Field Name="EarningCode41">
-          <DataField>EarningCode41</DataField>
-        </Field>
-        <Field Name="EarningCode42">
-          <DataField>EarningCode42</DataField>
-        </Field>
-        <Field Name="EarningCode43">
-          <DataField>EarningCode43</DataField>
-        </Field>
-        <Field Name="EarningCode44">
-          <DataField>EarningCode44</DataField>
-        </Field>
-        <Field Name="EarningCode45">
-          <DataField>EarningCode45</DataField>
-        </Field>
-        <Field Name="EarningCode46">
-          <DataField>EarningCode46</DataField>
-        </Field>
-        <Field Name="EarningCode47">
-          <DataField>EarningCode47</DataField>
-        </Field>
-        <Field Name="EarningCode48">
-          <DataField>EarningCode48</DataField>
-        </Field>
-        <Field Name="EarningCode49">
-          <DataField>EarningCode49</DataField>
-        </Field>
-        <Field Name="EarningCode50">
-          <DataField>EarningCode50</DataField>
-        </Field>
-        <Field Name="EarningCode51">
-          <DataField>EarningCode51</DataField>
-        </Field>
-        <Field Name="EarningCode52">
-          <DataField>EarningCode52</DataField>
-        </Field>
-        <Field Name="EarningCode53">
-          <DataField>EarningCode53</DataField>
-        </Field>
-        <Field Name="EarningCode54">
-          <DataField>EarningCode54</DataField>
-        </Field>
-        <Field Name="EarningCode55">
-          <DataField>EarningCode55</DataField>
-        </Field>
-        <Field Name="EarningCode56">
-          <DataField>EarningCode56</DataField>
-        </Field>
-        <Field Name="EarningCode57">
-          <DataField>EarningCode57</DataField>
-        </Field>
-        <Field Name="EarningCode58">
-          <DataField>EarningCode58</DataField>
-        </Field>
-        <Field Name="EarningCode59">
-          <DataField>EarningCode59</DataField>
-        </Field>
-        <Field Name="EarningCode60">
-          <DataField>EarningCode60</DataField>
-        </Field>
-        <Field Name="EarningCode61">
-          <DataField>EarningCode61</DataField>
-        </Field>
-        <Field Name="EarningCode62">
-          <DataField>EarningCode62</DataField>
-        </Field>
-        <Field Name="EarningCode63">
-          <DataField>EarningCode63</DataField>
-        </Field>
-        <Field Name="EarningCode64">
-          <DataField>EarningCode64</DataField>
-        </Field>
-        <Field Name="EarningCode65">
-          <DataField>EarningCode65</DataField>
-        </Field>
-        <Field Name="EarningCode66">
-          <DataField>EarningCode66</DataField>
-        </Field>
-        <Field Name="EarningCode67">
-          <DataField>EarningCode67</DataField>
-        </Field>
-        <Field Name="EarningCode68">
-          <DataField>EarningCode68</DataField>
-        </Field>
-        <Field Name="EarningCode69">
-          <DataField>EarningCode69</DataField>
-        </Field>
-        <Field Name="EarningCode70">
-          <DataField>EarningCode70</DataField>
-        </Field>
-        <Field Name="EarningAmount1">
-          <DataField>EarningAmount1</DataField>
-        </Field>
-        <Field Name="EarningAmount1Format">
-          <DataField>EarningAmount1Format</DataField>
-        </Field>
-        <Field Name="EarningAmount2">
-          <DataField>EarningAmount2</DataField>
-        </Field>
-        <Field Name="EarningAmount2Format">
-          <DataField>EarningAmount2Format</DataField>
-        </Field>
-        <Field Name="EarningAmount3">
-          <DataField>EarningAmount3</DataField>
-        </Field>
-        <Field Name="EarningAmount3Format">
-          <DataField>EarningAmount3Format</DataField>
-        </Field>
-        <Field Name="EarningAmount4">
-          <DataField>EarningAmount4</DataField>
-        </Field>
-        <Field Name="EarningAmount4Format">
-          <DataField>EarningAmount4Format</DataField>
-        </Field>
-        <Field Name="EarningAmount5">
-          <DataField>EarningAmount5</DataField>
-        </Field>
-        <Field Name="EarningAmount5Format">
-          <DataField>EarningAmount5Format</DataField>
-        </Field>
-        <Field Name="EarningAmount6">
-          <DataField>EarningAmount6</DataField>
-        </Field>
-        <Field Name="EarningAmount6Format">
-          <DataField>EarningAmount6Format</DataField>
-        </Field>
-        <Field Name="EarningAmount7">
-          <DataField>EarningAmount7</DataField>
-        </Field>
-        <Field Name="EarningAmount7Format">
-          <DataField>EarningAmount7Format</DataField>
-        </Field>
-        <Field Name="EarningAmount8">
-          <DataField>EarningAmount8</DataField>
-        </Field>
-        <Field Name="EarningAmount8Format">
-          <DataField>EarningAmount8Format</DataField>
-        </Field>
-        <Field Name="EarningAmount9">
-          <DataField>EarningAmount9</DataField>
-        </Field>
-        <Field Name="EarningAmount9Format">
-          <DataField>EarningAmount9Format</DataField>
-        </Field>
-        <Field Name="EarningAmount10">
-          <DataField>EarningAmount10</DataField>
-        </Field>
-        <Field Name="EarningAmount10Format">
-          <DataField>EarningAmount10Format</DataField>
-        </Field>
-        <Field Name="EarningAmount11">
-          <DataField>EarningAmount11</DataField>
-        </Field>
-        <Field Name="EarningAmount11Format">
-          <DataField>EarningAmount11Format</DataField>
-        </Field>
-        <Field Name="EarningAmount12">
-          <DataField>EarningAmount12</DataField>
-        </Field>
-        <Field Name="EarningAmount12Format">
-          <DataField>EarningAmount12Format</DataField>
-        </Field>
-        <Field Name="EarningAmount13">
-          <DataField>EarningAmount13</DataField>
-        </Field>
-        <Field Name="EarningAmount13Format">
-          <DataField>EarningAmount13Format</DataField>
-        </Field>
-        <Field Name="EarningAmount14">
-          <DataField>EarningAmount14</DataField>
-        </Field>
-        <Field Name="EarningAmount14Format">
-          <DataField>EarningAmount14Format</DataField>
-        </Field>
-        <Field Name="EarningAmount15">
-          <DataField>EarningAmount15</DataField>
-        </Field>
-        <Field Name="EarningAmount15Format">
-          <DataField>EarningAmount15Format</DataField>
-        </Field>
-        <Field Name="EarningAmount16">
-          <DataField>EarningAmount16</DataField>
-        </Field>
-        <Field Name="EarningAmount16Format">
-          <DataField>EarningAmount16Format</DataField>
-        </Field>
-        <Field Name="EarningAmount17">
-          <DataField>EarningAmount17</DataField>
-        </Field>
-        <Field Name="EarningAmount17Format">
-          <DataField>EarningAmount17Format</DataField>
-        </Field>
-        <Field Name="EarningAmount18">
-          <DataField>EarningAmount18</DataField>
-        </Field>
-        <Field Name="EarningAmount18Format">
-          <DataField>EarningAmount18Format</DataField>
-        </Field>
-        <Field Name="EarningAmount19">
-          <DataField>EarningAmount19</DataField>
-        </Field>
-        <Field Name="EarningAmount19Format">
-          <DataField>EarningAmount19Format</DataField>
-        </Field>
-        <Field Name="EarningAmount20">
-          <DataField>EarningAmount20</DataField>
-        </Field>
-        <Field Name="EarningAmount20Format">
-          <DataField>EarningAmount20Format</DataField>
-        </Field>
-        <Field Name="EarningAmount21">
-          <DataField>EarningAmount21</DataField>
-        </Field>
-        <Field Name="EarningAmount21Format">
-          <DataField>EarningAmount21Format</DataField>
-        </Field>
-        <Field Name="EarningAmount22">
-          <DataField>EarningAmount22</DataField>
-        </Field>
-        <Field Name="EarningAmount22Format">
-          <DataField>EarningAmount22Format</DataField>
-        </Field>
-        <Field Name="EarningAmount23">
-          <DataField>EarningAmount23</DataField>
-        </Field>
-        <Field Name="EarningAmount23Format">
-          <DataField>EarningAmount23Format</DataField>
-        </Field>
-        <Field Name="EarningAmount24">
-          <DataField>EarningAmount24</DataField>
-        </Field>
-        <Field Name="EarningAmount24Format">
-          <DataField>EarningAmount24Format</DataField>
-        </Field>
-        <Field Name="EarningAmount25">
-          <DataField>EarningAmount25</DataField>
-        </Field>
-        <Field Name="EarningAmount25Format">
-          <DataField>EarningAmount25Format</DataField>
-        </Field>
-        <Field Name="EarningAmount26">
-          <DataField>EarningAmount26</DataField>
-        </Field>
-        <Field Name="EarningAmount26Format">
-          <DataField>EarningAmount26Format</DataField>
-        </Field>
-        <Field Name="EarningAmount27">
-          <DataField>EarningAmount27</DataField>
-        </Field>
-        <Field Name="EarningAmount27Format">
-          <DataField>EarningAmount27Format</DataField>
-        </Field>
-        <Field Name="EarningAmount28">
-          <DataField>EarningAmount28</DataField>
-        </Field>
-        <Field Name="EarningAmount28Format">
-          <DataField>EarningAmount28Format</DataField>
-        </Field>
-        <Field Name="EarningAmount29">
-          <DataField>EarningAmount29</DataField>
-        </Field>
-        <Field Name="EarningAmount29Format">
-          <DataField>EarningAmount29Format</DataField>
-        </Field>
-        <Field Name="EarningAmount30">
-          <DataField>EarningAmount30</DataField>
-        </Field>
-        <Field Name="EarningAmount30Format">
-          <DataField>EarningAmount30Format</DataField>
-        </Field>
-        <Field Name="EarningAmount31">
-          <DataField>EarningAmount31</DataField>
-        </Field>
-        <Field Name="EarningAmount31Format">
-          <DataField>EarningAmount31Format</DataField>
-        </Field>
-        <Field Name="EarningAmount32">
-          <DataField>EarningAmount32</DataField>
-        </Field>
-        <Field Name="EarningAmount32Format">
-          <DataField>EarningAmount32Format</DataField>
-        </Field>
-        <Field Name="EarningAmount33">
-          <DataField>EarningAmount33</DataField>
-        </Field>
-        <Field Name="EarningAmount33Format">
-          <DataField>EarningAmount33Format</DataField>
-        </Field>
-        <Field Name="EarningAmount34">
-          <DataField>EarningAmount34</DataField>
-        </Field>
-        <Field Name="EarningAmount34Format">
-          <DataField>EarningAmount34Format</DataField>
-        </Field>
-        <Field Name="EarningAmount35">
-          <DataField>EarningAmount35</DataField>
-        </Field>
-        <Field Name="EarningAmount35Format">
-          <DataField>EarningAmount35Format</DataField>
-        </Field>
-        <Field Name="EarningAmount36">
-          <DataField>EarningAmount36</DataField>
-        </Field>
-        <Field Name="EarningAmount36Format">
-          <DataField>EarningAmount36Format</DataField>
-        </Field>
-        <Field Name="EarningAmount37">
-          <DataField>EarningAmount37</DataField>
-        </Field>
-        <Field Name="EarningAmount37Format">
-          <DataField>EarningAmount37Format</DataField>
-        </Field>
-        <Field Name="EarningAmount38">
-          <DataField>EarningAmount38</DataField>
-        </Field>
-        <Field Name="EarningAmount38Format">
-          <DataField>EarningAmount38Format</DataField>
-        </Field>
-        <Field Name="EarningAmount39">
-          <DataField>EarningAmount39</DataField>
-        </Field>
-        <Field Name="EarningAmount39Format">
-          <DataField>EarningAmount39Format</DataField>
-        </Field>
-        <Field Name="EarningAmount40">
-          <DataField>EarningAmount40</DataField>
-        </Field>
-        <Field Name="EarningAmount40Format">
-          <DataField>EarningAmount40Format</DataField>
-        </Field>
-        <Field Name="EarningAmount41">
-          <DataField>EarningAmount41</DataField>
-        </Field>
-        <Field Name="EarningAmount41Format">
-          <DataField>EarningAmount41Format</DataField>
-        </Field>
-        <Field Name="EarningAmount42">
-          <DataField>EarningAmount42</DataField>
-        </Field>
-        <Field Name="EarningAmount42Format">
-          <DataField>EarningAmount42Format</DataField>
-        </Field>
-        <Field Name="EarningAmount43">
-          <DataField>EarningAmount43</DataField>
-        </Field>
-        <Field Name="EarningAmount43Format">
-          <DataField>EarningAmount43Format</DataField>
-        </Field>
-        <Field Name="EarningAmount44">
-          <DataField>EarningAmount44</DataField>
-        </Field>
-        <Field Name="EarningAmount44Format">
-          <DataField>EarningAmount44Format</DataField>
-        </Field>
-        <Field Name="EarningAmount45">
-          <DataField>EarningAmount45</DataField>
-        </Field>
-        <Field Name="EarningAmount45Format">
-          <DataField>EarningAmount45Format</DataField>
-        </Field>
-        <Field Name="EarningAmount46">
-          <DataField>EarningAmount46</DataField>
-        </Field>
-        <Field Name="EarningAmount46Format">
-          <DataField>EarningAmount46Format</DataField>
-        </Field>
-        <Field Name="EarningAmount47">
-          <DataField>EarningAmount47</DataField>
-        </Field>
-        <Field Name="EarningAmount47Format">
-          <DataField>EarningAmount47Format</DataField>
-        </Field>
-        <Field Name="EarningAmount48">
-          <DataField>EarningAmount48</DataField>
-        </Field>
-        <Field Name="EarningAmount48Format">
-          <DataField>EarningAmount48Format</DataField>
-        </Field>
-        <Field Name="EarningAmount49">
-          <DataField>EarningAmount49</DataField>
-        </Field>
-        <Field Name="EarningAmount49Format">
-          <DataField>EarningAmount49Format</DataField>
-        </Field>
-        <Field Name="EarningAmount50">
-          <DataField>EarningAmount50</DataField>
-        </Field>
-        <Field Name="EarningAmount50Format">
-          <DataField>EarningAmount50Format</DataField>
-        </Field>
-        <Field Name="EarningAmount51">
-          <DataField>EarningAmount51</DataField>
-        </Field>
-        <Field Name="EarningAmount51Format">
-          <DataField>EarningAmount51Format</DataField>
-        </Field>
-        <Field Name="EarningAmount52">
-          <DataField>EarningAmount52</DataField>
-        </Field>
-        <Field Name="EarningAmount52Format">
-          <DataField>EarningAmount52Format</DataField>
-        </Field>
-        <Field Name="EarningAmount53">
-          <DataField>EarningAmount53</DataField>
-        </Field>
-        <Field Name="EarningAmount53Format">
-          <DataField>EarningAmount53Format</DataField>
-        </Field>
-        <Field Name="EarningAmount54">
-          <DataField>EarningAmount54</DataField>
-        </Field>
-        <Field Name="EarningAmount54Format">
-          <DataField>EarningAmount54Format</DataField>
-        </Field>
-        <Field Name="EarningAmount55">
-          <DataField>EarningAmount55</DataField>
-        </Field>
-        <Field Name="EarningAmount55Format">
-          <DataField>EarningAmount55Format</DataField>
-        </Field>
-        <Field Name="EarningAmount56">
-          <DataField>EarningAmount56</DataField>
-        </Field>
-        <Field Name="EarningAmount56Format">
-          <DataField>EarningAmount56Format</DataField>
-        </Field>
-        <Field Name="EarningAmount57">
-          <DataField>EarningAmount57</DataField>
-        </Field>
-        <Field Name="EarningAmount57Format">
-          <DataField>EarningAmount57Format</DataField>
-        </Field>
-        <Field Name="EarningAmount58">
-          <DataField>EarningAmount58</DataField>
-        </Field>
-        <Field Name="EarningAmount58Format">
-          <DataField>EarningAmount58Format</DataField>
-        </Field>
-        <Field Name="EarningAmount59">
-          <DataField>EarningAmount59</DataField>
-        </Field>
-        <Field Name="EarningAmount59Format">
-          <DataField>EarningAmount59Format</DataField>
-        </Field>
-        <Field Name="EarningAmount60">
-          <DataField>EarningAmount60</DataField>
-        </Field>
-        <Field Name="EarningAmount60Format">
-          <DataField>EarningAmount60Format</DataField>
-        </Field>
-        <Field Name="EarningAmount61">
-          <DataField>EarningAmount61</DataField>
-        </Field>
-        <Field Name="EarningAmount61Format">
-          <DataField>EarningAmount61Format</DataField>
-        </Field>
-        <Field Name="EarningAmount62">
-          <DataField>EarningAmount62</DataField>
-        </Field>
-        <Field Name="EarningAmount62Format">
-          <DataField>EarningAmount62Format</DataField>
-        </Field>
-        <Field Name="EarningAmount63">
-          <DataField>EarningAmount63</DataField>
-        </Field>
-        <Field Name="EarningAmount63Format">
-          <DataField>EarningAmount63Format</DataField>
-        </Field>
-        <Field Name="EarningAmount64">
-          <DataField>EarningAmount64</DataField>
-        </Field>
-        <Field Name="EarningAmount64Format">
-          <DataField>EarningAmount64Format</DataField>
-        </Field>
-        <Field Name="EarningAmount65">
-          <DataField>EarningAmount65</DataField>
-        </Field>
-        <Field Name="EarningAmount65Format">
-          <DataField>EarningAmount65Format</DataField>
-        </Field>
-        <Field Name="EarningAmount66">
-          <DataField>EarningAmount66</DataField>
-        </Field>
-        <Field Name="EarningAmount66Format">
-          <DataField>EarningAmount66Format</DataField>
-        </Field>
-        <Field Name="EarningAmount67">
-          <DataField>EarningAmount67</DataField>
-        </Field>
-        <Field Name="EarningAmount67Format">
-          <DataField>EarningAmount67Format</DataField>
-        </Field>
-        <Field Name="EarningAmount68">
-          <DataField>EarningAmount68</DataField>
-        </Field>
-        <Field Name="EarningAmount68Format">
-          <DataField>EarningAmount68Format</DataField>
-        </Field>
-        <Field Name="EarningAmount69">
-          <DataField>EarningAmount69</DataField>
-        </Field>
-        <Field Name="EarningAmount69Format">
-          <DataField>EarningAmount69Format</DataField>
-        </Field>
-        <Field Name="EarningAmount70">
-          <DataField>EarningAmount70</DataField>
-        </Field>
-        <Field Name="EarningAmount70Format">
-          <DataField>EarningAmount70Format</DataField>
-        </Field>
-        <Field Name="DeductionCode1">
-          <DataField>DeductionCode1</DataField>
-        </Field>
-        <Field Name="DeductionCode2">
-          <DataField>DeductionCode2</DataField>
-        </Field>
-        <Field Name="DeductionCode3">
-          <DataField>DeductionCode3</DataField>
-        </Field>
-        <Field Name="DeductionCode4">
-          <DataField>DeductionCode4</DataField>
-        </Field>
-        <Field Name="DeductionCode5">
-          <DataField>DeductionCode5</DataField>
-        </Field>
-        <Field Name="DeductionCode6">
-          <DataField>DeductionCode6</DataField>
-        </Field>
-        <Field Name="DeductionCode7">
-          <DataField>DeductionCode7</DataField>
-        </Field>
-        <Field Name="DeductionCode8">
-          <DataField>DeductionCode8</DataField>
-        </Field>
-        <Field Name="DeductionCode9">
-          <DataField>DeductionCode9</DataField>
-        </Field>
-        <Field Name="DeductionCode10">
-          <DataField>DeductionCode10</DataField>
-        </Field>
-        <Field Name="DeductionCode11">
-          <DataField>DeductionCode11</DataField>
-        </Field>
-        <Field Name="DeductionCode12">
-          <DataField>DeductionCode12</DataField>
-        </Field>
-        <Field Name="DeductionCode13">
-          <DataField>DeductionCode13</DataField>
-        </Field>
-        <Field Name="DeductionCode14">
-          <DataField>DeductionCode14</DataField>
-        </Field>
-        <Field Name="DeductionCode15">
-          <DataField>DeductionCode15</DataField>
-        </Field>
-        <Field Name="DeductionCode16">
-          <DataField>DeductionCode16</DataField>
-        </Field>
-        <Field Name="DeductionCode17">
-          <DataField>DeductionCode17</DataField>
-        </Field>
-        <Field Name="DeductionCode18">
-          <DataField>DeductionCode18</DataField>
-        </Field>
-        <Field Name="DeductionCode19">
-          <DataField>DeductionCode19</DataField>
-        </Field>
-        <Field Name="DeductionCode20">
-          <DataField>DeductionCode20</DataField>
-        </Field>
-        <Field Name="DeductionCode21">
-          <DataField>DeductionCode21</DataField>
-        </Field>
-        <Field Name="DeductionCode22">
-          <DataField>DeductionCode22</DataField>
-        </Field>
-        <Field Name="DeductionCode23">
-          <DataField>DeductionCode23</DataField>
-        </Field>
-        <Field Name="DeductionCode24">
-          <DataField>DeductionCode24</DataField>
-        </Field>
-        <Field Name="DeductionCode25">
-          <DataField>DeductionCode25</DataField>
-        </Field>
-        <Field Name="DeductionCode26">
-          <DataField>DeductionCode26</DataField>
-        </Field>
-        <Field Name="DeductionCode27">
-          <DataField>DeductionCode27</DataField>
-        </Field>
-        <Field Name="DeductionCode28">
-          <DataField>DeductionCode28</DataField>
-        </Field>
-        <Field Name="DeductionCode29">
-          <DataField>DeductionCode29</DataField>
-        </Field>
-        <Field Name="DeductionCode30">
-          <DataField>DeductionCode30</DataField>
-        </Field>
-        <Field Name="DeductionCode31">
-          <DataField>DeductionCode31</DataField>
-        </Field>
-        <Field Name="DeductionCode32">
-          <DataField>DeductionCode32</DataField>
-        </Field>
-        <Field Name="DeductionCode33">
-          <DataField>DeductionCode33</DataField>
-        </Field>
-        <Field Name="DeductionCode34">
-          <DataField>DeductionCode34</DataField>
-        </Field>
-        <Field Name="DeductionCode35">
-          <DataField>DeductionCode35</DataField>
-        </Field>
-        <Field Name="DeductionCode36">
-          <DataField>DeductionCode36</DataField>
-        </Field>
-        <Field Name="DeductionCode37">
-          <DataField>DeductionCode37</DataField>
-        </Field>
-        <Field Name="DeductionCode38">
-          <DataField>DeductionCode38</DataField>
-        </Field>
-        <Field Name="DeductionCode39">
-          <DataField>DeductionCode39</DataField>
-        </Field>
-        <Field Name="DeductionCode40">
-          <DataField>DeductionCode40</DataField>
-        </Field>
-        <Field Name="DeductionAmount1">
-          <DataField>DeductionAmount1</DataField>
-        </Field>
-        <Field Name="DeductionAmount1Format">
-          <DataField>DeductionAmount1Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount2">
-          <DataField>DeductionAmount2</DataField>
-        </Field>
-        <Field Name="DeductionAmount2Format">
-          <DataField>DeductionAmount2Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount3">
-          <DataField>DeductionAmount3</DataField>
-        </Field>
-        <Field Name="DeductionAmount3Format">
-          <DataField>DeductionAmount3Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount4">
-          <DataField>DeductionAmount4</DataField>
-        </Field>
-        <Field Name="DeductionAmount4Format">
-          <DataField>DeductionAmount4Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount5">
-          <DataField>DeductionAmount5</DataField>
-        </Field>
-        <Field Name="DeductionAmount5Format">
-          <DataField>DeductionAmount5Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount6">
-          <DataField>DeductionAmount6</DataField>
-        </Field>
-        <Field Name="DeductionAmount6Format">
-          <DataField>DeductionAmount6Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount7">
-          <DataField>DeductionAmount7</DataField>
-        </Field>
-        <Field Name="DeductionAmount7Format">
-          <DataField>DeductionAmount7Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount8">
-          <DataField>DeductionAmount8</DataField>
-        </Field>
-        <Field Name="DeductionAmount8Format">
-          <DataField>DeductionAmount8Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount9">
-          <DataField>DeductionAmount9</DataField>
-        </Field>
-        <Field Name="DeductionAmount9Format">
-          <DataField>DeductionAmount9Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount10">
-          <DataField>DeductionAmount10</DataField>
-        </Field>
-        <Field Name="DeductionAmount10Format">
-          <DataField>DeductionAmount10Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount11">
-          <DataField>DeductionAmount11</DataField>
-        </Field>
-        <Field Name="DeductionAmount11Format">
-          <DataField>DeductionAmount11Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount12">
-          <DataField>DeductionAmount12</DataField>
-        </Field>
-        <Field Name="DeductionAmount12Format">
-          <DataField>DeductionAmount12Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount13">
-          <DataField>DeductionAmount13</DataField>
-        </Field>
-        <Field Name="DeductionAmount13Format">
-          <DataField>DeductionAmount13Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount14">
-          <DataField>DeductionAmount14</DataField>
-        </Field>
-        <Field Name="DeductionAmount14Format">
-          <DataField>DeductionAmount14Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount15">
-          <DataField>DeductionAmount15</DataField>
-        </Field>
-        <Field Name="DeductionAmount15Format">
-          <DataField>DeductionAmount15Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount16">
-          <DataField>DeductionAmount16</DataField>
-        </Field>
-        <Field Name="DeductionAmount16Format">
-          <DataField>DeductionAmount16Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount17">
-          <DataField>DeductionAmount17</DataField>
-        </Field>
-        <Field Name="DeductionAmount17Format">
-          <DataField>DeductionAmount17Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount18">
-          <DataField>DeductionAmount18</DataField>
-        </Field>
-        <Field Name="DeductionAmount18Format">
-          <DataField>DeductionAmount18Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount19">
-          <DataField>DeductionAmount19</DataField>
-        </Field>
-        <Field Name="DeductionAmount19Format">
-          <DataField>DeductionAmount19Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount20">
-          <DataField>DeductionAmount20</DataField>
-        </Field>
-        <Field Name="DeductionAmount20Format">
-          <DataField>DeductionAmount20Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount21">
-          <DataField>DeductionAmount21</DataField>
-        </Field>
-        <Field Name="DeductionAmount21Format">
-          <DataField>DeductionAmount21Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount22">
-          <DataField>DeductionAmount22</DataField>
-        </Field>
-        <Field Name="DeductionAmount22Format">
-          <DataField>DeductionAmount22Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount23">
-          <DataField>DeductionAmount23</DataField>
-        </Field>
-        <Field Name="DeductionAmount23Format">
-          <DataField>DeductionAmount23Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount24">
-          <DataField>DeductionAmount24</DataField>
-        </Field>
-        <Field Name="DeductionAmount24Format">
-          <DataField>DeductionAmount24Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount25">
-          <DataField>DeductionAmount25</DataField>
-        </Field>
-        <Field Name="DeductionAmount25Format">
-          <DataField>DeductionAmount25Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount26">
-          <DataField>DeductionAmount26</DataField>
-        </Field>
-        <Field Name="DeductionAmount26Format">
-          <DataField>DeductionAmount26Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount27">
-          <DataField>DeductionAmount27</DataField>
-        </Field>
-        <Field Name="DeductionAmount27Format">
-          <DataField>DeductionAmount27Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount28">
-          <DataField>DeductionAmount28</DataField>
-        </Field>
-        <Field Name="DeductionAmount28Format">
-          <DataField>DeductionAmount28Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount29">
-          <DataField>DeductionAmount29</DataField>
-        </Field>
-        <Field Name="DeductionAmount29Format">
-          <DataField>DeductionAmount29Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount30">
-          <DataField>DeductionAmount30</DataField>
-        </Field>
-        <Field Name="DeductionAmount30Format">
-          <DataField>DeductionAmount30Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount31">
-          <DataField>DeductionAmount31</DataField>
-        </Field>
-        <Field Name="DeductionAmount31Format">
-          <DataField>DeductionAmount31Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount32">
-          <DataField>DeductionAmount32</DataField>
-        </Field>
-        <Field Name="DeductionAmount32Format">
-          <DataField>DeductionAmount32Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount33">
-          <DataField>DeductionAmount33</DataField>
-        </Field>
-        <Field Name="DeductionAmount33Format">
-          <DataField>DeductionAmount33Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount34">
-          <DataField>DeductionAmount34</DataField>
-        </Field>
-        <Field Name="DeductionAmount34Format">
-          <DataField>DeductionAmount34Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount35">
-          <DataField>DeductionAmount35</DataField>
-        </Field>
-        <Field Name="DeductionAmount35Format">
-          <DataField>DeductionAmount35Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount36">
-          <DataField>DeductionAmount36</DataField>
-        </Field>
-        <Field Name="DeductionAmount36Format">
-          <DataField>DeductionAmount36Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount37">
-          <DataField>DeductionAmount37</DataField>
-        </Field>
-        <Field Name="DeductionAmount37Format">
-          <DataField>DeductionAmount37Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount38">
-          <DataField>DeductionAmount38</DataField>
-        </Field>
-        <Field Name="DeductionAmount38Format">
-          <DataField>DeductionAmount38Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount39">
-          <DataField>DeductionAmount39</DataField>
-        </Field>
-        <Field Name="DeductionAmount39Format">
-          <DataField>DeductionAmount39Format</DataField>
-        </Field>
-        <Field Name="DeductionAmount40">
-          <DataField>DeductionAmount40</DataField>
-        </Field>
-        <Field Name="DeductionAmount40Format">
-          <DataField>DeductionAmount40Format</DataField>
-        </Field>
-        <Field Name="EarningInclude1">
-          <DataField>EarningInclude1</DataField>
-        </Field>
-        <Field Name="EarningInclude2">
-          <DataField>EarningInclude2</DataField>
-        </Field>
-        <Field Name="EarningInclude3">
-          <DataField>EarningInclude3</DataField>
-        </Field>
-        <Field Name="EarningInclude4">
-          <DataField>EarningInclude4</DataField>
-        </Field>
-        <Field Name="EarningInclude5">
-          <DataField>EarningInclude5</DataField>
-        </Field>
-        <Field Name="EarningInclude6">
-          <DataField>EarningInclude6</DataField>
-        </Field>
-        <Field Name="EarningInclude7">
-          <DataField>EarningInclude7</DataField>
-        </Field>
-        <Field Name="EarningInclude8">
-          <DataField>EarningInclude8</DataField>
-        </Field>
-        <Field Name="EarningInclude9">
-          <DataField>EarningInclude9</DataField>
-        </Field>
-        <Field Name="EarningInclude10">
-          <DataField>EarningInclude10</DataField>
-        </Field>
-        <Field Name="EarningInclude11">
-          <DataField>EarningInclude11</DataField>
-        </Field>
-        <Field Name="EarningInclude12">
-          <DataField>EarningInclude12</DataField>
-        </Field>
-        <Field Name="EarningInclude13">
-          <DataField>EarningInclude13</DataField>
-        </Field>
-        <Field Name="EarningInclude14">
-          <DataField>EarningInclude14</DataField>
-        </Field>
-        <Field Name="EarningInclude15">
-          <DataField>EarningInclude15</DataField>
-        </Field>
-        <Field Name="EarningInclude16">
-          <DataField>EarningInclude16</DataField>
-        </Field>
-        <Field Name="EarningInclude17">
-          <DataField>EarningInclude17</DataField>
-        </Field>
-        <Field Name="EarningInclude18">
-          <DataField>EarningInclude18</DataField>
-        </Field>
-        <Field Name="EarningInclude19">
-          <DataField>EarningInclude19</DataField>
-        </Field>
-        <Field Name="EarningInclude20">
-          <DataField>EarningInclude20</DataField>
-        </Field>
-        <Field Name="EarningInclude21">
-          <DataField>EarningInclude21</DataField>
-        </Field>
-        <Field Name="EarningInclude22">
-          <DataField>EarningInclude22</DataField>
-        </Field>
-        <Field Name="EarningInclude23">
-          <DataField>EarningInclude23</DataField>
-        </Field>
-        <Field Name="EarningInclude24">
-          <DataField>EarningInclude24</DataField>
-        </Field>
-        <Field Name="EarningInclude25">
-          <DataField>EarningInclude25</DataField>
-        </Field>
-        <Field Name="EarningInclude26">
-          <DataField>EarningInclude26</DataField>
-        </Field>
-        <Field Name="EarningInclude27">
-          <DataField>EarningInclude27</DataField>
-        </Field>
-        <Field Name="EarningInclude28">
-          <DataField>EarningInclude28</DataField>
-        </Field>
-        <Field Name="EarningInclude29">
-          <DataField>EarningInclude29</DataField>
-        </Field>
-        <Field Name="EarningInclude30">
-          <DataField>EarningInclude30</DataField>
-        </Field>
-        <Field Name="EarningInclude31">
-          <DataField>EarningInclude31</DataField>
-        </Field>
-        <Field Name="EarningInclude32">
-          <DataField>EarningInclude32</DataField>
-        </Field>
-        <Field Name="EarningInclude33">
-          <DataField>EarningInclude33</DataField>
-        </Field>
-        <Field Name="EarningInclude34">
-          <DataField>EarningInclude34</DataField>
-        </Field>
-        <Field Name="EarningInclude35">
-          <DataField>EarningInclude35</DataField>
-        </Field>
-        <Field Name="EarningInclude36">
-          <DataField>EarningInclude36</DataField>
-        </Field>
-        <Field Name="EarningInclude37">
-          <DataField>EarningInclude37</DataField>
-        </Field>
-        <Field Name="EarningInclude38">
-          <DataField>EarningInclude38</DataField>
-        </Field>
-        <Field Name="EarningInclude39">
-          <DataField>EarningInclude39</DataField>
-        </Field>
-        <Field Name="EarningInclude40">
-          <DataField>EarningInclude40</DataField>
-        </Field>
-        <Field Name="EarningInclude41">
-          <DataField>EarningInclude41</DataField>
-        </Field>
-        <Field Name="EarningInclude42">
-          <DataField>EarningInclude42</DataField>
-        </Field>
-        <Field Name="EarningInclude43">
-          <DataField>EarningInclude43</DataField>
-        </Field>
-        <Field Name="EarningInclude44">
-          <DataField>EarningInclude44</DataField>
-        </Field>
-        <Field Name="EarningInclude45">
-          <DataField>EarningInclude45</DataField>
-        </Field>
-        <Field Name="EarningInclude46">
-          <DataField>EarningInclude46</DataField>
-        </Field>
-        <Field Name="EarningInclude47">
-          <DataField>EarningInclude47</DataField>
-        </Field>
-        <Field Name="EarningInclude48">
-          <DataField>EarningInclude48</DataField>
-        </Field>
-        <Field Name="EarningInclude49">
-          <DataField>EarningInclude49</DataField>
-        </Field>
-        <Field Name="EarningInclude50">
-          <DataField>EarningInclude50</DataField>
-        </Field>
-        <Field Name="EarningInclude51">
-          <DataField>EarningInclude51</DataField>
-        </Field>
-        <Field Name="EarningInclude52">
-          <DataField>EarningInclude52</DataField>
-        </Field>
-        <Field Name="EarningInclude53">
-          <DataField>EarningInclude53</DataField>
-        </Field>
-        <Field Name="EarningInclude54">
-          <DataField>EarningInclude54</DataField>
-        </Field>
-        <Field Name="EarningInclude55">
-          <DataField>EarningInclude55</DataField>
-        </Field>
-        <Field Name="EarningInclude56">
-          <DataField>EarningInclude56</DataField>
-        </Field>
-        <Field Name="EarningInclude57">
-          <DataField>EarningInclude57</DataField>
-        </Field>
-        <Field Name="EarningInclude58">
-          <DataField>EarningInclude58</DataField>
-        </Field>
-        <Field Name="EarningInclude59">
-          <DataField>EarningInclude59</DataField>
-        </Field>
-        <Field Name="EarningInclude60">
-          <DataField>EarningInclude60</DataField>
-        </Field>
-        <Field Name="EarningInclude61">
-          <DataField>EarningInclude61</DataField>
-        </Field>
-        <Field Name="EarningInclude62">
-          <DataField>EarningInclude62</DataField>
-        </Field>
-        <Field Name="EarningInclude63">
-          <DataField>EarningInclude63</DataField>
-        </Field>
-        <Field Name="EarningInclude64">
-          <DataField>EarningInclude64</DataField>
-        </Field>
-        <Field Name="EarningInclude65">
-          <DataField>EarningInclude65</DataField>
-        </Field>
-        <Field Name="EarningInclude66">
-          <DataField>EarningInclude66</DataField>
-        </Field>
-        <Field Name="EarningInclude67">
-          <DataField>EarningInclude67</DataField>
-        </Field>
-        <Field Name="EarningInclude68">
-          <DataField>EarningInclude68</DataField>
-        </Field>
-        <Field Name="EarningInclude69">
-          <DataField>EarningInclude69</DataField>
-        </Field>
-        <Field Name="EarningInclude70">
-          <DataField>EarningInclude70</DataField>
-        </Field>
-        <Field Name="DeductionInclude1">
-          <DataField>DeductionInclude1</DataField>
-        </Field>
-        <Field Name="DeductionInclude2">
-          <DataField>DeductionInclude2</DataField>
-        </Field>
-        <Field Name="DeductionInclude3">
-          <DataField>DeductionInclude3</DataField>
-        </Field>
-        <Field Name="DeductionInclude4">
-          <DataField>DeductionInclude4</DataField>
-        </Field>
-        <Field Name="DeductionInclude5">
-          <DataField>DeductionInclude5</DataField>
-        </Field>
-        <Field Name="DeductionInclude6">
-          <DataField>DeductionInclude6</DataField>
-        </Field>
-        <Field Name="DeductionInclude7">
-          <DataField>DeductionInclude7</DataField>
-        </Field>
-        <Field Name="DeductionInclude8">
-          <DataField>DeductionInclude8</DataField>
-        </Field>
-        <Field Name="DeductionInclude9">
-          <DataField>DeductionInclude9</DataField>
-        </Field>
-        <Field Name="DeductionInclude10">
-          <DataField>DeductionInclude10</DataField>
-        </Field>
-        <Field Name="DeductionInclude11">
-          <DataField>DeductionInclude11</DataField>
-        </Field>
-        <Field Name="DeductionInclude12">
-          <DataField>DeductionInclude12</DataField>
-        </Field>
-        <Field Name="DeductionInclude13">
-          <DataField>DeductionInclude13</DataField>
-        </Field>
-        <Field Name="DeductionInclude14">
-          <DataField>DeductionInclude14</DataField>
-        </Field>
-        <Field Name="DeductionInclude15">
-          <DataField>DeductionInclude15</DataField>
-        </Field>
-        <Field Name="DeductionInclude16">
-          <DataField>DeductionInclude16</DataField>
-        </Field>
-        <Field Name="DeductionInclude17">
-          <DataField>DeductionInclude17</DataField>
-        </Field>
-        <Field Name="DeductionInclude18">
-          <DataField>DeductionInclude18</DataField>
-        </Field>
-        <Field Name="DeductionInclude19">
-          <DataField>DeductionInclude19</DataField>
-        </Field>
-        <Field Name="DeductionInclude20">
-          <DataField>DeductionInclude20</DataField>
-        </Field>
-        <Field Name="DeductionInclude21">
-          <DataField>DeductionInclude21</DataField>
-        </Field>
-        <Field Name="DeductionInclude22">
-          <DataField>DeductionInclude22</DataField>
-        </Field>
-        <Field Name="DeductionInclude23">
-          <DataField>DeductionInclude23</DataField>
-        </Field>
-        <Field Name="DeductionInclude24">
-          <DataField>DeductionInclude24</DataField>
-        </Field>
-        <Field Name="DeductionInclude25">
-          <DataField>DeductionInclude25</DataField>
-        </Field>
-        <Field Name="DeductionInclude26">
-          <DataField>DeductionInclude26</DataField>
-        </Field>
-        <Field Name="DeductionInclude27">
-          <DataField>DeductionInclude27</DataField>
-        </Field>
-        <Field Name="DeductionInclude28">
-          <DataField>DeductionInclude28</DataField>
-        </Field>
-        <Field Name="DeductionInclude29">
-          <DataField>DeductionInclude29</DataField>
-        </Field>
-        <Field Name="DeductionInclude30">
-          <DataField>DeductionInclude30</DataField>
-        </Field>
-        <Field Name="DeductionInclude31">
-          <DataField>DeductionInclude31</DataField>
-        </Field>
-        <Field Name="DeductionInclude32">
-          <DataField>DeductionInclude32</DataField>
-        </Field>
-        <Field Name="DeductionInclude33">
-          <DataField>DeductionInclude33</DataField>
-        </Field>
-        <Field Name="DeductionInclude34">
-          <DataField>DeductionInclude34</DataField>
-        </Field>
-        <Field Name="DeductionInclude35">
-          <DataField>DeductionInclude35</DataField>
-        </Field>
-        <Field Name="DeductionInclude36">
-          <DataField>DeductionInclude36</DataField>
-        </Field>
-        <Field Name="DeductionInclude37">
-          <DataField>DeductionInclude37</DataField>
-        </Field>
-        <Field Name="DeductionInclude38">
-          <DataField>DeductionInclude38</DataField>
-        </Field>
-        <Field Name="DeductionInclude39">
-          <DataField>DeductionInclude39</DataField>
-        </Field>
-        <Field Name="DeductionInclude40">
-          <DataField>DeductionInclude40</DataField>
-        </Field>
-        <Field Name="Num">
-          <DataField>Num</DataField>
-        </Field>
-        <Field Name="ShowNumbering">
-          <DataField>ShowNumbering</DataField>
-        </Field>
-        <Field Name="PayrollMonthYear">
-          <DataField>PayrollMonthYear</DataField>
-        </Field>
-        <Field Name="Filters">
-          <DataField>Filters</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -7629,7 +6176,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Gross_Pay.Value</Value>
+                                  <Value>=(Fields!RSSF.Value*100)/5</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0.00</Format>
@@ -10760,7 +9307,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>23.2903in</Height>
+        <Height>23.42224in</Height>
         <Style />
       </Body>
       <Width>7.41667in</Width>
@@ -10769,12 +9316,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -10814,4 +9355,1457 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Resource_No">
+          <DataField>Resource_No</DataField>
+        </Field>
+        <Field Name="First_Name">
+          <DataField>First_Name</DataField>
+        </Field>
+        <Field Name="Employee_Full_Name">
+          <DataField>Employee_Full_Name</DataField>
+        </Field>
+        <Field Name="Employee_Major_Location">
+          <DataField>Employee_Major_Location</DataField>
+        </Field>
+        <Field Name="Basic_Salary">
+          <DataField>Basic_Salary</DataField>
+        </Field>
+        <Field Name="Basic_SalaryFormat">
+          <DataField>Basic_SalaryFormat</DataField>
+        </Field>
+        <Field Name="Other_Earnings">
+          <DataField>Other_Earnings</DataField>
+        </Field>
+        <Field Name="Other_EarningsFormat">
+          <DataField>Other_EarningsFormat</DataField>
+        </Field>
+        <Field Name="Gross_Pay">
+          <DataField>Gross_Pay</DataField>
+        </Field>
+        <Field Name="Gross_PayFormat">
+          <DataField>Gross_PayFormat</DataField>
+        </Field>
+        <Field Name="TaxablePay">
+          <DataField>TaxablePay</DataField>
+        </Field>
+        <Field Name="TaxablePayFormat">
+          <DataField>TaxablePayFormat</DataField>
+        </Field>
+        <Field Name="PAYE">
+          <DataField>PAYE</DataField>
+        </Field>
+        <Field Name="PAYEFormat">
+          <DataField>PAYEFormat</DataField>
+        </Field>
+        <Field Name="RSSF">
+          <DataField>RSSF</DataField>
+        </Field>
+        <Field Name="RSSFFormat">
+          <DataField>RSSFFormat</DataField>
+        </Field>
+        <Field Name="RSSF_Employer">
+          <DataField>RSSF_Employer</DataField>
+        </Field>
+        <Field Name="RSSF_EmployerFormat">
+          <DataField>RSSF_EmployerFormat</DataField>
+        </Field>
+        <Field Name="RSS_15Percent">
+          <DataField>RSS_15Percent</DataField>
+        </Field>
+        <Field Name="RSS_15PercentFormat">
+          <DataField>RSS_15PercentFormat</DataField>
+        </Field>
+        <Field Name="Local_Service_Tax">
+          <DataField>Local_Service_Tax</DataField>
+        </Field>
+        <Field Name="Local_Service_TaxFormat">
+          <DataField>Local_Service_TaxFormat</DataField>
+        </Field>
+        <Field Name="Other_Deductions">
+          <DataField>Other_Deductions</DataField>
+        </Field>
+        <Field Name="Other_DeductionsFormat">
+          <DataField>Other_DeductionsFormat</DataField>
+        </Field>
+        <Field Name="Total_Deductions">
+          <DataField>Total_Deductions</DataField>
+        </Field>
+        <Field Name="Total_DeductionsFormat">
+          <DataField>Total_DeductionsFormat</DataField>
+        </Field>
+        <Field Name="Net_Pay">
+          <DataField>Net_Pay</DataField>
+        </Field>
+        <Field Name="Net_PayFormat">
+          <DataField>Net_PayFormat</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address_2">
+          <DataField>CompanyInfo_Address_2</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone_No_">
+          <DataField>CompanyInfo_Phone_No_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax_No_">
+          <DataField>CompanyInfo_Fax_No_</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Home_Page">
+          <DataField>CompanyInfo_Home_Page</DataField>
+        </Field>
+        <Field Name="CompanyInfo_E_Mail">
+          <DataField>CompanyInfo_E_Mail</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="EarningCode1">
+          <DataField>EarningCode1</DataField>
+        </Field>
+        <Field Name="EarningCode2">
+          <DataField>EarningCode2</DataField>
+        </Field>
+        <Field Name="EarningCode3">
+          <DataField>EarningCode3</DataField>
+        </Field>
+        <Field Name="EarningCode4">
+          <DataField>EarningCode4</DataField>
+        </Field>
+        <Field Name="EarningCode5">
+          <DataField>EarningCode5</DataField>
+        </Field>
+        <Field Name="EarningCode6">
+          <DataField>EarningCode6</DataField>
+        </Field>
+        <Field Name="EarningCode7">
+          <DataField>EarningCode7</DataField>
+        </Field>
+        <Field Name="EarningCode8">
+          <DataField>EarningCode8</DataField>
+        </Field>
+        <Field Name="EarningCode9">
+          <DataField>EarningCode9</DataField>
+        </Field>
+        <Field Name="EarningCode10">
+          <DataField>EarningCode10</DataField>
+        </Field>
+        <Field Name="EarningCode11">
+          <DataField>EarningCode11</DataField>
+        </Field>
+        <Field Name="EarningCode12">
+          <DataField>EarningCode12</DataField>
+        </Field>
+        <Field Name="EarningCode13">
+          <DataField>EarningCode13</DataField>
+        </Field>
+        <Field Name="EarningCode14">
+          <DataField>EarningCode14</DataField>
+        </Field>
+        <Field Name="EarningCode15">
+          <DataField>EarningCode15</DataField>
+        </Field>
+        <Field Name="EarningCode16">
+          <DataField>EarningCode16</DataField>
+        </Field>
+        <Field Name="EarningCode17">
+          <DataField>EarningCode17</DataField>
+        </Field>
+        <Field Name="EarningCode18">
+          <DataField>EarningCode18</DataField>
+        </Field>
+        <Field Name="EarningCode19">
+          <DataField>EarningCode19</DataField>
+        </Field>
+        <Field Name="EarningCode20">
+          <DataField>EarningCode20</DataField>
+        </Field>
+        <Field Name="EarningCode21">
+          <DataField>EarningCode21</DataField>
+        </Field>
+        <Field Name="EarningCode22">
+          <DataField>EarningCode22</DataField>
+        </Field>
+        <Field Name="EarningCode23">
+          <DataField>EarningCode23</DataField>
+        </Field>
+        <Field Name="EarningCode24">
+          <DataField>EarningCode24</DataField>
+        </Field>
+        <Field Name="EarningCode25">
+          <DataField>EarningCode25</DataField>
+        </Field>
+        <Field Name="EarningCode26">
+          <DataField>EarningCode26</DataField>
+        </Field>
+        <Field Name="EarningCode27">
+          <DataField>EarningCode27</DataField>
+        </Field>
+        <Field Name="EarningCode28">
+          <DataField>EarningCode28</DataField>
+        </Field>
+        <Field Name="EarningCode29">
+          <DataField>EarningCode29</DataField>
+        </Field>
+        <Field Name="EarningCode30">
+          <DataField>EarningCode30</DataField>
+        </Field>
+        <Field Name="EarningCode31">
+          <DataField>EarningCode31</DataField>
+        </Field>
+        <Field Name="EarningCode32">
+          <DataField>EarningCode32</DataField>
+        </Field>
+        <Field Name="EarningCode33">
+          <DataField>EarningCode33</DataField>
+        </Field>
+        <Field Name="EarningCode34">
+          <DataField>EarningCode34</DataField>
+        </Field>
+        <Field Name="EarningCode35">
+          <DataField>EarningCode35</DataField>
+        </Field>
+        <Field Name="EarningCode36">
+          <DataField>EarningCode36</DataField>
+        </Field>
+        <Field Name="EarningCode37">
+          <DataField>EarningCode37</DataField>
+        </Field>
+        <Field Name="EarningCode38">
+          <DataField>EarningCode38</DataField>
+        </Field>
+        <Field Name="EarningCode39">
+          <DataField>EarningCode39</DataField>
+        </Field>
+        <Field Name="EarningCode40">
+          <DataField>EarningCode40</DataField>
+        </Field>
+        <Field Name="EarningCode41">
+          <DataField>EarningCode41</DataField>
+        </Field>
+        <Field Name="EarningCode42">
+          <DataField>EarningCode42</DataField>
+        </Field>
+        <Field Name="EarningCode43">
+          <DataField>EarningCode43</DataField>
+        </Field>
+        <Field Name="EarningCode44">
+          <DataField>EarningCode44</DataField>
+        </Field>
+        <Field Name="EarningCode45">
+          <DataField>EarningCode45</DataField>
+        </Field>
+        <Field Name="EarningCode46">
+          <DataField>EarningCode46</DataField>
+        </Field>
+        <Field Name="EarningCode47">
+          <DataField>EarningCode47</DataField>
+        </Field>
+        <Field Name="EarningCode48">
+          <DataField>EarningCode48</DataField>
+        </Field>
+        <Field Name="EarningCode49">
+          <DataField>EarningCode49</DataField>
+        </Field>
+        <Field Name="EarningCode50">
+          <DataField>EarningCode50</DataField>
+        </Field>
+        <Field Name="EarningCode51">
+          <DataField>EarningCode51</DataField>
+        </Field>
+        <Field Name="EarningCode52">
+          <DataField>EarningCode52</DataField>
+        </Field>
+        <Field Name="EarningCode53">
+          <DataField>EarningCode53</DataField>
+        </Field>
+        <Field Name="EarningCode54">
+          <DataField>EarningCode54</DataField>
+        </Field>
+        <Field Name="EarningCode55">
+          <DataField>EarningCode55</DataField>
+        </Field>
+        <Field Name="EarningCode56">
+          <DataField>EarningCode56</DataField>
+        </Field>
+        <Field Name="EarningCode57">
+          <DataField>EarningCode57</DataField>
+        </Field>
+        <Field Name="EarningCode58">
+          <DataField>EarningCode58</DataField>
+        </Field>
+        <Field Name="EarningCode59">
+          <DataField>EarningCode59</DataField>
+        </Field>
+        <Field Name="EarningCode60">
+          <DataField>EarningCode60</DataField>
+        </Field>
+        <Field Name="EarningCode61">
+          <DataField>EarningCode61</DataField>
+        </Field>
+        <Field Name="EarningCode62">
+          <DataField>EarningCode62</DataField>
+        </Field>
+        <Field Name="EarningCode63">
+          <DataField>EarningCode63</DataField>
+        </Field>
+        <Field Name="EarningCode64">
+          <DataField>EarningCode64</DataField>
+        </Field>
+        <Field Name="EarningCode65">
+          <DataField>EarningCode65</DataField>
+        </Field>
+        <Field Name="EarningCode66">
+          <DataField>EarningCode66</DataField>
+        </Field>
+        <Field Name="EarningCode67">
+          <DataField>EarningCode67</DataField>
+        </Field>
+        <Field Name="EarningCode68">
+          <DataField>EarningCode68</DataField>
+        </Field>
+        <Field Name="EarningCode69">
+          <DataField>EarningCode69</DataField>
+        </Field>
+        <Field Name="EarningCode70">
+          <DataField>EarningCode70</DataField>
+        </Field>
+        <Field Name="EarningAmount1">
+          <DataField>EarningAmount1</DataField>
+        </Field>
+        <Field Name="EarningAmount1Format">
+          <DataField>EarningAmount1Format</DataField>
+        </Field>
+        <Field Name="EarningAmount2">
+          <DataField>EarningAmount2</DataField>
+        </Field>
+        <Field Name="EarningAmount2Format">
+          <DataField>EarningAmount2Format</DataField>
+        </Field>
+        <Field Name="EarningAmount3">
+          <DataField>EarningAmount3</DataField>
+        </Field>
+        <Field Name="EarningAmount3Format">
+          <DataField>EarningAmount3Format</DataField>
+        </Field>
+        <Field Name="EarningAmount4">
+          <DataField>EarningAmount4</DataField>
+        </Field>
+        <Field Name="EarningAmount4Format">
+          <DataField>EarningAmount4Format</DataField>
+        </Field>
+        <Field Name="EarningAmount5">
+          <DataField>EarningAmount5</DataField>
+        </Field>
+        <Field Name="EarningAmount5Format">
+          <DataField>EarningAmount5Format</DataField>
+        </Field>
+        <Field Name="EarningAmount6">
+          <DataField>EarningAmount6</DataField>
+        </Field>
+        <Field Name="EarningAmount6Format">
+          <DataField>EarningAmount6Format</DataField>
+        </Field>
+        <Field Name="EarningAmount7">
+          <DataField>EarningAmount7</DataField>
+        </Field>
+        <Field Name="EarningAmount7Format">
+          <DataField>EarningAmount7Format</DataField>
+        </Field>
+        <Field Name="EarningAmount8">
+          <DataField>EarningAmount8</DataField>
+        </Field>
+        <Field Name="EarningAmount8Format">
+          <DataField>EarningAmount8Format</DataField>
+        </Field>
+        <Field Name="EarningAmount9">
+          <DataField>EarningAmount9</DataField>
+        </Field>
+        <Field Name="EarningAmount9Format">
+          <DataField>EarningAmount9Format</DataField>
+        </Field>
+        <Field Name="EarningAmount10">
+          <DataField>EarningAmount10</DataField>
+        </Field>
+        <Field Name="EarningAmount10Format">
+          <DataField>EarningAmount10Format</DataField>
+        </Field>
+        <Field Name="EarningAmount11">
+          <DataField>EarningAmount11</DataField>
+        </Field>
+        <Field Name="EarningAmount11Format">
+          <DataField>EarningAmount11Format</DataField>
+        </Field>
+        <Field Name="EarningAmount12">
+          <DataField>EarningAmount12</DataField>
+        </Field>
+        <Field Name="EarningAmount12Format">
+          <DataField>EarningAmount12Format</DataField>
+        </Field>
+        <Field Name="EarningAmount13">
+          <DataField>EarningAmount13</DataField>
+        </Field>
+        <Field Name="EarningAmount13Format">
+          <DataField>EarningAmount13Format</DataField>
+        </Field>
+        <Field Name="EarningAmount14">
+          <DataField>EarningAmount14</DataField>
+        </Field>
+        <Field Name="EarningAmount14Format">
+          <DataField>EarningAmount14Format</DataField>
+        </Field>
+        <Field Name="EarningAmount15">
+          <DataField>EarningAmount15</DataField>
+        </Field>
+        <Field Name="EarningAmount15Format">
+          <DataField>EarningAmount15Format</DataField>
+        </Field>
+        <Field Name="EarningAmount16">
+          <DataField>EarningAmount16</DataField>
+        </Field>
+        <Field Name="EarningAmount16Format">
+          <DataField>EarningAmount16Format</DataField>
+        </Field>
+        <Field Name="EarningAmount17">
+          <DataField>EarningAmount17</DataField>
+        </Field>
+        <Field Name="EarningAmount17Format">
+          <DataField>EarningAmount17Format</DataField>
+        </Field>
+        <Field Name="EarningAmount18">
+          <DataField>EarningAmount18</DataField>
+        </Field>
+        <Field Name="EarningAmount18Format">
+          <DataField>EarningAmount18Format</DataField>
+        </Field>
+        <Field Name="EarningAmount19">
+          <DataField>EarningAmount19</DataField>
+        </Field>
+        <Field Name="EarningAmount19Format">
+          <DataField>EarningAmount19Format</DataField>
+        </Field>
+        <Field Name="EarningAmount20">
+          <DataField>EarningAmount20</DataField>
+        </Field>
+        <Field Name="EarningAmount20Format">
+          <DataField>EarningAmount20Format</DataField>
+        </Field>
+        <Field Name="EarningAmount21">
+          <DataField>EarningAmount21</DataField>
+        </Field>
+        <Field Name="EarningAmount21Format">
+          <DataField>EarningAmount21Format</DataField>
+        </Field>
+        <Field Name="EarningAmount22">
+          <DataField>EarningAmount22</DataField>
+        </Field>
+        <Field Name="EarningAmount22Format">
+          <DataField>EarningAmount22Format</DataField>
+        </Field>
+        <Field Name="EarningAmount23">
+          <DataField>EarningAmount23</DataField>
+        </Field>
+        <Field Name="EarningAmount23Format">
+          <DataField>EarningAmount23Format</DataField>
+        </Field>
+        <Field Name="EarningAmount24">
+          <DataField>EarningAmount24</DataField>
+        </Field>
+        <Field Name="EarningAmount24Format">
+          <DataField>EarningAmount24Format</DataField>
+        </Field>
+        <Field Name="EarningAmount25">
+          <DataField>EarningAmount25</DataField>
+        </Field>
+        <Field Name="EarningAmount25Format">
+          <DataField>EarningAmount25Format</DataField>
+        </Field>
+        <Field Name="EarningAmount26">
+          <DataField>EarningAmount26</DataField>
+        </Field>
+        <Field Name="EarningAmount26Format">
+          <DataField>EarningAmount26Format</DataField>
+        </Field>
+        <Field Name="EarningAmount27">
+          <DataField>EarningAmount27</DataField>
+        </Field>
+        <Field Name="EarningAmount27Format">
+          <DataField>EarningAmount27Format</DataField>
+        </Field>
+        <Field Name="EarningAmount28">
+          <DataField>EarningAmount28</DataField>
+        </Field>
+        <Field Name="EarningAmount28Format">
+          <DataField>EarningAmount28Format</DataField>
+        </Field>
+        <Field Name="EarningAmount29">
+          <DataField>EarningAmount29</DataField>
+        </Field>
+        <Field Name="EarningAmount29Format">
+          <DataField>EarningAmount29Format</DataField>
+        </Field>
+        <Field Name="EarningAmount30">
+          <DataField>EarningAmount30</DataField>
+        </Field>
+        <Field Name="EarningAmount30Format">
+          <DataField>EarningAmount30Format</DataField>
+        </Field>
+        <Field Name="EarningAmount31">
+          <DataField>EarningAmount31</DataField>
+        </Field>
+        <Field Name="EarningAmount31Format">
+          <DataField>EarningAmount31Format</DataField>
+        </Field>
+        <Field Name="EarningAmount32">
+          <DataField>EarningAmount32</DataField>
+        </Field>
+        <Field Name="EarningAmount32Format">
+          <DataField>EarningAmount32Format</DataField>
+        </Field>
+        <Field Name="EarningAmount33">
+          <DataField>EarningAmount33</DataField>
+        </Field>
+        <Field Name="EarningAmount33Format">
+          <DataField>EarningAmount33Format</DataField>
+        </Field>
+        <Field Name="EarningAmount34">
+          <DataField>EarningAmount34</DataField>
+        </Field>
+        <Field Name="EarningAmount34Format">
+          <DataField>EarningAmount34Format</DataField>
+        </Field>
+        <Field Name="EarningAmount35">
+          <DataField>EarningAmount35</DataField>
+        </Field>
+        <Field Name="EarningAmount35Format">
+          <DataField>EarningAmount35Format</DataField>
+        </Field>
+        <Field Name="EarningAmount36">
+          <DataField>EarningAmount36</DataField>
+        </Field>
+        <Field Name="EarningAmount36Format">
+          <DataField>EarningAmount36Format</DataField>
+        </Field>
+        <Field Name="EarningAmount37">
+          <DataField>EarningAmount37</DataField>
+        </Field>
+        <Field Name="EarningAmount37Format">
+          <DataField>EarningAmount37Format</DataField>
+        </Field>
+        <Field Name="EarningAmount38">
+          <DataField>EarningAmount38</DataField>
+        </Field>
+        <Field Name="EarningAmount38Format">
+          <DataField>EarningAmount38Format</DataField>
+        </Field>
+        <Field Name="EarningAmount39">
+          <DataField>EarningAmount39</DataField>
+        </Field>
+        <Field Name="EarningAmount39Format">
+          <DataField>EarningAmount39Format</DataField>
+        </Field>
+        <Field Name="EarningAmount40">
+          <DataField>EarningAmount40</DataField>
+        </Field>
+        <Field Name="EarningAmount40Format">
+          <DataField>EarningAmount40Format</DataField>
+        </Field>
+        <Field Name="EarningAmount41">
+          <DataField>EarningAmount41</DataField>
+        </Field>
+        <Field Name="EarningAmount41Format">
+          <DataField>EarningAmount41Format</DataField>
+        </Field>
+        <Field Name="EarningAmount42">
+          <DataField>EarningAmount42</DataField>
+        </Field>
+        <Field Name="EarningAmount42Format">
+          <DataField>EarningAmount42Format</DataField>
+        </Field>
+        <Field Name="EarningAmount43">
+          <DataField>EarningAmount43</DataField>
+        </Field>
+        <Field Name="EarningAmount43Format">
+          <DataField>EarningAmount43Format</DataField>
+        </Field>
+        <Field Name="EarningAmount44">
+          <DataField>EarningAmount44</DataField>
+        </Field>
+        <Field Name="EarningAmount44Format">
+          <DataField>EarningAmount44Format</DataField>
+        </Field>
+        <Field Name="EarningAmount45">
+          <DataField>EarningAmount45</DataField>
+        </Field>
+        <Field Name="EarningAmount45Format">
+          <DataField>EarningAmount45Format</DataField>
+        </Field>
+        <Field Name="EarningAmount46">
+          <DataField>EarningAmount46</DataField>
+        </Field>
+        <Field Name="EarningAmount46Format">
+          <DataField>EarningAmount46Format</DataField>
+        </Field>
+        <Field Name="EarningAmount47">
+          <DataField>EarningAmount47</DataField>
+        </Field>
+        <Field Name="EarningAmount47Format">
+          <DataField>EarningAmount47Format</DataField>
+        </Field>
+        <Field Name="EarningAmount48">
+          <DataField>EarningAmount48</DataField>
+        </Field>
+        <Field Name="EarningAmount48Format">
+          <DataField>EarningAmount48Format</DataField>
+        </Field>
+        <Field Name="EarningAmount49">
+          <DataField>EarningAmount49</DataField>
+        </Field>
+        <Field Name="EarningAmount49Format">
+          <DataField>EarningAmount49Format</DataField>
+        </Field>
+        <Field Name="EarningAmount50">
+          <DataField>EarningAmount50</DataField>
+        </Field>
+        <Field Name="EarningAmount50Format">
+          <DataField>EarningAmount50Format</DataField>
+        </Field>
+        <Field Name="EarningAmount51">
+          <DataField>EarningAmount51</DataField>
+        </Field>
+        <Field Name="EarningAmount51Format">
+          <DataField>EarningAmount51Format</DataField>
+        </Field>
+        <Field Name="EarningAmount52">
+          <DataField>EarningAmount52</DataField>
+        </Field>
+        <Field Name="EarningAmount52Format">
+          <DataField>EarningAmount52Format</DataField>
+        </Field>
+        <Field Name="EarningAmount53">
+          <DataField>EarningAmount53</DataField>
+        </Field>
+        <Field Name="EarningAmount53Format">
+          <DataField>EarningAmount53Format</DataField>
+        </Field>
+        <Field Name="EarningAmount54">
+          <DataField>EarningAmount54</DataField>
+        </Field>
+        <Field Name="EarningAmount54Format">
+          <DataField>EarningAmount54Format</DataField>
+        </Field>
+        <Field Name="EarningAmount55">
+          <DataField>EarningAmount55</DataField>
+        </Field>
+        <Field Name="EarningAmount55Format">
+          <DataField>EarningAmount55Format</DataField>
+        </Field>
+        <Field Name="EarningAmount56">
+          <DataField>EarningAmount56</DataField>
+        </Field>
+        <Field Name="EarningAmount56Format">
+          <DataField>EarningAmount56Format</DataField>
+        </Field>
+        <Field Name="EarningAmount57">
+          <DataField>EarningAmount57</DataField>
+        </Field>
+        <Field Name="EarningAmount57Format">
+          <DataField>EarningAmount57Format</DataField>
+        </Field>
+        <Field Name="EarningAmount58">
+          <DataField>EarningAmount58</DataField>
+        </Field>
+        <Field Name="EarningAmount58Format">
+          <DataField>EarningAmount58Format</DataField>
+        </Field>
+        <Field Name="EarningAmount59">
+          <DataField>EarningAmount59</DataField>
+        </Field>
+        <Field Name="EarningAmount59Format">
+          <DataField>EarningAmount59Format</DataField>
+        </Field>
+        <Field Name="EarningAmount60">
+          <DataField>EarningAmount60</DataField>
+        </Field>
+        <Field Name="EarningAmount60Format">
+          <DataField>EarningAmount60Format</DataField>
+        </Field>
+        <Field Name="EarningAmount61">
+          <DataField>EarningAmount61</DataField>
+        </Field>
+        <Field Name="EarningAmount61Format">
+          <DataField>EarningAmount61Format</DataField>
+        </Field>
+        <Field Name="EarningAmount62">
+          <DataField>EarningAmount62</DataField>
+        </Field>
+        <Field Name="EarningAmount62Format">
+          <DataField>EarningAmount62Format</DataField>
+        </Field>
+        <Field Name="EarningAmount63">
+          <DataField>EarningAmount63</DataField>
+        </Field>
+        <Field Name="EarningAmount63Format">
+          <DataField>EarningAmount63Format</DataField>
+        </Field>
+        <Field Name="EarningAmount64">
+          <DataField>EarningAmount64</DataField>
+        </Field>
+        <Field Name="EarningAmount64Format">
+          <DataField>EarningAmount64Format</DataField>
+        </Field>
+        <Field Name="EarningAmount65">
+          <DataField>EarningAmount65</DataField>
+        </Field>
+        <Field Name="EarningAmount65Format">
+          <DataField>EarningAmount65Format</DataField>
+        </Field>
+        <Field Name="EarningAmount66">
+          <DataField>EarningAmount66</DataField>
+        </Field>
+        <Field Name="EarningAmount66Format">
+          <DataField>EarningAmount66Format</DataField>
+        </Field>
+        <Field Name="EarningAmount67">
+          <DataField>EarningAmount67</DataField>
+        </Field>
+        <Field Name="EarningAmount67Format">
+          <DataField>EarningAmount67Format</DataField>
+        </Field>
+        <Field Name="EarningAmount68">
+          <DataField>EarningAmount68</DataField>
+        </Field>
+        <Field Name="EarningAmount68Format">
+          <DataField>EarningAmount68Format</DataField>
+        </Field>
+        <Field Name="EarningAmount69">
+          <DataField>EarningAmount69</DataField>
+        </Field>
+        <Field Name="EarningAmount69Format">
+          <DataField>EarningAmount69Format</DataField>
+        </Field>
+        <Field Name="EarningAmount70">
+          <DataField>EarningAmount70</DataField>
+        </Field>
+        <Field Name="EarningAmount70Format">
+          <DataField>EarningAmount70Format</DataField>
+        </Field>
+        <Field Name="DeductionCode1">
+          <DataField>DeductionCode1</DataField>
+        </Field>
+        <Field Name="DeductionCode2">
+          <DataField>DeductionCode2</DataField>
+        </Field>
+        <Field Name="DeductionCode3">
+          <DataField>DeductionCode3</DataField>
+        </Field>
+        <Field Name="DeductionCode4">
+          <DataField>DeductionCode4</DataField>
+        </Field>
+        <Field Name="DeductionCode5">
+          <DataField>DeductionCode5</DataField>
+        </Field>
+        <Field Name="DeductionCode6">
+          <DataField>DeductionCode6</DataField>
+        </Field>
+        <Field Name="DeductionCode7">
+          <DataField>DeductionCode7</DataField>
+        </Field>
+        <Field Name="DeductionCode8">
+          <DataField>DeductionCode8</DataField>
+        </Field>
+        <Field Name="DeductionCode9">
+          <DataField>DeductionCode9</DataField>
+        </Field>
+        <Field Name="DeductionCode10">
+          <DataField>DeductionCode10</DataField>
+        </Field>
+        <Field Name="DeductionCode11">
+          <DataField>DeductionCode11</DataField>
+        </Field>
+        <Field Name="DeductionCode12">
+          <DataField>DeductionCode12</DataField>
+        </Field>
+        <Field Name="DeductionCode13">
+          <DataField>DeductionCode13</DataField>
+        </Field>
+        <Field Name="DeductionCode14">
+          <DataField>DeductionCode14</DataField>
+        </Field>
+        <Field Name="DeductionCode15">
+          <DataField>DeductionCode15</DataField>
+        </Field>
+        <Field Name="DeductionCode16">
+          <DataField>DeductionCode16</DataField>
+        </Field>
+        <Field Name="DeductionCode17">
+          <DataField>DeductionCode17</DataField>
+        </Field>
+        <Field Name="DeductionCode18">
+          <DataField>DeductionCode18</DataField>
+        </Field>
+        <Field Name="DeductionCode19">
+          <DataField>DeductionCode19</DataField>
+        </Field>
+        <Field Name="DeductionCode20">
+          <DataField>DeductionCode20</DataField>
+        </Field>
+        <Field Name="DeductionCode21">
+          <DataField>DeductionCode21</DataField>
+        </Field>
+        <Field Name="DeductionCode22">
+          <DataField>DeductionCode22</DataField>
+        </Field>
+        <Field Name="DeductionCode23">
+          <DataField>DeductionCode23</DataField>
+        </Field>
+        <Field Name="DeductionCode24">
+          <DataField>DeductionCode24</DataField>
+        </Field>
+        <Field Name="DeductionCode25">
+          <DataField>DeductionCode25</DataField>
+        </Field>
+        <Field Name="DeductionCode26">
+          <DataField>DeductionCode26</DataField>
+        </Field>
+        <Field Name="DeductionCode27">
+          <DataField>DeductionCode27</DataField>
+        </Field>
+        <Field Name="DeductionCode28">
+          <DataField>DeductionCode28</DataField>
+        </Field>
+        <Field Name="DeductionCode29">
+          <DataField>DeductionCode29</DataField>
+        </Field>
+        <Field Name="DeductionCode30">
+          <DataField>DeductionCode30</DataField>
+        </Field>
+        <Field Name="DeductionCode31">
+          <DataField>DeductionCode31</DataField>
+        </Field>
+        <Field Name="DeductionCode32">
+          <DataField>DeductionCode32</DataField>
+        </Field>
+        <Field Name="DeductionCode33">
+          <DataField>DeductionCode33</DataField>
+        </Field>
+        <Field Name="DeductionCode34">
+          <DataField>DeductionCode34</DataField>
+        </Field>
+        <Field Name="DeductionCode35">
+          <DataField>DeductionCode35</DataField>
+        </Field>
+        <Field Name="DeductionCode36">
+          <DataField>DeductionCode36</DataField>
+        </Field>
+        <Field Name="DeductionCode37">
+          <DataField>DeductionCode37</DataField>
+        </Field>
+        <Field Name="DeductionCode38">
+          <DataField>DeductionCode38</DataField>
+        </Field>
+        <Field Name="DeductionCode39">
+          <DataField>DeductionCode39</DataField>
+        </Field>
+        <Field Name="DeductionCode40">
+          <DataField>DeductionCode40</DataField>
+        </Field>
+        <Field Name="DeductionAmount1">
+          <DataField>DeductionAmount1</DataField>
+        </Field>
+        <Field Name="DeductionAmount1Format">
+          <DataField>DeductionAmount1Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount2">
+          <DataField>DeductionAmount2</DataField>
+        </Field>
+        <Field Name="DeductionAmount2Format">
+          <DataField>DeductionAmount2Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount3">
+          <DataField>DeductionAmount3</DataField>
+        </Field>
+        <Field Name="DeductionAmount3Format">
+          <DataField>DeductionAmount3Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount4">
+          <DataField>DeductionAmount4</DataField>
+        </Field>
+        <Field Name="DeductionAmount4Format">
+          <DataField>DeductionAmount4Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount5">
+          <DataField>DeductionAmount5</DataField>
+        </Field>
+        <Field Name="DeductionAmount5Format">
+          <DataField>DeductionAmount5Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount6">
+          <DataField>DeductionAmount6</DataField>
+        </Field>
+        <Field Name="DeductionAmount6Format">
+          <DataField>DeductionAmount6Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount7">
+          <DataField>DeductionAmount7</DataField>
+        </Field>
+        <Field Name="DeductionAmount7Format">
+          <DataField>DeductionAmount7Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount8">
+          <DataField>DeductionAmount8</DataField>
+        </Field>
+        <Field Name="DeductionAmount8Format">
+          <DataField>DeductionAmount8Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount9">
+          <DataField>DeductionAmount9</DataField>
+        </Field>
+        <Field Name="DeductionAmount9Format">
+          <DataField>DeductionAmount9Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount10">
+          <DataField>DeductionAmount10</DataField>
+        </Field>
+        <Field Name="DeductionAmount10Format">
+          <DataField>DeductionAmount10Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount11">
+          <DataField>DeductionAmount11</DataField>
+        </Field>
+        <Field Name="DeductionAmount11Format">
+          <DataField>DeductionAmount11Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount12">
+          <DataField>DeductionAmount12</DataField>
+        </Field>
+        <Field Name="DeductionAmount12Format">
+          <DataField>DeductionAmount12Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount13">
+          <DataField>DeductionAmount13</DataField>
+        </Field>
+        <Field Name="DeductionAmount13Format">
+          <DataField>DeductionAmount13Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount14">
+          <DataField>DeductionAmount14</DataField>
+        </Field>
+        <Field Name="DeductionAmount14Format">
+          <DataField>DeductionAmount14Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount15">
+          <DataField>DeductionAmount15</DataField>
+        </Field>
+        <Field Name="DeductionAmount15Format">
+          <DataField>DeductionAmount15Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount16">
+          <DataField>DeductionAmount16</DataField>
+        </Field>
+        <Field Name="DeductionAmount16Format">
+          <DataField>DeductionAmount16Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount17">
+          <DataField>DeductionAmount17</DataField>
+        </Field>
+        <Field Name="DeductionAmount17Format">
+          <DataField>DeductionAmount17Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount18">
+          <DataField>DeductionAmount18</DataField>
+        </Field>
+        <Field Name="DeductionAmount18Format">
+          <DataField>DeductionAmount18Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount19">
+          <DataField>DeductionAmount19</DataField>
+        </Field>
+        <Field Name="DeductionAmount19Format">
+          <DataField>DeductionAmount19Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount20">
+          <DataField>DeductionAmount20</DataField>
+        </Field>
+        <Field Name="DeductionAmount20Format">
+          <DataField>DeductionAmount20Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount21">
+          <DataField>DeductionAmount21</DataField>
+        </Field>
+        <Field Name="DeductionAmount21Format">
+          <DataField>DeductionAmount21Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount22">
+          <DataField>DeductionAmount22</DataField>
+        </Field>
+        <Field Name="DeductionAmount22Format">
+          <DataField>DeductionAmount22Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount23">
+          <DataField>DeductionAmount23</DataField>
+        </Field>
+        <Field Name="DeductionAmount23Format">
+          <DataField>DeductionAmount23Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount24">
+          <DataField>DeductionAmount24</DataField>
+        </Field>
+        <Field Name="DeductionAmount24Format">
+          <DataField>DeductionAmount24Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount25">
+          <DataField>DeductionAmount25</DataField>
+        </Field>
+        <Field Name="DeductionAmount25Format">
+          <DataField>DeductionAmount25Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount26">
+          <DataField>DeductionAmount26</DataField>
+        </Field>
+        <Field Name="DeductionAmount26Format">
+          <DataField>DeductionAmount26Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount27">
+          <DataField>DeductionAmount27</DataField>
+        </Field>
+        <Field Name="DeductionAmount27Format">
+          <DataField>DeductionAmount27Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount28">
+          <DataField>DeductionAmount28</DataField>
+        </Field>
+        <Field Name="DeductionAmount28Format">
+          <DataField>DeductionAmount28Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount29">
+          <DataField>DeductionAmount29</DataField>
+        </Field>
+        <Field Name="DeductionAmount29Format">
+          <DataField>DeductionAmount29Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount30">
+          <DataField>DeductionAmount30</DataField>
+        </Field>
+        <Field Name="DeductionAmount30Format">
+          <DataField>DeductionAmount30Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount31">
+          <DataField>DeductionAmount31</DataField>
+        </Field>
+        <Field Name="DeductionAmount31Format">
+          <DataField>DeductionAmount31Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount32">
+          <DataField>DeductionAmount32</DataField>
+        </Field>
+        <Field Name="DeductionAmount32Format">
+          <DataField>DeductionAmount32Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount33">
+          <DataField>DeductionAmount33</DataField>
+        </Field>
+        <Field Name="DeductionAmount33Format">
+          <DataField>DeductionAmount33Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount34">
+          <DataField>DeductionAmount34</DataField>
+        </Field>
+        <Field Name="DeductionAmount34Format">
+          <DataField>DeductionAmount34Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount35">
+          <DataField>DeductionAmount35</DataField>
+        </Field>
+        <Field Name="DeductionAmount35Format">
+          <DataField>DeductionAmount35Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount36">
+          <DataField>DeductionAmount36</DataField>
+        </Field>
+        <Field Name="DeductionAmount36Format">
+          <DataField>DeductionAmount36Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount37">
+          <DataField>DeductionAmount37</DataField>
+        </Field>
+        <Field Name="DeductionAmount37Format">
+          <DataField>DeductionAmount37Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount38">
+          <DataField>DeductionAmount38</DataField>
+        </Field>
+        <Field Name="DeductionAmount38Format">
+          <DataField>DeductionAmount38Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount39">
+          <DataField>DeductionAmount39</DataField>
+        </Field>
+        <Field Name="DeductionAmount39Format">
+          <DataField>DeductionAmount39Format</DataField>
+        </Field>
+        <Field Name="DeductionAmount40">
+          <DataField>DeductionAmount40</DataField>
+        </Field>
+        <Field Name="DeductionAmount40Format">
+          <DataField>DeductionAmount40Format</DataField>
+        </Field>
+        <Field Name="EarningInclude1">
+          <DataField>EarningInclude1</DataField>
+        </Field>
+        <Field Name="EarningInclude2">
+          <DataField>EarningInclude2</DataField>
+        </Field>
+        <Field Name="EarningInclude3">
+          <DataField>EarningInclude3</DataField>
+        </Field>
+        <Field Name="EarningInclude4">
+          <DataField>EarningInclude4</DataField>
+        </Field>
+        <Field Name="EarningInclude5">
+          <DataField>EarningInclude5</DataField>
+        </Field>
+        <Field Name="EarningInclude6">
+          <DataField>EarningInclude6</DataField>
+        </Field>
+        <Field Name="EarningInclude7">
+          <DataField>EarningInclude7</DataField>
+        </Field>
+        <Field Name="EarningInclude8">
+          <DataField>EarningInclude8</DataField>
+        </Field>
+        <Field Name="EarningInclude9">
+          <DataField>EarningInclude9</DataField>
+        </Field>
+        <Field Name="EarningInclude10">
+          <DataField>EarningInclude10</DataField>
+        </Field>
+        <Field Name="EarningInclude11">
+          <DataField>EarningInclude11</DataField>
+        </Field>
+        <Field Name="EarningInclude12">
+          <DataField>EarningInclude12</DataField>
+        </Field>
+        <Field Name="EarningInclude13">
+          <DataField>EarningInclude13</DataField>
+        </Field>
+        <Field Name="EarningInclude14">
+          <DataField>EarningInclude14</DataField>
+        </Field>
+        <Field Name="EarningInclude15">
+          <DataField>EarningInclude15</DataField>
+        </Field>
+        <Field Name="EarningInclude16">
+          <DataField>EarningInclude16</DataField>
+        </Field>
+        <Field Name="EarningInclude17">
+          <DataField>EarningInclude17</DataField>
+        </Field>
+        <Field Name="EarningInclude18">
+          <DataField>EarningInclude18</DataField>
+        </Field>
+        <Field Name="EarningInclude19">
+          <DataField>EarningInclude19</DataField>
+        </Field>
+        <Field Name="EarningInclude20">
+          <DataField>EarningInclude20</DataField>
+        </Field>
+        <Field Name="EarningInclude21">
+          <DataField>EarningInclude21</DataField>
+        </Field>
+        <Field Name="EarningInclude22">
+          <DataField>EarningInclude22</DataField>
+        </Field>
+        <Field Name="EarningInclude23">
+          <DataField>EarningInclude23</DataField>
+        </Field>
+        <Field Name="EarningInclude24">
+          <DataField>EarningInclude24</DataField>
+        </Field>
+        <Field Name="EarningInclude25">
+          <DataField>EarningInclude25</DataField>
+        </Field>
+        <Field Name="EarningInclude26">
+          <DataField>EarningInclude26</DataField>
+        </Field>
+        <Field Name="EarningInclude27">
+          <DataField>EarningInclude27</DataField>
+        </Field>
+        <Field Name="EarningInclude28">
+          <DataField>EarningInclude28</DataField>
+        </Field>
+        <Field Name="EarningInclude29">
+          <DataField>EarningInclude29</DataField>
+        </Field>
+        <Field Name="EarningInclude30">
+          <DataField>EarningInclude30</DataField>
+        </Field>
+        <Field Name="EarningInclude31">
+          <DataField>EarningInclude31</DataField>
+        </Field>
+        <Field Name="EarningInclude32">
+          <DataField>EarningInclude32</DataField>
+        </Field>
+        <Field Name="EarningInclude33">
+          <DataField>EarningInclude33</DataField>
+        </Field>
+        <Field Name="EarningInclude34">
+          <DataField>EarningInclude34</DataField>
+        </Field>
+        <Field Name="EarningInclude35">
+          <DataField>EarningInclude35</DataField>
+        </Field>
+        <Field Name="EarningInclude36">
+          <DataField>EarningInclude36</DataField>
+        </Field>
+        <Field Name="EarningInclude37">
+          <DataField>EarningInclude37</DataField>
+        </Field>
+        <Field Name="EarningInclude38">
+          <DataField>EarningInclude38</DataField>
+        </Field>
+        <Field Name="EarningInclude39">
+          <DataField>EarningInclude39</DataField>
+        </Field>
+        <Field Name="EarningInclude40">
+          <DataField>EarningInclude40</DataField>
+        </Field>
+        <Field Name="EarningInclude41">
+          <DataField>EarningInclude41</DataField>
+        </Field>
+        <Field Name="EarningInclude42">
+          <DataField>EarningInclude42</DataField>
+        </Field>
+        <Field Name="EarningInclude43">
+          <DataField>EarningInclude43</DataField>
+        </Field>
+        <Field Name="EarningInclude44">
+          <DataField>EarningInclude44</DataField>
+        </Field>
+        <Field Name="EarningInclude45">
+          <DataField>EarningInclude45</DataField>
+        </Field>
+        <Field Name="EarningInclude46">
+          <DataField>EarningInclude46</DataField>
+        </Field>
+        <Field Name="EarningInclude47">
+          <DataField>EarningInclude47</DataField>
+        </Field>
+        <Field Name="EarningInclude48">
+          <DataField>EarningInclude48</DataField>
+        </Field>
+        <Field Name="EarningInclude49">
+          <DataField>EarningInclude49</DataField>
+        </Field>
+        <Field Name="EarningInclude50">
+          <DataField>EarningInclude50</DataField>
+        </Field>
+        <Field Name="EarningInclude51">
+          <DataField>EarningInclude51</DataField>
+        </Field>
+        <Field Name="EarningInclude52">
+          <DataField>EarningInclude52</DataField>
+        </Field>
+        <Field Name="EarningInclude53">
+          <DataField>EarningInclude53</DataField>
+        </Field>
+        <Field Name="EarningInclude54">
+          <DataField>EarningInclude54</DataField>
+        </Field>
+        <Field Name="EarningInclude55">
+          <DataField>EarningInclude55</DataField>
+        </Field>
+        <Field Name="EarningInclude56">
+          <DataField>EarningInclude56</DataField>
+        </Field>
+        <Field Name="EarningInclude57">
+          <DataField>EarningInclude57</DataField>
+        </Field>
+        <Field Name="EarningInclude58">
+          <DataField>EarningInclude58</DataField>
+        </Field>
+        <Field Name="EarningInclude59">
+          <DataField>EarningInclude59</DataField>
+        </Field>
+        <Field Name="EarningInclude60">
+          <DataField>EarningInclude60</DataField>
+        </Field>
+        <Field Name="EarningInclude61">
+          <DataField>EarningInclude61</DataField>
+        </Field>
+        <Field Name="EarningInclude62">
+          <DataField>EarningInclude62</DataField>
+        </Field>
+        <Field Name="EarningInclude63">
+          <DataField>EarningInclude63</DataField>
+        </Field>
+        <Field Name="EarningInclude64">
+          <DataField>EarningInclude64</DataField>
+        </Field>
+        <Field Name="EarningInclude65">
+          <DataField>EarningInclude65</DataField>
+        </Field>
+        <Field Name="EarningInclude66">
+          <DataField>EarningInclude66</DataField>
+        </Field>
+        <Field Name="EarningInclude67">
+          <DataField>EarningInclude67</DataField>
+        </Field>
+        <Field Name="EarningInclude68">
+          <DataField>EarningInclude68</DataField>
+        </Field>
+        <Field Name="EarningInclude69">
+          <DataField>EarningInclude69</DataField>
+        </Field>
+        <Field Name="EarningInclude70">
+          <DataField>EarningInclude70</DataField>
+        </Field>
+        <Field Name="DeductionInclude1">
+          <DataField>DeductionInclude1</DataField>
+        </Field>
+        <Field Name="DeductionInclude2">
+          <DataField>DeductionInclude2</DataField>
+        </Field>
+        <Field Name="DeductionInclude3">
+          <DataField>DeductionInclude3</DataField>
+        </Field>
+        <Field Name="DeductionInclude4">
+          <DataField>DeductionInclude4</DataField>
+        </Field>
+        <Field Name="DeductionInclude5">
+          <DataField>DeductionInclude5</DataField>
+        </Field>
+        <Field Name="DeductionInclude6">
+          <DataField>DeductionInclude6</DataField>
+        </Field>
+        <Field Name="DeductionInclude7">
+          <DataField>DeductionInclude7</DataField>
+        </Field>
+        <Field Name="DeductionInclude8">
+          <DataField>DeductionInclude8</DataField>
+        </Field>
+        <Field Name="DeductionInclude9">
+          <DataField>DeductionInclude9</DataField>
+        </Field>
+        <Field Name="DeductionInclude10">
+          <DataField>DeductionInclude10</DataField>
+        </Field>
+        <Field Name="DeductionInclude11">
+          <DataField>DeductionInclude11</DataField>
+        </Field>
+        <Field Name="DeductionInclude12">
+          <DataField>DeductionInclude12</DataField>
+        </Field>
+        <Field Name="DeductionInclude13">
+          <DataField>DeductionInclude13</DataField>
+        </Field>
+        <Field Name="DeductionInclude14">
+          <DataField>DeductionInclude14</DataField>
+        </Field>
+        <Field Name="DeductionInclude15">
+          <DataField>DeductionInclude15</DataField>
+        </Field>
+        <Field Name="DeductionInclude16">
+          <DataField>DeductionInclude16</DataField>
+        </Field>
+        <Field Name="DeductionInclude17">
+          <DataField>DeductionInclude17</DataField>
+        </Field>
+        <Field Name="DeductionInclude18">
+          <DataField>DeductionInclude18</DataField>
+        </Field>
+        <Field Name="DeductionInclude19">
+          <DataField>DeductionInclude19</DataField>
+        </Field>
+        <Field Name="DeductionInclude20">
+          <DataField>DeductionInclude20</DataField>
+        </Field>
+        <Field Name="DeductionInclude21">
+          <DataField>DeductionInclude21</DataField>
+        </Field>
+        <Field Name="DeductionInclude22">
+          <DataField>DeductionInclude22</DataField>
+        </Field>
+        <Field Name="DeductionInclude23">
+          <DataField>DeductionInclude23</DataField>
+        </Field>
+        <Field Name="DeductionInclude24">
+          <DataField>DeductionInclude24</DataField>
+        </Field>
+        <Field Name="DeductionInclude25">
+          <DataField>DeductionInclude25</DataField>
+        </Field>
+        <Field Name="DeductionInclude26">
+          <DataField>DeductionInclude26</DataField>
+        </Field>
+        <Field Name="DeductionInclude27">
+          <DataField>DeductionInclude27</DataField>
+        </Field>
+        <Field Name="DeductionInclude28">
+          <DataField>DeductionInclude28</DataField>
+        </Field>
+        <Field Name="DeductionInclude29">
+          <DataField>DeductionInclude29</DataField>
+        </Field>
+        <Field Name="DeductionInclude30">
+          <DataField>DeductionInclude30</DataField>
+        </Field>
+        <Field Name="DeductionInclude31">
+          <DataField>DeductionInclude31</DataField>
+        </Field>
+        <Field Name="DeductionInclude32">
+          <DataField>DeductionInclude32</DataField>
+        </Field>
+        <Field Name="DeductionInclude33">
+          <DataField>DeductionInclude33</DataField>
+        </Field>
+        <Field Name="DeductionInclude34">
+          <DataField>DeductionInclude34</DataField>
+        </Field>
+        <Field Name="DeductionInclude35">
+          <DataField>DeductionInclude35</DataField>
+        </Field>
+        <Field Name="DeductionInclude36">
+          <DataField>DeductionInclude36</DataField>
+        </Field>
+        <Field Name="DeductionInclude37">
+          <DataField>DeductionInclude37</DataField>
+        </Field>
+        <Field Name="DeductionInclude38">
+          <DataField>DeductionInclude38</DataField>
+        </Field>
+        <Field Name="DeductionInclude39">
+          <DataField>DeductionInclude39</DataField>
+        </Field>
+        <Field Name="DeductionInclude40">
+          <DataField>DeductionInclude40</DataField>
+        </Field>
+        <Field Name="Num">
+          <DataField>Num</DataField>
+        </Field>
+        <Field Name="ShowNumbering">
+          <DataField>ShowNumbering</DataField>
+        </Field>
+        <Field Name="PayrollMonthYear">
+          <DataField>PayrollMonthYear</DataField>
+        </Field>
+        <Field Name="Filters">
+          <DataField>Filters</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

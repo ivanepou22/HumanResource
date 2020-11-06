@@ -491,7 +491,7 @@ report 50007 "Payroll Report"
                                         TotalPretaxDeductions += ResLedgerEntry.Amount;
                                     END;
                                     IF (ResLedgerEntry."ED Code" = 'NSSF') OR (ResLedgerEntry."ED Code" = 'NSSF-ADMIN')
-                                    OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') then begin
+                                    OR (ResLedgerEntry."ED Code" = 'NSSF-DIST') OR (ResLedgerEntry."ED Code" = 'NSSF-FARM') then begin
                                         RSSF := ResLedgerEntry.Amount;
                                         RSSFEmployer := ResLedgerEntry."Employer Amount (LCY)";
                                     end;
