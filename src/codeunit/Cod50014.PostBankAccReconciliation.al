@@ -803,18 +803,6 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
                 PreviousUnclearedDifferences1 += ReconciliationLine2."Statement Amount";
             UNTIL ReconciliationLine2.NEXT = 0;
 
-        ReconciliationLine2.RESET;
-        ReconciliationLine2.SETRANGE("Statement Type", ReconciliationLine2."Statement Type"::"Payment Application");
-        ReconciliationLine2.SETRANGE(ReconciliationLine2."Bank Account No.", BankAccountReconciliation."Bank Account No.");
-        ReconciliationLine2.SETFILTER(ReconciliationLine2."Statement No.", '<>%1', BankAccountReconciliation."Statement No.");
-        ReconciliationLine2.SETRANGE(ReconciliationLine2.Type, ReconciliationLine2.Type::Difference);
-        ReconciliationLine2.SETRANGE(ReconciliationLine2.Cleared, false);
-        ReconciliationLine2.SETFILTER(ReconciliationLine2."Cleared Date", '<=%1', BankAccountReconciliation."Statement Date");
-        IF ReconciliationLine2.FINDFIRST THEN
-            REPEAT
-                PreviousUnclearedDifferences2 += ReconciliationLine2."Statement Amount";
-            UNTIL ReconciliationLine2.NEXT = 0;
-
         ReconciliationLine.RESET;
         ReconciliationLine.SETRANGE("Statement Type", ReconciliationLine."Statement Type"::"Bank Reconciliation");
         ReconciliationLine.SETRANGE(ReconciliationLine."Bank Account No.", BankAccountReconciliation."Bank Account No.");
@@ -830,7 +818,7 @@ codeunit 50014 "Post Bank Acc. Reconciliation"
 
         BankAccountReconciliation.CALCFIELDS("Previous Uncleared Difference");
         EndingBalance := BankAccountReconciliation."Statement Ending Balance" + OutstandingAmount - PositiveNegativeDifferences -
-                         (PreviousUnclearedDifferences1 + PreviousUnclearedDifferences2);
+                         (PreviousUnclearedDifferences1);
         EXIT(EndingBalance - CashBookBalance);
     end;
 

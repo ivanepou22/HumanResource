@@ -13,6 +13,7 @@ report 50026 "Standard Trial Balance"
         dataitem(GLAccount; "G/L Account")
         {
             DataItemTableView = WHERE("Account Type" = CONST(Posting));
+            RequestFilterFields = "Date Filter";
             Column(CompanyInfo_Name; CompanyInfo.Name) { }
             Column(CompanyInfo_Address; CompanyInfo.Address) { }
             Column(CompanyInfo_Address_2; CompanyInfo."Address 2") { }
@@ -29,7 +30,7 @@ report 50026 "Standard Trial Balance"
 
             trigger OnPreDataItem()
             begin
-                GLAccount.SETRANGE("Date Filter", 0D, EndingDate);
+                //GLAccount.SETRANGE("Date Filter", 0D, EndingDate);
             end;
 
             trigger OnAfterGetRecord()
@@ -68,14 +69,6 @@ report 50026 "Standard Trial Balance"
             {
                 group(Options)
                 {
-                    field("Starting Date"; StartingDate)
-                    {
-                        ApplicationArea = All;
-                    }
-                    field("Ending Date"; EndingDate)
-                    {
-                        ApplicationArea = All;
-                    }
 
                 }
             }
@@ -95,6 +88,7 @@ report 50026 "Standard Trial Balance"
     begin
         CompanyInfo.GET;
         CompanyInfo.CALCFIELDS(Picture);
+        EndingDate := GLAccount.GetFilter("Date Filter");
     end;
 
     var
@@ -103,7 +97,7 @@ report 50026 "Standard Trial Balance"
         CreditBalance: Decimal;
         TotalDebitBalance: Decimal;
         TotalCreditBalance: Decimal;
-        EndingDate: Date;
+        EndingDate: Text[50];
         StartingDate: Date;
         DebitChange: Decimal;
         CreditChange: Decimal;
