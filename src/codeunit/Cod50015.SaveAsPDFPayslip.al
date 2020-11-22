@@ -21,7 +21,7 @@ codeunit 50015 "Save As PDF Payslip"
         //CLEAR(OStream);
         MyPDFFile.CREATE(FileName1);
         MyPDFFile.CREATEOUTSTREAM(OStream);
-        REPORT.SAVEAS(50009, XMLParameters, REPORTFORMAT::Pdf, OStream);
+        REPORT.SAVEAS(50008, XMLParameters, REPORTFORMAT::Pdf, OStream);
         MyPDFFile.CLOSE;
 
         MyPDFFile3.OPEN(FileName1);
