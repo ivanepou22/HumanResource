@@ -34,5 +34,6 @@
   ],
   "contextSensitiveHelpUrl": "https://HumanResource.com/help/",
   "showMyCode": true,
-  "runtime": "5.0"
+  "runtime": "5.0",
+  "target": "Internal"
 }

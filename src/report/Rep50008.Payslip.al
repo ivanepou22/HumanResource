@@ -707,6 +707,7 @@ report 50008 "Payslip"
         PayrollMonthYear: Text[50];
         Filters: Text[250];
         MajorLocation: Code[10];
+        EmployeeNumber: Code[20];
 
     procedure EmployeeGetFilters() ResNo2: Code[20]
     begin
@@ -716,5 +717,13 @@ report 50008 "Payslip"
     procedure GetDateFilters() ResDate: Date
     begin
         ResDate := "Res. Ledger Entry"."Posting Date";
+    end;
+
+    procedure SetEmployeeNo(var EmployeeNo: Code[20])
+    var
+        myInt: Integer;
+    begin
+        if EmployeeNo <> '' then
+            EmployeeNumber := EmployeeNo;
     end;
 }

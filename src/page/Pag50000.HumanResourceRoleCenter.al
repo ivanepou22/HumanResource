@@ -118,6 +118,15 @@ page 50000 "Human Resource Role Center"
                     RunObject = report "Payroll Summary";
                     ApplicationArea = Basic, Suite;
                 }
+                action("Payroll. Summary B4 Close")
+                {
+                    Caption = 'Payroll Summary B4 Close';
+                    ToolTip = 'Employee Payroll Summary before closing the payroll period';
+                    Image = PayrollStatistics;
+                    RunObject = report "Payroll Summary Before Post";
+                    ApplicationArea = Basic, Suite;
+                }
+
             }
 
 
@@ -158,6 +167,14 @@ page 50000 "Human Resource Role Center"
                 ToolTip = 'Employee Payroll Summary';
                 Image = PayrollStatistics;
                 RunObject = report "Payroll Summary";
+                ApplicationArea = Basic, Suite;
+            }
+            action("Payroll Summary B4 Close")
+            {
+                Caption = 'Payroll Summary B4 Close';
+                ToolTip = 'Employee Payroll Summary before closing the payroll period';
+                Image = PayrollStatistics;
+                RunObject = report "Payroll Summary Before Post";
                 ApplicationArea = Basic, Suite;
             }
 

@@ -12,7 +12,10 @@ pageextension 50022 "Vendor Card Ext" extends "Vendor Card"
                 Importance = Promoted;
             }
         }
-
+        modify("Our Account No.")
+        {
+            Visible = false;
+        }
         addafter("Balance Due (LCY)")
         {
             field("TIN Mandatory"; "TIN Mandatory")
@@ -20,6 +23,26 @@ pageextension 50022 "Vendor Card Ext" extends "Vendor Card"
                 ApplicationArea = All;
             }
 
+        }
+        addafter("Our Account No.")
+        {
+            field("Bank Code"; "Bank Code")
+            {
+                ApplicationArea = All;
+                //FieldPropertyName = FieldPropertyValue;
+            }
+            field("Bank Name"; "Bank Name")
+            {
+                ApplicationArea = All;
+            }
+            field("Bank Account No."; "Bank Account No.")
+            {
+                ApplicationArea = All;
+            }
+            field("Mobile Money Number"; "Mobile Money Number")
+            {
+                ApplicationArea = All;
+            }
         }
 
         addfirst(Invoicing)

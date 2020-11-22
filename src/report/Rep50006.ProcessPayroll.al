@@ -33,6 +33,8 @@ report 50006 "Process Payroll"
             trigger OnAfterGetRecord()
             var
                 ResJnlPostLine: Codeunit "ResJnlPost Line";
+                PayrollLedgerEntries: Record "Payroll Journal Lines";
+                PayrollJnlPostLine: Codeunit "PayrollJnlPost Line";
             begin
 
                 IF ProcessingOption = ProcessingOption::"Generate Payroll Journals" THEN BEGIN
@@ -60,6 +62,13 @@ report 50006 "Process Payroll"
                     IF NOT ResLedgerEntry.FIND('-') THEN BEGIN
                         ResJnlPostLine.InsertPayrollPeriod(PostingDate, "Employee Statistics Group".Code, ResLedgerEntry);
                     END;
+                    PayrollLedgerEntries.Reset();
+                    PayrollLedgerEntries.SetRange(PayrollLedgerEntries."Entry Type Payroll", PayrollLedgerEntries."Entry Type Payroll"::"Payroll Period");
+                    PayrollLedgerEntries.SetRange(PayrollLedgerEntries."Employee Statistics Group", "Employee Statistics Group".Code);
+                    PayrollLedgerEntries.SetRange(PayrollLedgerEntries."Posting Date", PostingDate);
+                    if not PayrollLedgerEntries.Find('-') then begin
+                        PayrollJnlPostLine.InsertPayrollPeriod(PostingDate, "Employee Statistics Group".Code, PayrollLedgerEntries);
+                    end;
                 END ELSE
                     IF ProcessingOption = ProcessingOption::"Generate Payment Journals" THEN BEGIN
                         "Employee Statistics Group".TESTFIELD("Payments Journal Template Name");
@@ -1012,6 +1021,11 @@ report 50006 "Process Payroll"
                                 DocumentNo,
                                 COPYSTR(EmployeeRec."Full Name", 1, 50),
                                 '', BasicSalary, FALSE);
+
+                // creating Payroll Line
+                InsertPayrollJournalLines(EmployeeRec."No.", EmployeeRec."Statistics Group Code", 'BASICPAY', 'Basic Salary',
+                                         PayrollEntryType::"Basic Pay", TRUE, BasicSalary, 0);
+
             END ELSE BEGIN
                 AddToBlockEarningItems('BASICPAY', 'Basic Salaries', BasicSalary, 0);
             END;
@@ -1065,6 +1079,10 @@ report 50006 "Process Payroll"
                                               DocumentNo,
                                               COPYSTR(EmployeeRec."Full Name",
                                               1, 50), '', EarningAmount, FALSE);
+                            // Payroll Lines
+                            InsertPayrollJournalLines(EmployeeRec."No.", EmployeeRec."Statistics Group Code", Earnings.Code,
+                                                     Earnings.Description, PayrollEntryType::Earning,
+                                                     Earnings.Taxable, EarningAmount, 0);
                         END ELSE BEGIN
                             AddToBlockEarningItems(Earnings.Code, Earnings.Description, EarningAmount, 0);
                         END;
@@ -1836,6 +1854,10 @@ report 50006 "Process Payroll"
                                                   DocumentNo,
                                                   COPYSTR(EmployeeRec."Full Name",
                                                   1, 50), '', -(DeductionAmount + DeductionAmountEmployer), FALSE);
+                                //Payroll Lines
+                                InsertPayrollJournalLines(EmployeeRec."No.", EmployeeRec."Statistics Group Code", Deductions.Code,
+                                                 Deductions.Description, PayrollEntryType::Deduction,
+                                                 Deductions."Pre-Tax Deductible", DeductionAmount, DeductionAmountEmployer);
                             END;
                         END ELSE BEGIN
                             AddToBlockDeductionItems(Deductions.Code, Deductions.Description, 0, (DeductionAmount + DeductionAmountEmployer));
@@ -2325,6 +2347,10 @@ report 50006 "Process Payroll"
                                       DocumentNo,
                                       COPYSTR(EmployeeRec."Full Name",
                                       1, 50), '', -IncomeTax, FALSE);
+                    //Payroll Lines
+                    InsertPayrollJournalLines(EmployeeRec."No.", EmployeeRec."Statistics Group Code", HRSetup."Income Tax Range Table Code",
+                                           HRSetup."Income Tax Range Table Code", PayrollEntryType::"Income Tax",
+                                           TRUE, IncomeTax, 0);
                 END ELSE BEGIN
                     AddToBlockDeductionItems('TAX', 'TAX', 0, IncomeTax);
                 END;
@@ -2357,6 +2383,12 @@ report 50006 "Process Payroll"
                                       DocumentNo,
                                       COPYSTR(EmployeeRec."Full Name",
                                       1, 50), '', -LocalTax, FALSE);
+
+                    //Payroll Lines
+                    InsertPayrollJournalLines(EmployeeRec."No.", EmployeeRec."Statistics Group Code", HRSetup."Local Tax Range Table Code",
+                                           HRSetup."Local Tax Range Table Code", PayrollEntryType::"Local Service Tax",
+                                           TRUE, LocalTax, 0);
+
                 END ELSE BEGIN
                     AddToBlockDeductionItems('LST', 'LST', 0, LocalTax);
                 END;
@@ -2388,6 +2420,11 @@ report 50006 "Process Payroll"
                                       PostingDate, DocumentNo,
                                       COPYSTR(EmployeeRec."Full Name", 1, 50),
                                       '', -NetPay, FALSE);
+                    //Payroll Lines
+                    InsertPayrollJournalLines(EmployeeRec."No.", EmployeeRec."Statistics Group Code", 'NETPAY',
+                                             'Net Salary', PayrollEntryType::"Net Salary Payable",
+                                             TRUE, NetPay, 0);
+
                 END ELSE BEGIN
                     AddToBlockDeductionItems('NETPAY', 'Net Salaries', 0, NetPay);
                 END;
@@ -2681,6 +2718,102 @@ report 50006 "Process Payroll"
         END;
     end;
 
+    //==================================
+    procedure InsertPayrollJournalLines(EmployeeNo: Code[20]; EmpStatsGroup: Code[10]; EDCode: Code[10]; Description: Text[50]; EntryType: Option " ","Basic Pay",Earning,Deduction,"Income Tax","Net Salary Payable","Net Salary Paid"; TaxablePreTaxDeductible: Boolean; Amount: Decimal; EmployerAmount: Decimal)
+    var
+        ResJournalLine: Record "Res. Journal Line";
+        PayrollLedgerEntry: Record "Payroll Journal Lines";
+        ResJnlTemplate: Record "Res. Journal Template";
+        ResJnlBatch: Record "Res. Journal Batch";
+        SourceCode: Record "Source Code";
+        Resource: Record Resource;
+        EntryNo: Integer;
+
+    begin
+
+        PayrollLedgerEntry.Reset();
+        PayrollLedgerEntry.SetRange(PayrollLedgerEntry."Document No.", DocumentNo);
+        PayrollLedgerEntry.SetRange(PayrollLedgerEntry."Posting Date", PostingDate);
+        PayrollLedgerEntry.SetRange(PayrollLedgerEntry."Resource No.", EmployeeNo);
+        PayrollLedgerEntry.SetRange(PayrollLedgerEntry."ED Code", EDCode);
+        if PayrollLedgerEntry.FindFirst() then begin
+            PayrollLedgerEntry.Delete();
+        end;
+
+        IF Amount <> ROUND(0.0000001, 0.01, '=') THEN BEGIN
+            IF NOT ResJnlBatch.GET('RESJNL', 'RESJOURNAL') THEN BEGIN
+                IF NOT (ResJnlTemplate.GET('RESJNL')) THEN BEGIN
+                    ResJnlTemplate.INIT;
+                    ResJnlTemplate.VALIDATE(Name, 'RESJNL');
+                    IF NOT (SourceCode.GET('RESJNL')) THEN BEGIN
+                        SourceCode.INIT;
+                        SourceCode.VALIDATE(Code, 'RESJNL');
+                        SourceCode.INSERT;
+                    END;
+                    ResJnlTemplate."Source Code" := 'RESJNL';
+                    ResJnlTemplate.Description := 'Resource Journal Template';
+                    ResJnlTemplate.INSERT(TRUE);
+                END;
+                ResJnlBatch.VALIDATE("Journal Template Name", 'RESJNL');
+                ResJnlBatch.Name := 'RESJOURNAL';
+                ResJnlBatch.Description := 'Resource Payroll Journal Batch';
+                ResJnlBatch.INSERT(TRUE);
+            END;
+
+            Resource.GET(EmployeeNo);
+            IF (Resource."Gen. Prod. Posting Group" = '') THEN
+                ERROR(ASLT0010 + Resource."No.");
+            IF (Resource."Base Unit of Measure" = '') THEN
+                ERROR(ASLT0011);
+            ResJournalLine.RESET;
+
+            //V.0.2 16/03/19 | Employee dimensions in resource ledgers
+            EmployeeDimension.RESET;
+            EmployeeDimension.SETRANGE(EmployeeDimension."Table Name", EmployeeDimension."Table Name"::Employee);
+            EmployeeDimension.SETRANGE(EmployeeDimension."No.", Resource."No.");
+            EmployeeDimension.SETRANGE(EmployeeDimension."Table Line No.", 5200);
+            IF EmployeeDimension.FINDFIRST THEN BEGIN
+                ResDim4 := EmployeeDimension."Shortcut Dimension 4 Code";
+                ResDim5 := EmployeeDimension."Shortcut Dimension 5 Code";
+            END;
+            //V.0.2 16/03/19 | Employee dimensions in resource ledgers
+
+            IF ResJournalLine.FINDLAST THEN
+                EntryNo := ResJournalLine."Line No." + 10000
+            ELSE
+                EntryNo := 10000;
+            ResJournalLine.INIT;
+            ResJournalLine."Journal Template Name" := 'RESJNL';
+            ResJournalLine."Journal Batch Name" := 'RESJOURNAL';
+            ResJournalLine."Line No." := EntryNo;
+            ResJournalLine."Entry Type Payroll" := ResJournalLine."Entry Type Payroll"::"Payroll Entry";
+            ResJournalLine."Entry Type" := ResJournalLine."Entry Type"::Usage;
+            ResJournalLine."ED Code" := EDCode;
+            ResJournalLine."Document No." := DocumentNo;
+            ResJournalLine."Posting Date" := PostingDate;
+            ResJournalLine."Resource No." := EmployeeNo;
+            ResJournalLine.Description := Description;
+            ResJournalLine."Payroll Entry Type" := EntryType;
+            ResJournalLine."Taxable/Pre-Tax Deductible" := TaxablePreTaxDeductible;
+            ResJournalLine."Employee Statistics Group" := EmpStatsGroup;
+            ResJournalLine.Amount := Amount;
+            ResJournalLine."Amount (LCY)" := Amount;
+            ResJournalLine."Employer Amount" := EmployerAmount;
+            ResJournalLine."Employer Amount (LCY)" := EmployerAmount;
+            ResJournalLine."Gen. Prod. Posting Group" := Resource."Gen. Prod. Posting Group";
+            ResJournalLine."Unit of Measure Code" := Resource."Base Unit of Measure";
+            ResJournalLine."Shortcut Dimension 1 Code" := Resource."Global Dimension 1 Code";
+            ResJournalLine."Shortcut Dimension 2 Code" := Resource."Global Dimension 2 Code";
+            ResJournalLine."Shortcut Dimension 3 Code" := ResDim3;
+            ResJournalLine."Shortcut Dimension 4 Code" := ResDim4;
+            ResJournalLine."Shortcut Dimension 5 Code" := ResDim5;
+            ResJournalLine."Shortcut Dimension 6 Code" := ResDim6;
+            ResJournalLine."Shortcut Dimension 7 Code" := ResDim7;
+            ResJournalLine."Shortcut Dimension 8 Code" := ResDim8;
+            ResJournalLine.INSERT;
+            CODEUNIT.RUN(CODEUNIT::"PayrollJnlPostEntries Batch", ResJournalLine);
+        END;
+    end;
     //==================================
     procedure CheckGlEntriesPosted()
     var
