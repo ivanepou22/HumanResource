@@ -264,6 +264,12 @@ report 50031 "Item Movement"
                                     TransShipmentInventory +
                                     PurcReturnInventory +
                                     PurcCreditMemoInventory);
+                Message('%1, %2, %3, %4, %5, %6', SalesShipInventory,
+                                    ConsumptionInventory,
+                                    NegativeInventory,
+                                    TransShipmentInventory,
+                                    PurcReturnInventory,
+                                    PurcCreditMemoInventory);
             end;
         }
     }

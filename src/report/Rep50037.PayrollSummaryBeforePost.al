@@ -61,7 +61,6 @@ report 50037 "Payroll Summary Before Post"
             Column(ParentDescription; ParentDescription) { }
             Column(TotalAmounts; TotalAmounts) { }
             Column(TotalBasicAmounts; TotalBasicAmounts) { }
-            Column(NontaxableAmountTotal; NontaxableAmountTotal) { }
             Column(GroupAmount1; GroupAmount[1]) { }
             Column(GroupAmount2; GroupAmount[2]) { }
             Column(GroupAmount3; GroupAmount[3]) { }
@@ -72,16 +71,7 @@ report 50037 "Payroll Summary Before Post"
             Column(GroupAmount8; GroupAmount[8]) { }
             Column(GroupAmount9; GroupAmount[9]) { }
             Column(GroupAmount10; GroupAmount[10]) { }
-            Column(NontaxableAmount1; NontaxableAmount[1]) { }
-            Column(NontaxableAmount2; NontaxableAmount[2]) { }
-            Column(NontaxableAmount3; NontaxableAmount[3]) { }
-            Column(NontaxableAmount4; NontaxableAmount[4]) { }
-            Column(NontaxableAmount5; NontaxableAmount[5]) { }
-            Column(NontaxableAmount6; NontaxableAmount[6]) { }
-            Column(NontaxableAmount7; NontaxableAmount[7]) { }
-            Column(NontaxableAmount8; NontaxableAmount[8]) { }
-            Column(NontaxableAmount9; NontaxableAmount[9]) { }
-            Column(NontaxableAmount10; NontaxableAmount[10]) { }
+
             Column(BasicSalaryAmount1; BasicSalaryAmount[1]) { }
             Column(BasicSalaryAmount2; BasicSalaryAmount[2]) { }
             Column(BasicSalaryAmount3; BasicSalaryAmount[3]) { }
@@ -98,6 +88,7 @@ report 50037 "Payroll Summary Before Post"
             begin
                 Confidential.SETFILTER("Parent Code2", '<>%1', '');
                 Confidential.SETFILTER(Confidential.Type, '%1|%2', Confidential.Type::Earning, Confidential.Type::"Pay Basic");
+                Confidential.SetFilter(Confidential.Taxable, '%1', true);
             end;
 
             //OnAfterGetRecord
@@ -131,37 +122,7 @@ report 50037 "Payroll Summary Before Post"
                         TotalBasicAmounts += ResLedgerEntry3.Amount;
                     UNTIL ResLedgerEntry3.NEXT = 0;
 
-                //geting the nontaxable pay
-                P := 1;
-                PayrollGroup2.RESET;
-                PayrollGroup2.SETRANGE(PayrollGroup2."Payroll Processing Frequency", PayrollGroup2."Payroll Processing Frequency"::Monthly);
-                PayrollGroup2.SETRANGE(PayrollGroup2."Basic Pay Type", PayrollGroup2."Basic Pay Type"::Fixed);
-                IF PayrollGroup2.FINDFIRST THEN
-                    REPEAT
-                        NontaxableAmount[P] := 0;
-                        ResLedgerEntry4.RESET;
-                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Payroll Entry Type", ResLedgerEntry4."Payroll Entry Type"::Earning);
-                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."ED Code", Confidential.Code);
-                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Employee Statistics Group", PayrollGroup2.Code);
-                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Taxable/Pre-Tax Deductible", FALSE);
-                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Posting Date", PayrollPeriod);
-                        IF ResLedgerEntry4.FINDFIRST THEN
-                            REPEAT
-                                NontaxableAmount[P] += ResLedgerEntry4.Amount;
-                            UNTIL ResLedgerEntry4.NEXT = 0;
-                        P += 1;
-                    UNTIL PayrollGroup2.NEXT = 0;
 
-                //nontaxable pay total
-                ResLedgerEntry5.RESET;
-                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."Payroll Entry Type", ResLedgerEntry5."Payroll Entry Type"::Earning);
-                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."ED Code", Confident2.Code);
-                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."Taxable/Pre-Tax Deductible", FALSE);
-                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."Posting Date", PayrollPeriod);
-                IF ResLedgerEntry5.FINDFIRST THEN
-                    REPEAT
-                        NontaxableAmountTotal += ResLedgerEntry5.Amount;
-                    UNTIL ResLedgerEntry5.NEXT = 0;
 
                 //Getting the amounts
                 J := 1;
@@ -187,6 +148,68 @@ report 50037 "Payroll Summary Before Post"
 
         }
 
+        dataitem(NonTaxable; Confidential)
+        {
+            Column(Code_NonTaxable; NonTaxable.Code) { }
+            Column(Description_NonTaxable; NonTaxable.Description) { }
+            Column(ParentCode2_NonTaxable; NonTaxable."Parent Code2") { }
+            Column(NontaxableAmountTotal; NontaxableAmountTotal) { }
+            Column(NontaxableAmount1; NontaxableAmount[1]) { }
+            Column(NontaxableAmount2; NontaxableAmount[2]) { }
+            Column(NontaxableAmount3; NontaxableAmount[3]) { }
+            Column(NontaxableAmount4; NontaxableAmount[4]) { }
+            Column(NontaxableAmount5; NontaxableAmount[5]) { }
+            Column(NontaxableAmount6; NontaxableAmount[6]) { }
+            Column(NontaxableAmount7; NontaxableAmount[7]) { }
+            Column(NontaxableAmount8; NontaxableAmount[8]) { }
+            Column(NontaxableAmount9; NontaxableAmount[9]) { }
+            Column(NontaxableAmount10; NontaxableAmount[10]) { }
+
+            //OnPreDataItem
+            trigger OnPreDataItem()
+            begin
+                NonTaxable.SETFILTER("Parent Code2", '<>%1', '');
+                NonTaxable.SETFILTER(NonTaxable.Type, '%1', NonTaxable.Type::Earning);
+                NonTaxable.SetFilter(NonTaxable.Taxable, '%1', false);
+            end;
+
+            trigger OnAfterGetRecord()
+            var
+                myInt: Integer;
+            begin
+                //geting the nontaxable pay
+                P := 1;
+                PayrollGroup2.RESET;
+                PayrollGroup2.SETRANGE(PayrollGroup2."Payroll Processing Frequency", PayrollGroup2."Payroll Processing Frequency"::Monthly);
+                PayrollGroup2.SETRANGE(PayrollGroup2."Basic Pay Type", PayrollGroup2."Basic Pay Type"::Fixed);
+                IF PayrollGroup2.FINDFIRST THEN
+                    REPEAT
+                        NontaxableAmount[P] := 0;
+                        ResLedgerEntry4.RESET;
+                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Payroll Entry Type", ResLedgerEntry4."Payroll Entry Type"::Earning);
+                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."ED Code", NonTaxable.Code);
+                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Employee Statistics Group", PayrollGroup2.Code);
+                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Taxable/Pre-Tax Deductible", FALSE);
+                        ResLedgerEntry4.SETRANGE(ResLedgerEntry4."Posting Date", PayrollPeriod);
+                        IF ResLedgerEntry4.FINDFIRST THEN
+                            REPEAT
+                                NontaxableAmount[P] += ResLedgerEntry4.Amount;
+                            UNTIL ResLedgerEntry4.NEXT = 0;
+                        P += 1;
+                    UNTIL PayrollGroup2.NEXT = 0;
+
+                //nontaxable pay total
+                ResLedgerEntry5.RESET;
+                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."Payroll Entry Type", ResLedgerEntry5."Payroll Entry Type"::Earning);
+                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."ED Code", NonTaxable.Code);
+                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."Taxable/Pre-Tax Deductible", FALSE);
+                ResLedgerEntry5.SETRANGE(ResLedgerEntry5."Posting Date", PayrollPeriod);
+                IF ResLedgerEntry5.FINDFIRST THEN
+                    REPEAT
+                        NontaxableAmountTotal += ResLedgerEntry5.Amount;
+                    UNTIL ResLedgerEntry5.NEXT = 0;
+            end;
+        }
         dataitem(DeductionsGroup; Confidential)
         {
             Column(Code_DeductionsGroup; DeductionsGroup.Code) { }
@@ -223,6 +246,7 @@ report 50037 "Payroll Summary Before Post"
                         ResLedgerEntry7.RESET;
                         ResLedgerEntry7.SETFILTER(ResLedgerEntry7."Payroll Entry Type", '%1|%2|%3', ResLedgerEntry7."Payroll Entry Type"::"Income Tax", ResLedgerEntry7."Payroll Entry Type"::"Local Service Tax", ResLedgerEntry7."Payroll Entry Type"::Deduction);
                         ResLedgerEntry7.SETRANGE(ResLedgerEntry7."ED Code", DeductionsGroup.Code);
+                        //ResLedgerEntry7.SetFilter(ResLedgerEntry7."ED Code", '<>%1|<>%2|<>%3|<>%4','ABSENT ADM','ABSENT DIS','ABSENT FAR','ABSENT PDN');
                         ResLedgerEntry7.SETRANGE(ResLedgerEntry7."Employee Statistics Group", PayrollGroup5.Code);
                         ResLedgerEntry7.SETRANGE(ResLedgerEntry7."Posting Date", PayrollPeriod);
                         IF ResLedgerEntry7.FINDFIRST THEN
@@ -242,6 +266,52 @@ report 50037 "Payroll Summary Before Post"
                     REPEAT
                         DeductionTotalAmount += ResLedgerEntry8.Amount;
                     UNTIL ResLedgerEntry8.NEXT = 0;
+            end;
+        }
+
+        dataitem(AbsentDeduction; Confidential)
+        {
+            Column(Code_AbsentDeduction; AbsentDeduction.Code) { }
+            Column(Description_AbsentDeduction; AbsentDeduction.Description) { }
+            Column(Type_AbsentDeduction; AbsentDeduction.Type) { }
+            column(AbsentAmount1; AbsentAmount[1]) { }
+            column(AbsentAmount2; AbsentAmount[2]) { }
+            column(AbsentAmount3; AbsentAmount[3]) { }
+            column(AbsentAmount4; AbsentAmount[4]) { }
+            column(AbsentAmount5; AbsentAmount[5]) { }
+            column(AbsentAmount6; AbsentAmount[6]) { }
+            column(AbsentAmount7; AbsentAmount[7]) { }
+            column(AbsentAmount8; AbsentAmount[8]) { }
+            column(AbsentAmount9; AbsentAmount[9]) { }
+            column(AbsentAmount10; AbsentAmount[10]) { }
+
+            trigger OnPreDataItem()
+            begin
+                AbsentDeduction.SetFilter(AbsentDeduction.Type, '%1', AbsentDeduction.Type::Deduction);
+                AbsentDeduction.SetFilter(AbsentDeduction.Code, '%1|%2|%3|%4', 'ABSENT ADM', 'ABSENT DIS', 'ABSENT FAR', 'ABSENT PDN');
+            end;
+
+            trigger OnAfterGetRecord()
+            begin
+                B := 1;
+                PayrollGroup10.Reset();
+                PayrollGroup10.SETRANGE(PayrollGroup10."Payroll Processing Frequency", PayrollGroup10."Payroll Processing Frequency"::Monthly);
+                PayrollGroup10.SETRANGE(PayrollGroup10."Basic Pay Type", PayrollGroup10."Basic Pay Type"::Fixed);
+                IF PayrollGroup10.FINDFIRST THEN
+                    repeat
+                        AbsentAmount[B] := 0;
+                        ResLedgerEntry10.RESET;
+                        ResLedgerEntry10.SETFILTER(ResLedgerEntry10."Payroll Entry Type", '%1', ResLedgerEntry10."Payroll Entry Type"::Deduction);
+                        ResLedgerEntry10.SETRANGE(ResLedgerEntry10."ED Code", AbsentDeduction.Code);
+                        ResLedgerEntry10.SETRANGE(ResLedgerEntry10."Employee Statistics Group", PayrollGroup10.Code);
+                        ResLedgerEntry10.SETRANGE(ResLedgerEntry10."Posting Date", PayrollPeriod);
+                        IF ResLedgerEntry10.FINDFIRST THEN
+                            REPEAT
+                                AbsentAmount[B] += ResLedgerEntry10.Amount;
+                            UNTIL ResLedgerEntry10.NEXT = 0;
+                        B += 1;
+                    until PayrollGroup10.Next() = 0;
+
             end;
         }
 
@@ -382,4 +452,11 @@ report 50037 "Payroll Summary Before Post"
         ResLedgerEntry9: Record "Payroll Journal Lines";
         PayeAmounts: array[20] of Decimal;
         CompanyInfo: Record "Company Information";
+
+        //absentism
+        AbsentAmount: array[20] of Decimal;
+        PayrollGroup10: Record "Employee Statistics Group";
+        ResLedgerEntry10: Record "Payroll Journal Lines";
+        B: Integer;
+
 }

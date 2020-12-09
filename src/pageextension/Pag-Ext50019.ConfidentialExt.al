@@ -341,6 +341,11 @@ pageextension 50019 "Confidential Ext" extends Confidential
                 Visible = not LocationView and not BanksView and not RangeTableLineView and not RangeTableView and
                 not EarnigsView and not DeductionView;
             }
+            field(Type; Type)
+            {
+                ApplicationArea = All;
+            }
+
         }
     }
 
